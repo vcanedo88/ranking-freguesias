@@ -207,6 +207,14 @@ footer.rodape a{color:var(--texto-2)}
 .picker .lista-op button{display:flex;align-items:center;gap:8px;width:100%;border:0;background:#fff;padding:6px 10px;font-family:var(--sans);font-size:13.5px;color:var(--texto);cursor:pointer;text-align:left}
 .picker .lista-op button:hover,.picker .lista-op button[aria-selected="true"]{background:var(--s1)}
 .sec-filtro .rot-sel{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2)}
+
+#clubes th{white-space:nowrap}
+#clubes td.esq .clube{gap:6px;flex-wrap:wrap;row-gap:4px}
+#clubes td.esq .clube img{width:18px;height:18px}
+.picker .filtro-esc{display:flex;flex-wrap:wrap;gap:4px;padding:8px 10px;border-bottom:1px solid var(--linha);position:sticky;top:0;background:#fff;z-index:1}
+.picker .filtro-esc button{width:auto;padding:3px 6px;border:1px solid var(--cinza);display:inline-flex}
+.picker .filtro-esc button[aria-pressed="true"]{background:var(--s2);border-color:var(--roxo)}
+.picker .filtro-esc img{width:20px;height:20px}
 </style>
 </head>
 <body>
@@ -293,24 +301,25 @@ footer.rodape a{color:var(--texto-2)}
           <tr>
             <th>#</th>
             <th class="esq">Clube</th>
-            <th>Índice contra o G12</th>
+            <th>Índice</th>
             <th>Jogos</th>
             <th>V</th>
             <th>E</th>
             <th>D</th>
             <th>Mata-matas</th>
-            <th class="esq">Domina (65+)</th>
-            <th class="esq lg">Vantagem clara (60 a 64,9)</th>
-            <th class="esq lg">Vantagem (55 a 59,9)</th>
+            <th class="esq">Domina</th>
+            <th class="esq lg">Vantagem clara</th>
+            <th class="esq lg">Vantagem</th>
             <th class="esq lg">Equilíbrio</th>
-            <th class="esq lg">Desvantagem (55 a 59,9)</th>
-            <th class="esq lg">Desvantagem clara (60 a 64,9)</th>
-            <th class="esq">Freguês de (65+)</th>
+            <th class="esq lg">Desvantagem</th>
+            <th class="esq lg">Desvantagem clara</th>
+            <th class="esq">Freguês de</th>
           </tr>
         </thead>
         <tbody data-draw="cl"></tbody>
       </table>
     </div>
+    <p class="nota">Índice: aproveitamento ponderado do clube somando os seus confrontos. Em cada confronto, pelo índice do clube: <b>domina</b> 65 ou mais · <b>vantagem clara</b> 60 a 64,9 · <b>vantagem</b> 55 a 59,9. Pelo índice do adversário: <b>desvantagem</b> 55 a 59,9 · <b>desvantagem clara</b> 60 a 64,9 · <b>freguês de</b> 65 ou mais. <b>Equilíbrio</b>: nenhum dos dois chega a 55. Clique num clube para filtrar o ranking dos confrontos.</p>
   </section>
 
   <section class="bloco" id="detalhe">
@@ -517,14 +526,30 @@ footer.rodape a{color:var(--texto-2)}
   // Detalhe
   dash.draw('sel', (box) => {
     const rk = ok('g12_ranking') || []; const cur = sel(); box.replaceChildren(); if (!cur) return;
-    const dupla = (r) => { const s = mk('span', 'clube'); s.append(crest(r.time_a), crest(r.time_b)); return s; };
+    // ordem do seletor: escolhido um clube, mostra os confrontos dele (ele à esquerda), por ordem do adversário;
+    // sem clube, cada confronto aparece com os dois times em ordem alfabética, e a lista também em ordem alfabética
+    const par = (r) => { const [a, b] = [r.time_a, r.time_b].sort((x, y) => x.localeCompare(y, 'pt')); if (st.pickClube === b) return [b, a]; return [a, b]; };
+    const dupla = (ts) => { const s = mk('span', 'clube'); s.append(crest(ts[0]), crest(ts[1])); return s; };
     const btn = mk('button'); btn.type = 'button'; btn.setAttribute('aria-haspopup', 'listbox'); btn.setAttribute('aria-expanded', 'false');
-    const lab = mk('span', 'clube'); lab.append(dupla(cur), document.createTextNode(' ' + cur.classico)); btn.append(lab, mk('span', 'x', '▾'));
+    const lab = mk('span', 'clube'); lab.append(dupla([cur.time_a, cur.time_b]), document.createTextNode(' ' + cur.classico)); btn.append(lab, mk('span', 'x', '▾'));
     const lst = mk('div', 'lista-op'); lst.hidden = true; lst.setAttribute('role', 'listbox');
-    for (const r of [...rk].sort((a, b) => a.classico.localeCompare(b.classico, 'pt'))) {
-      const o = mk('button'); o.type = 'button'; o.setAttribute('role', 'option'); o.setAttribute('aria-selected', String(r.classico === cur.classico));
-      o.append(dupla(r), document.createTextNode(r.classico)); o.onclick = () => { lst.hidden = true; pick(r.classico, false); }; lst.appendChild(o);
-    }
+    const clubes = [...new Set(rk.flatMap((r) => [r.time_a, r.time_b]))].sort((a, b) => a.localeCompare(b, 'pt'));
+    const filtro = mk('div', 'filtro-esc');
+    const opcoes = mk('div');
+    const desenha = () => {
+      filtro.replaceChildren(...['', ...clubes].map((c) => {
+        const b = mk('button'); b.type = 'button'; b.title = c || 'Todos os clubes'; b.setAttribute('aria-pressed', String((st.pickClube || '') === c));
+        if (c) b.append(crest(c)); else b.append(document.createTextNode('Todos'));
+        b.onclick = (e) => { e.stopPropagation(); st.pickClube = c; desenha(); }; return b;
+      }));
+      const linhas = rk.filter((r) => !st.pickClube || r.time_a === st.pickClube || r.time_b === st.pickClube)
+        .map((r) => ({ r, ts: par(r) })).sort((x, y) => (x.ts[0] + x.ts[1]).localeCompare(y.ts[0] + y.ts[1], 'pt'));
+      opcoes.replaceChildren(...linhas.map(({ r, ts }) => {
+        const o = mk('button'); o.type = 'button'; o.setAttribute('role', 'option'); o.setAttribute('aria-selected', String(r.classico === cur.classico));
+        o.append(dupla(ts), document.createTextNode(`${ts[0]} x ${ts[1]}`)); o.onclick = () => { lst.hidden = true; pick(r.classico, false); }; return o;
+      }));
+    };
+    desenha(); lst.append(filtro, opcoes);
     btn.onclick = (e) => { e.stopPropagation(); lst.hidden = !lst.hidden; btn.setAttribute('aria-expanded', String(!lst.hidden)); };
     if (!window.__pickerFecha) { window.__pickerFecha = true; document.addEventListener('click', (e) => { document.querySelectorAll('.picker').forEach((p) => { if (!p.contains(e.target)) { const l = p.querySelector('.lista-op'); if (l) l.hidden = true; } }); }); }
     box.append(btn, lst);
