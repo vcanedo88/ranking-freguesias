@@ -174,18 +174,16 @@ footer.rodape a{color:var(--texto-2)}
 .ranking tbody tr:hover td.h2c,.ranking tr.ativo td.h2c{background:var(--s2)}
 .ranking tbody tr:hover td.h3c,.ranking tr.ativo td.h3c{background:var(--s3)}
 .ranking tbody tr:hover td.h4c,.ranking tr.ativo td.h4c{background:var(--s4)}
-.zebra tbody tr:nth-child(even) td{background:var(--fundo-sutil)}
-.zebra tbody tr:hover td{background:var(--s1)}
 .tag.v2{background:var(--s1);border-color:var(--s1);color:var(--texto)}
 .ix.v2 .trilho i{background:var(--s2)}
-.faixa{margin-top:18px;row-gap:18px}
+.faixa{margin-top:8px;margin-bottom:20px;row-gap:20px}
 .faixa i,.faixa i.w,.faixa i.d{background:#fff;border:1px solid var(--linha);display:flex;align-items:center;justify-content:center}
 .faixa i img{width:72%;height:72%;object-fit:contain;pointer-events:none}
 .faixa i.e::before{content:"";width:36%;height:2px;background:var(--cinza)}
 .faixa i.mm{border:2px solid var(--roxo)}
 .faixa i.mm::after{content:none}
 .faixa i[data-corte]{box-shadow:-4px 0 0 -1px var(--texto)}
-.faixa i .corte{position:absolute;top:-15px;left:-9px;font-size:10px;font-weight:700;color:var(--texto);line-height:1}
+.faixa i .corte{position:absolute;bottom:-16px;left:-9px;font-size:10px;font-weight:700;color:var(--texto);line-height:1}
 .leg i,.leg i.w,.leg i.d{background:#fff;border:1px solid var(--linha)}
 .leg i.mm{border:2px solid var(--roxo)}
 .leg i.mm::after{content:none}
@@ -193,6 +191,22 @@ footer.rodape a{color:var(--texto-2)}
 .chips.esc .chip{padding:3px 6px;display:inline-flex;align-items:center}
 .chips.esc .chip img{width:22px;height:22px;object-fit:contain}
 .chips.esc .chip[aria-pressed="true"]{background:var(--s2);border-color:var(--roxo);color:var(--texto)}
+
+.zebra tbody tr:nth-child(even) td:not(.h1c):not(.h2c):not(.h3c):not(.h4c){background:var(--fundo-sutil)}
+.zebra tbody tr.ativo td:not(.h1c):not(.h2c):not(.h3c):not(.h4c),.zebra tbody tr:hover td:not(.h1c):not(.h2c):not(.h3c):not(.h4c){background:var(--s1)}
+.ranking td.esq,.ranking th.esq{text-align:left}
+.ranking td.esq .clube{justify-content:flex-start}
+.placar{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.placar img{width:20px;height:20px;object-fit:contain}
+.placar small{color:var(--texto-2)}
+.partidas{display:inline-flex;flex-direction:column;gap:3px;align-items:flex-start}
+.picker{position:relative}
+.picker>button{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:14px;padding:5px 10px;border:1px solid var(--cinza);background:#fff;color:var(--texto);cursor:pointer;min-width:250px;justify-content:space-between}
+.picker img{width:22px;height:22px;object-fit:contain}
+.picker .lista-op{position:absolute;right:0;top:calc(100% + 4px);z-index:20;background:#fff;border:1px solid var(--cinza);box-shadow:0 4px 14px rgba(0,0,0,.1);max-height:380px;overflow:auto;min-width:290px}
+.picker .lista-op button{display:flex;align-items:center;gap:8px;width:100%;border:0;background:#fff;padding:6px 10px;font-family:var(--sans);font-size:13.5px;color:var(--texto);cursor:pointer;text-align:left}
+.picker .lista-op button:hover,.picker .lista-op button[aria-selected="true"]{background:var(--s1)}
+.sec-filtro .rot-sel{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2)}
 </style>
 </head>
 <body>
@@ -243,7 +257,7 @@ footer.rodape a{color:var(--texto-2)}
       <div class="ctl"><span class="rot">Clube</span><div class="chips esc" role="group" aria-label="Clube" data-draw="clube-sel"></div></div>
     </div>
     <div class="tabela-wrap">
-      <table class="ranking">
+      <table class="ranking zebra">
         <thead>
           <tr>
             <th>#</th>
@@ -258,14 +272,14 @@ footer.rodape a{color:var(--texto-2)}
             <th>Mata-matas</th>
             <th class="lg">Na casa do dominante</th>
             <th class="lg">Na casa do outro</th>
-            <th class="lg">Forma (5 jogos)</th>
+            <th class="lg">5 jogos</th>
             <th>Jogos desde</th>
           </tr>
         </thead>
         <tbody data-draw="rk"></tbody>
       </table>
     </div>
-    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando (cerca de 15 de cada lado), nos 30 jogos, sem os jogos em campo neutro e sem o bônus dos mata-matas · Forma: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
+    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando (cerca de 15 de cada lado), nos 30 jogos, sem os jogos em campo neutro e sem o bônus dos mata-matas · 5 jogos: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
   </section>
 
   <section class="bloco" id="clubes">
@@ -285,18 +299,20 @@ footer.rodape a{color:var(--texto-2)}
         <thead>
           <tr>
             <th>#</th>
-            <th>Clube</th>
+            <th class="esq">Clube</th>
             <th>Índice contra o G12</th>
             <th>Jogos</th>
             <th>V</th>
             <th>E</th>
             <th>D</th>
             <th>Mata-matas</th>
-            <th>Domina (65+)</th>
-            <th class="lg">Vantagem sobre (55 a 64,9)</th>
-            <th class="lg">Equilíbrio</th>
-            <th class="lg">Em desvantagem contra (55 a 64,9)</th>
-            <th>Freguês de (65+)</th>
+            <th class="esq">Domina (65+)</th>
+            <th class="esq lg">Vantagem clara (60 a 64,9)</th>
+            <th class="esq lg">Vantagem (55 a 59,9)</th>
+            <th class="esq lg">Equilíbrio</th>
+            <th class="esq lg">Desvantagem (55 a 59,9)</th>
+            <th class="esq lg">Desvantagem clara (60 a 64,9)</th>
+            <th class="esq">Freguês de (65+)</th>
           </tr>
         </thead>
         <tbody data-draw="cl"></tbody>
@@ -307,7 +323,7 @@ footer.rodape a{color:var(--texto-2)}
   <section class="bloco" id="detalhe">
     <div class="h2linha">
       <h2>O confronto em detalhe</h2>
-      <div class="sec-filtro"><label for="fg-sel">Confronto</label><select id="fg-sel" data-draw="sel" aria-label="Confronto"></select></div>
+      <div class="sec-filtro"><span class="rot-sel">Confronto</span><div class="picker" data-draw="sel"></div></div>
     </div>
     <div class="vs" data-draw="d-vs">—</div>
     <div class="kpis fatos">
@@ -341,7 +357,7 @@ footer.rodape a{color:var(--texto-2)}
     <p class="h2sub">Cada confronto (ida e volta ou jogo único) conta uma vez, como um jogo extra para quem avançou. Peso = recência do último jogo × peso da fase.</p>
     <div class="tabela-wrap">
       <table class="ranking">
-        <thead><tr><th>Data</th><th>Competição</th><th>Fase</th><th class="lg">Jogos</th><th>Avançou</th><th>Como</th><th>Peso</th></tr></thead>
+        <thead><tr><th>Data</th><th>Competição</th><th>Fase</th><th class="lg">Jogos</th><th>Agregado</th><th>Avançou</th><th>Como</th><th>Peso</th></tr></thead>
         <tbody data-draw="mm"></tbody>
       </table>
     </div>
@@ -349,7 +365,7 @@ footer.rodape a{color:var(--texto-2)}
     <h3 style="margin-top:26px">Lista de jogos</h3>
     <p class="h2sub">Peso = recência × importância do jogo. N = campo neutro.</p>
     <div class="lista">
-      <table class="ranking">
+      <table class="ranking zebra">
         <thead><tr><th>#</th><th>Data</th><th>Mandante</th><th>Gols</th><th>Gols</th><th>Visitante</th><th class="lg">Pênaltis</th><th class="lg">Competição</th><th class="lg">Avançou</th><th>Peso</th></tr></thead>
         <tbody data-draw="jg"></tbody>
       </table>
@@ -495,10 +511,10 @@ footer.rodape a{color:var(--texto-2)}
     const cl = ok('g12c_clubes'); tb.replaceChildren(); if (!cl) return;
     for (const r of cl.filter((x) => String(x.janela) === st.jcl)) {
       const tr = document.createElement('tr');
-      td(tr, r.pos, 'cinza'); td(tr, nome(r.clube), 'l');
+      td(tr, r.pos, 'cinza'); td(tr, nome(r.clube), 'l esq');
       td(tr, idxCell(r.indice, lvl(r.indice)));
       td(tr, r.jogos); td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, r.mm);
-      td(tr, escList(r.domina)); td(tr, escList(r.vantagem_sobre), 'lg'); td(tr, escList(r.equilibrio), 'lg'); td(tr, escList(r.desvantagem_contra), 'lg'); td(tr, escList(r.fregues_de));
+      td(tr, escList(r.domina), 'esq'); td(tr, escList(r.vantagem_clara_sobre), 'esq lg'); td(tr, escList(r.vantagem_sobre), 'esq lg'); td(tr, escList(r.equilibrio), 'esq lg'); td(tr, escList(r.desvantagem_contra), 'esq lg'); td(tr, escList(r.desvantagem_clara_contra), 'esq lg'); td(tr, escList(r.fregues_de), 'esq');
       tr.tabIndex = 0;
       tr.addEventListener('click', () => { st.clube = r.clube; dash.draw('clube-sel'); dash.draw('rk'); document.getElementById('ranking').scrollIntoView({ behavior: 'smooth' }); });
       tb.appendChild(tr);
@@ -506,11 +522,19 @@ footer.rodape a{color:var(--texto-2)}
   });
 
   // Detalhe
-  dash.draw('sel', (s) => {
-    const rk = ok('g12c_ranking') || [];
-    s.replaceChildren(...[...rk].sort((a, b) => a.classico.localeCompare(b.classico, 'pt')).map((r) => new Option(r.classico, r.classico)));
-    const cur = sel(); if (cur) s.value = cur.classico;
-    s.onchange = () => pick(s.value, false);
+  dash.draw('sel', (box) => {
+    const rk = ok('g12c_ranking') || []; const cur = sel(); box.replaceChildren(); if (!cur) return;
+    const dupla = (r) => { const s = mk('span', 'clube'); s.append(crest(r.time_a), crest(r.time_b)); return s; };
+    const btn = mk('button'); btn.type = 'button'; btn.setAttribute('aria-haspopup', 'listbox'); btn.setAttribute('aria-expanded', 'false');
+    const lab = mk('span', 'clube'); lab.append(dupla(cur), document.createTextNode(' ' + cur.classico)); btn.append(lab, mk('span', 'x', '▾'));
+    const lst = mk('div', 'lista-op'); lst.hidden = true; lst.setAttribute('role', 'listbox');
+    for (const r of [...rk].sort((a, b) => a.classico.localeCompare(b.classico, 'pt'))) {
+      const o = mk('button'); o.type = 'button'; o.setAttribute('role', 'option'); o.setAttribute('aria-selected', String(r.classico === cur.classico));
+      o.append(dupla(r), document.createTextNode(r.classico)); o.onclick = () => { lst.hidden = true; pick(r.classico, false); }; lst.appendChild(o);
+    }
+    btn.onclick = (e) => { e.stopPropagation(); lst.hidden = !lst.hidden; btn.setAttribute('aria-expanded', String(!lst.hidden)); };
+    if (!window.__pickerFecha) { window.__pickerFecha = true; document.addEventListener('click', (e) => { document.querySelectorAll('.picker').forEach((p) => { if (!p.contains(e.target)) { const l = p.querySelector('.lista-op'); if (l) l.hidden = true; } }); }); }
+    box.append(btn, lst);
   });
   const T = (name, fn) => dash.draw(name, (el) => { const r = sel(); el.textContent = r ? fn(r) : '—'; });
   dash.draw('d-vs', (el) => {
@@ -571,25 +595,26 @@ footer.rodape a{color:var(--texto-2)}
     }
     el.appendChild(tip);
   });
+  const placar = (p) => { const s = mk('span', 'placar'); s.append(crest(p.m), mk('b', '', `${p.gm} x ${p.gv}`), crest(p.v)); if (p.pen) s.append(mk('small', '', `pên. ${p.pen}`)); return s; };
+  const partidasCell = (r) => { const box = mk('span', 'partidas'); (r.partidas || []).forEach((p) => box.append(placar(p))); return box; };
+  const aggCell = (r) => { if (!r.partidas || r.partidas.length < 2) return mk('span', 'cinza', '—'); const s = mk('span', 'placar'); s.append(crest(r.avancou), mk('b', '', r.agregado), crest(r.perdeu)); return s; };
   const COMO = { agregado: 'Agregado', 'pênaltis': 'Pênaltis', vantagem: 'Vantagem', jogo: 'Jogo único', 'gol fora': 'Gol fora', 'decisão do STJD': 'Decisão do STJD' };
   dash.draw('mm', (tb) => {
     const mm = ok('g12c_matamatas'); const cur = sel(); tb.replaceChildren(); if (!mm || !cur) return;
     const rows = mm.filter((x) => x.classico === cur.classico);
     for (const r of rows) {
       const tr = document.createElement('tr');
-      td(tr, brc(r.data)); td(tr, r.competicao, 'l'); td(tr, r.fase); td(tr, r.jogos, 'lg l'); td(tr, so(r.avancou)); td(tr, COMO[r.como] || r.como); td(tr, f1(r.peso));
+      td(tr, brc(r.data)); td(tr, r.competicao, 'l'); td(tr, r.fase); td(tr, partidasCell(r), 'lg'); td(tr, aggCell(r)); td(tr, so(r.avancou)); td(tr, COMO[r.como] || r.como); td(tr, f1(r.peso));
       tb.appendChild(tr);
     }
-    if (!rows.length) { const tr = document.createElement('tr'); td(tr, 'Nenhum mata-mata na janela.', 'cinza').colSpan = 7; tb.appendChild(tr); }
+    if (!rows.length) { const tr = document.createElement('tr'); td(tr, 'Nenhum mata-mata na janela.', 'cinza').colSpan = 8; tb.appendChild(tr); }
   });
   dash.draw('jg', (tb) => {
     const jg = ok('g12c_jogos'); const cur = sel(); tb.replaceChildren(); if (!jg || !cur) return;
     for (const g of jg.filter((x) => x.classico === cur.classico)) {
       const tr = document.createElement('tr');
-      const o = outcome(g, cur.dominante);
       td(tr, g.n, 'cinza'); td(tr, brc(g.data) + (g.neutro ? ' N' : '')); td(tr, so(g.mandante)); td(tr, g.gm, 'forte'); td(tr, g.gv, 'forte'); td(tr, so(g.visitante));
       td(tr, g.penaltis, 'lg'); td(tr, g.competicao, 'lg l'); td(tr, g.classificado ? so(g.classificado) : '', 'lg'); td(tr, f1(g.peso));
-      tr.firstChild.style.boxShadow = `inset 4px 0 0 ${o === 'w' ? 'var(--roxo)' : o === 'd' ? 'var(--verde)' : 'var(--cinza)'}`;
       tb.appendChild(tr);
     }
   });

@@ -1,174 +1,174 @@
-classico,data,competicao,fase,jogos,avancou,como,peso
-Flamengo x Vasco,2025-03-08,Carioca 2025,Semifinal,Vasco 0x1 Flamengo / Flamengo 2x1 Vasco,Flamengo,agregado,3.6
-Flamengo x Vasco,2023-03-19,Carioca 2023,Semifinal,Flamengo 3x2 Vasco / Vasco 1x3 Flamengo,Flamengo,agregado,3.0
-Flamengo x Vasco,2022-03-20,Carioca 2022,Semifinal,Vasco 0x1 Flamengo / Flamengo 1x0 Vasco,Flamengo,agregado,3.0
-Flamengo x Vasco,2019-04-21,Carioca 2019,Final,Vasco 0x2 Flamengo / Flamengo 2x0 Vasco,Flamengo,agregado,3.0
-Flamengo x Vasco,2019-03-31,Carioca 2019,Final de turno,Vasco 1x1 Flamengo (pên. 1-3),Flamengo,pênaltis,2.4
-Flamengo x Fluminense,2026-03-08,Carioca 2026,Final,Fluminense 0x0 Flamengo (pên. 4-5),Flamengo,pênaltis,4.5
-Flamengo x Fluminense,2025-03-16,Carioca 2025,Final,Fluminense 1x2 Flamengo / Flamengo 0x0 Fluminense,Flamengo,agregado,4.5
-Flamengo x Fluminense,2024-03-16,Carioca 2024,Semifinal,Fluminense 0x2 Flamengo / Flamengo 0x0 Fluminense,Flamengo,agregado,3.0
-Flamengo x Fluminense,2023-06-01,Copa do Brasil 2023,Oitavas,Fluminense 0x0 Flamengo / Flamengo 2x0 Fluminense,Flamengo,agregado,5.0
-Flamengo x Fluminense,2023-04-09,Carioca 2023,Final,Flamengo 2x0 Fluminense / Fluminense 4x1 Flamengo,Fluminense,agregado,3.75
-Flamengo x Fluminense,2022-04-02,Carioca 2022,Final,Flamengo 0x2 Fluminense / Fluminense 1x1 Flamengo,Fluminense,agregado,3.0
-Flamengo x Fluminense,2021-05-22,Carioca 2021,Final,Fluminense 1x1 Flamengo / Flamengo 3x1 Fluminense,Flamengo,agregado,3.0
-Flamengo x Botafogo,2026-02-15,Carioca 2026,Quartas,Botafogo 1x2 Flamengo,Flamengo,jogo,3.6
-Flamengo x Botafogo,2025-02-02,Supercopa 2025,Final,Botafogo 1x3 Flamengo,Flamengo,jogo,4.5
-Flamengo x Botafogo,2018-03-28,Carioca 2018,Semifinal,Flamengo 0x1 Botafogo,Botafogo,jogo,2.4
-Flamengo x Botafogo,2018-02-10,Carioca 2018,Semifinal,Flamengo 3x1 Botafogo,Flamengo,jogo,2.4
-Flamengo x Botafogo,2017-08-23,Copa do Brasil 2017,Semifinal,Botafogo 0x0 Flamengo / Flamengo 1x0 Botafogo,Flamengo,agregado,4.0
-Fluminense x Botafogo,2022-03-27,Carioca 2022,Semifinal,Botafogo 0x1 Fluminense / Fluminense 1x2 Botafogo,Fluminense,vantagem,3.0
-Fluminense x Botafogo,2020-07-05,Carioca 2020,Semifinal,Fluminense 0x0 Botafogo,Fluminense,vantagem,2.4
-Fluminense x Botafogo,2018-03-25,Carioca 2018,Final de turno,Fluminense 3x0 Botafogo,Fluminense,jogo,2.4
-Fluminense x Vasco,2026-08-05,Copa do Brasil 2026,Oitavas,Vasco 0x0 Fluminense / Fluminense 1x3 Vasco,Vasco,agregado,6.0
-Fluminense x Vasco,2026-03-01,Carioca 2026,Semifinal,Vasco 0x1 Fluminense / Fluminense 1x1 Vasco,Fluminense,agregado,3.6
-Fluminense x Vasco,2025-12-14,Copa do Brasil 2025,Semifinal,Vasco 2x1 Fluminense / Fluminense 1x0 Vasco (pên. 3-4),Vasco,pênaltis,6.0
-Fluminense x Vasco,2019-02-17,Carioca 2019,Final de turno,Vasco 1x0 Fluminense,Vasco,jogo,2.4
-Fluminense x Vasco,2018-03-29,Carioca 2018,Semifinal,Fluminense 2x3 Vasco,Vasco,jogo,2.4
-Vasco x Botafogo,2025-09-11,Copa do Brasil 2025,Quartas,Vasco 1x1 Botafogo / Botafogo 1x1 Vasco (pên. 3-5),Vasco,pênaltis,6.0
-Vasco x Botafogo,2021-05-22,Carioca 2021,Taça Rio (consolação),Botafogo 0x1 Vasco / Vasco 0x1 Botafogo (pên. 3-0),Vasco,pênaltis,2.5
-Vasco x Botafogo,2020-09-23,Copa do Brasil 2020,4ª fase,Botafogo 1x0 Vasco / Vasco 0x0 Botafogo,Botafogo,agregado,4.0
-Corinthians x Palmeiras,2025-08-06,Copa do Brasil 2025,Oitavas,Corinthians 1x0 Palmeiras / Palmeiras 0x2 Corinthians,Corinthians,agregado,6.0
-Corinthians x Palmeiras,2025-03-27,Paulistão 2025,Final,Palmeiras 0x1 Corinthians / Corinthians 0x0 Palmeiras,Corinthians,agregado,4.5
-Corinthians x Palmeiras,2021-05-16,Paulistão 2021,Semifinal,Corinthians 0x2 Palmeiras,Palmeiras,jogo,2.4
-Corinthians x Palmeiras,2020-08-08,Paulistão 2020,Final,Corinthians 0x0 Palmeiras / Palmeiras 1x1 Corinthians (pên. 4-3),Palmeiras,pênaltis,3.0
-Corinthians x São Paulo,2023-08-16,Copa do Brasil 2023,Semifinal,Corinthians 2x1 São Paulo / São Paulo 2x0 Corinthians,São Paulo,agregado,5.0
-Corinthians x São Paulo,2022-03-27,Paulistão 2022,Semifinal,São Paulo 2x1 Corinthians,São Paulo,jogo,3.0
-Corinthians x São Paulo,2019-04-21,Paulistão 2019,Final,São Paulo 0x0 Corinthians / Corinthians 2x1 São Paulo,Corinthians,agregado,3.0
-Corinthians x Santos,2025-03-09,Paulistão 2025,Semifinal,Corinthians 2x1 Santos,Corinthians,jogo,3.6
-Corinthians x Santos,2022-07-13,Copa do Brasil 2022,Oitavas,Corinthians 4x0 Santos / Santos 1x0 Corinthians,Corinthians,agregado,5.0
-Corinthians x Santos,2019-04-08,Paulistão 2019,Semifinal,Corinthians 2x1 Santos / Santos 1x0 Corinthians (pên. 6-7),Corinthians,pênaltis,2.4
-Palmeiras x São Paulo,2026-03-01,Paulistão 2026,Semifinal,Palmeiras 2x1 São Paulo,Palmeiras,jogo,3.6
-Palmeiras x São Paulo,2025-03-10,Paulistão 2025,Semifinal,Palmeiras 1x0 São Paulo,Palmeiras,jogo,3.6
-Palmeiras x São Paulo,2024-02-04,Supercopa 2024,Final,Palmeiras 0x0 São Paulo (pên. 2-4),São Paulo,pênaltis,3.75
-Palmeiras x São Paulo,2023-07-13,Copa do Brasil 2023,Quartas,São Paulo 1x0 Palmeiras / Palmeiras 1x2 São Paulo,São Paulo,agregado,5.0
-Palmeiras x São Paulo,2022-07-14,Copa do Brasil 2022,Oitavas,São Paulo 1x0 Palmeiras / Palmeiras 2x1 São Paulo (pên. 3-4),São Paulo,pênaltis,5.0
-Palmeiras x São Paulo,2022-04-03,Paulistão 2022,Final,São Paulo 3x1 Palmeiras / Palmeiras 4x0 São Paulo,Palmeiras,agregado,3.0
-Palmeiras x São Paulo,2021-08-17,Libertadores 2021,Quartas,São Paulo 1x1 Palmeiras / Palmeiras 3x0 São Paulo,Palmeiras,agregado,4.0
-Palmeiras x São Paulo,2021-05-23,Paulistão 2021,Final,Palmeiras 0x0 São Paulo / São Paulo 2x0 Palmeiras,São Paulo,agregado,3.0
-Palmeiras x Santos,2026-09-02,Copa do Brasil 2026,Quartas,Palmeiras 3x0 Santos / Santos 0x0 Palmeiras,Palmeiras,agregado,6.0
-Palmeiras x Santos,2024-04-07,Paulistão 2024,Final,Santos 1x0 Palmeiras / Palmeiras 2x0 Santos,Palmeiras,agregado,4.5
-Palmeiras x Santos,2021-01-30,Libertadores 2020,Final,Palmeiras 1x0 Santos,Palmeiras,jogo,5.0
-Palmeiras x Santos,2018-03-27,Paulistão 2018,Semifinal,Santos 0x1 Palmeiras / Palmeiras 1x2 Santos (pên. 5-3),Palmeiras,pênaltis,2.4
-Grêmio x Internacional,2026-09-03,Copa do Brasil 2026,Quartas,Internacional 0x0 Grêmio / Grêmio 3x1 Internacional,Grêmio,agregado,6.0
-Grêmio x Internacional,2026-03-08,Gauchão 2026,Final,Grêmio 3x0 Internacional / Internacional 1x1 Grêmio,Grêmio,agregado,4.5
-Grêmio x Internacional,2025-03-16,Gauchão 2025,Final,Grêmio 0x2 Internacional / Internacional 1x1 Grêmio,Internacional,agregado,4.5
-Grêmio x Internacional,2022-03-23,Gauchão 2022,Semifinal,Internacional 0x3 Grêmio / Grêmio 0x1 Internacional,Grêmio,agregado,3.0
-Grêmio x Internacional,2021-05-23,Gauchão 2021,Final,Internacional 1x2 Grêmio / Grêmio 1x1 Internacional,Grêmio,agregado,3.0
-Grêmio x Internacional,2020-09-23,Libertadores 2020,E,Internacional 0x1 Grêmio,Grêmio,jogo,4.0
-Grêmio x Internacional,2020-08-05,Gauchão 2020,Final de turno,Grêmio 2x0 Internacional,Grêmio,jogo,2.4
-Cruzeiro x Atlético-MG,2026-09-01,Copa do Brasil 2026,Quartas,Cruzeiro 1x1 Atlético-MG / Atlético-MG 2x1 Cruzeiro,Atlético-MG,agregado,6.0
-Cruzeiro x Atlético-MG,2026-03-08,Mineiro 2026,Final,Cruzeiro 1x0 Atlético-MG,Cruzeiro,jogo,4.5
-Cruzeiro x Atlético-MG,2025-09-11,Copa do Brasil 2025,Quartas,Atlético-MG 0x2 Cruzeiro / Cruzeiro 2x0 Atlético-MG,Cruzeiro,agregado,6.0
-Cruzeiro x Atlético-MG,2024-04-07,Mineiro 2024,Final,Atlético-MG 2x2 Cruzeiro / Cruzeiro 1x3 Atlético-MG,Atlético-MG,agregado,3.75
-Cruzeiro x Atlético-MG,2022-04-02,Mineiro 2022,Final,Atlético-MG 3x1 Cruzeiro,Atlético-MG,jogo,3.75
-Cruzeiro x Atlético-MG,2019-07-17,Copa do Brasil 2019,Quartas,Cruzeiro 3x0 Atlético-MG / Atlético-MG 2x0 Cruzeiro,Cruzeiro,agregado,4.0
-Cruzeiro x Atlético-MG,2019-04-20,Mineiro 2019,Final,Cruzeiro 2x1 Atlético-MG / Atlético-MG 1x1 Cruzeiro,Cruzeiro,agregado,3.0
-Flamengo x Corinthians,2026-02-01,Supercopa 2026,Final,Flamengo 0x2 Corinthians,Corinthians,jogo,4.5
-Flamengo x Corinthians,2024-10-20,Copa do Brasil 2024,Semifinal,Flamengo 1x0 Corinthians / Corinthians 0x0 Flamengo,Flamengo,agregado,6.0
-Flamengo x Corinthians,2022-10-19,Copa do Brasil 2022,Final,Corinthians 0x0 Flamengo / Flamengo 1x1 Corinthians (pên. 6-5),Flamengo,pênaltis,6.25
-Flamengo x Corinthians,2022-08-09,Libertadores 2022,Quartas,Corinthians 0x2 Flamengo / Flamengo 1x0 Corinthians,Flamengo,agregado,5.0
-Flamengo x Corinthians,2019-06-04,Copa do Brasil 2019,Oitavas,Corinthians 0x1 Flamengo / Flamengo 1x0 Corinthians,Flamengo,agregado,4.0
-Flamengo x Corinthians,2018-09-26,Copa do Brasil 2018,Semifinal,Flamengo 0x0 Corinthians / Corinthians 2x1 Flamengo,Corinthians,agregado,4.0
-Flamengo x Palmeiras,2025-11-29,Libertadores 2025,Final,Palmeiras 0x1 Flamengo,Flamengo,jogo,7.5
-Flamengo x Palmeiras,2024-08-07,Copa do Brasil 2024,Oitavas,Flamengo 2x0 Palmeiras / Palmeiras 1x0 Flamengo,Flamengo,agregado,6.0
-Flamengo x Palmeiras,2023-01-28,Supercopa 2023,Final,Palmeiras 4x3 Flamengo,Palmeiras,jogo,3.75
-Flamengo x Palmeiras,2021-11-27,Libertadores 2021,Final,Palmeiras 2x1 Flamengo,Palmeiras,jogo,6.25
-Flamengo x Palmeiras,2021-04-11,Supercopa 2021,Final,Flamengo 2x2 Palmeiras (pên. 6-5),Flamengo,pênaltis,3.75
-Flamengo x São Paulo,2023-09-24,Copa do Brasil 2023,Final,Flamengo 0x1 São Paulo / São Paulo 1x1 Flamengo,São Paulo,agregado,7.5
-Flamengo x São Paulo,2022-09-14,Copa do Brasil 2022,Semifinal,São Paulo 1x3 Flamengo / Flamengo 1x0 São Paulo,Flamengo,agregado,5.0
-Flamengo x São Paulo,2020-11-18,Copa do Brasil 2020,Quartas,Flamengo 1x2 São Paulo / São Paulo 3x0 Flamengo,São Paulo,agregado,5.0
-Flamengo x Santos,2017-07-26,Copa do Brasil 2017,Quartas,Flamengo 2x0 Santos / Santos 4x2 Flamengo,Flamengo,gol fora,5.0
-Flamengo x Grêmio,2023-08-16,Copa do Brasil 2023,Semifinal,Grêmio 0x2 Flamengo / Flamengo 1x0 Grêmio,Flamengo,agregado,6.0
-Flamengo x Grêmio,2021-09-15,Copa do Brasil 2021,Quartas,Grêmio 0x4 Flamengo / Flamengo 2x0 Grêmio,Flamengo,agregado,5.0
-Flamengo x Grêmio,2019-10-23,Libertadores 2019,Semifinal,Grêmio 1x1 Flamengo / Flamengo 5x0 Grêmio,Flamengo,agregado,5.0
-Flamengo x Grêmio,2018-08-15,Copa do Brasil 2018,Quartas,Grêmio 1x1 Flamengo / Flamengo 1x0 Grêmio,Flamengo,agregado,4.0
-Flamengo x Internacional,2025-08-20,Libertadores 2025,Oitavas,Flamengo 1x0 Internacional / Internacional 0x2 Flamengo,Flamengo,agregado,6.0
-Flamengo x Internacional,2019-08-28,Libertadores 2019,Quartas,Flamengo 2x0 Internacional / Internacional 1x1 Flamengo,Flamengo,agregado,5.0
-Flamengo x Cruzeiro,2026-08-19,Libertadores 2026,Oitavas,Cruzeiro 1x1 Flamengo / Flamengo 2x1 Cruzeiro,Flamengo,agregado,6.0
-Flamengo x Cruzeiro,2018-08-29,Libertadores 2018,Oitavas,Flamengo 0x2 Cruzeiro / Cruzeiro 0x1 Flamengo,Cruzeiro,agregado,5.0
-Flamengo x Cruzeiro,2017-09-27,Copa do Brasil 2017,Final,Flamengo 1x1 Cruzeiro / Cruzeiro 0x0 Flamengo (pên. 5-3),Cruzeiro,pênaltis,6.25
-Flamengo x Cruzeiro,2013-08-28,Copa do Brasil 2013,Oitavas,Cruzeiro 2x1 Flamengo / Flamengo 1x0 Cruzeiro,Flamengo,gol fora,4.0
-Flamengo x Atlético-MG,2025-08-06,Copa do Brasil 2025,Oitavas,Flamengo 0x1 Atlético-MG / Atlético-MG 0x1 Flamengo (pên. 4-3),Atlético-MG,pênaltis,6.0
-Flamengo x Atlético-MG,2024-11-10,Copa do Brasil 2024,Final,Flamengo 3x1 Atlético-MG / Atlético-MG 0x1 Flamengo,Flamengo,agregado,7.5
-Flamengo x Atlético-MG,2022-07-13,Copa do Brasil 2022,Oitavas,Atlético-MG 2x1 Flamengo / Flamengo 2x0 Atlético-MG,Flamengo,agregado,5.0
-Flamengo x Atlético-MG,2022-02-20,Supercopa 2022,Final,Atlético-MG 2x2 Flamengo (pên. 8-7),Atlético-MG,pênaltis,3.75
-Fluminense x Corinthians,2022-09-15,Copa do Brasil 2022,Semifinal,Fluminense 2x2 Corinthians / Corinthians 3x0 Fluminense,Corinthians,agregado,6.0
-Fluminense x Corinthians,2019-08-29,Sul-Americana 2019,Quartas,Corinthians 0x0 Fluminense / Fluminense 1x1 Corinthians,Corinthians,gol fora,5.0
-Fluminense x Corinthians,2016-09-21,Copa do Brasil 2016,Oitavas,Fluminense 1x1 Corinthians / Corinthians 1x0 Fluminense,Corinthians,agregado,4.0
-Fluminense x Palmeiras,2026-10-21,Libertadores 2026,Semifinal,Fluminense 1x2 Palmeiras / Palmeiras 0x1 Fluminense (pên. 5-3),Palmeiras,pênaltis,6.0
-Fluminense x Palmeiras,2015-10-28,Copa do Brasil 2015,Semifinal,Fluminense 2x1 Palmeiras / Palmeiras 2x1 Fluminense (pên. 4-1),Palmeiras,pênaltis,4.0
-Fluminense x Grêmio,2024-08-20,Libertadores 2024,Oitavas,Grêmio 2x1 Fluminense / Fluminense 2x1 Grêmio (pên. 4-2),Fluminense,pênaltis,6.0
-Fluminense x Grêmio,2017-05-31,Copa do Brasil 2017,Oitavas,Grêmio 3x1 Fluminense / Fluminense 0x2 Grêmio,Grêmio,agregado,4.0
-Fluminense x Grêmio,2015-09-30,Copa do Brasil 2015,Quartas,Fluminense 0x0 Grêmio / Grêmio 1x1 Fluminense,Fluminense,gol fora,4.0
-Fluminense x Internacional,2025-08-06,Copa do Brasil 2025,Oitavas,Internacional 1x2 Fluminense / Fluminense 1x1 Internacional,Fluminense,agregado,6.0
-Fluminense x Internacional,2023-10-04,Libertadores 2023,Semifinal,Fluminense 2x2 Internacional / Internacional 1x2 Fluminense,Fluminense,agregado,6.0
-Fluminense x Internacional,2016-03-23,Primeira Liga 2016,Semifinal,Fluminense 2x2 Internacional (pên. 3-2),Fluminense,pênaltis,2.4
-Fluminense x Cruzeiro,2022-07-12,Copa do Brasil 2022,Oitavas,Fluminense 2x1 Cruzeiro / Cruzeiro 0x3 Fluminense,Fluminense,agregado,6.0
-Fluminense x Cruzeiro,2019-06-05,Copa do Brasil 2019,Oitavas,Fluminense 1x1 Cruzeiro / Cruzeiro 2x2 Fluminense (pên. 3-1),Cruzeiro,pênaltis,5.0
-Fluminense x Atlético-MG,2024-09-25,Libertadores 2024,Quartas,Fluminense 1x0 Atlético-MG / Atlético-MG 2x0 Fluminense,Atlético-MG,agregado,6.0
-Fluminense x Atlético-MG,2021-09-15,Copa do Brasil 2021,Quartas,Fluminense 1x2 Atlético-MG / Atlético-MG 1x0 Fluminense,Atlético-MG,agregado,5.0
-Vasco x Corinthians,2025-12-21,Copa do Brasil 2025,Final,Corinthians 0x0 Vasco / Vasco 1x2 Corinthians,Corinthians,agregado,7.5
-Vasco x Corinthians,2012-05-23,Libertadores 2012,Quartas,Vasco 0x0 Corinthians / Corinthians 1x0 Vasco,Corinthians,agregado,4.0
-Vasco x Palmeiras,2026-11-08,Copa do Brasil 2026,Semifinal,Palmeiras 1x0 Vasco / Vasco 2x1 Palmeiras (pên. 4-5),Palmeiras,pênaltis,6.0
-Vasco x Palmeiras,2011-08-25,Sul-Americana 2011,2ª fase,Vasco 2x0 Palmeiras / Palmeiras 3x1 Vasco,Vasco,gol fora,4.0
-Vasco x Palmeiras,2008-09-17,Sul-Americana 2008,1ª fase,Vasco 3x1 Palmeiras / Palmeiras 3x0 Vasco,Palmeiras,agregado,4.0
-Vasco x São Paulo,2021-08-04,Copa do Brasil 2021,Oitavas,São Paulo 2x0 Vasco / Vasco 1x2 São Paulo,São Paulo,agregado,6.0
-Vasco x São Paulo,2015-09-30,Copa do Brasil 2015,Quartas,São Paulo 3x0 Vasco / Vasco 1x1 São Paulo,São Paulo,agregado,5.0
-Vasco x Santos,2019-04-24,Copa do Brasil 2019,4ª fase,Santos 2x0 Vasco / Vasco 2x1 Santos,Santos,agregado,5.0
-Vasco x Santos,2016-09-21,Copa do Brasil 2016,Oitavas,Santos 3x1 Vasco / Vasco 2x2 Santos,Santos,agregado,5.0
-Vasco x Atlético-MG,2024-10-19,Copa do Brasil 2024,Semifinal,Atlético-MG 2x1 Vasco / Vasco 1x1 Atlético-MG,Atlético-MG,agregado,6.0
-Botafogo x Palmeiras,2025-06-28,Mundial de Clubes 2025,Oitavas,Palmeiras 1x0 Botafogo,Palmeiras,jogo,6.0
-Botafogo x Palmeiras,2024-08-21,Libertadores 2024,Oitavas,Botafogo 2x1 Palmeiras / Palmeiras 2x2 Botafogo,Botafogo,agregado,6.0
-Botafogo x Palmeiras,2012-08-22,Sul-Americana 2012,2ª fase,Palmeiras 2x0 Botafogo / Botafogo 3x1 Palmeiras,Palmeiras,gol fora,4.0
-Botafogo x São Paulo,2024-09-25,Libertadores 2024,Quartas,Botafogo 0x0 São Paulo / São Paulo 1x1 Botafogo (pên. 4-5),Botafogo,pênaltis,6.0
-Botafogo x Santos,2014-10-16,Copa do Brasil 2014,Quartas,Botafogo 2x3 Santos / Santos 5x0 Botafogo,Santos,agregado,5.0
-Botafogo x Grêmio,2017-09-20,Libertadores 2017,Quartas,Botafogo 0x0 Grêmio / Grêmio 1x0 Botafogo,Grêmio,agregado,5.0
-Botafogo x Cruzeiro,2016-09-21,Copa do Brasil 2016,Oitavas,Botafogo 2x5 Cruzeiro / Cruzeiro 1x0 Botafogo,Cruzeiro,agregado,5.0
-Botafogo x Atlético-MG,2024-11-30,Libertadores 2024,Final,Atlético-MG 1x3 Botafogo,Botafogo,jogo,7.5
-Botafogo x Atlético-MG,2019-07-31,Sul-Americana 2019,Oitavas,Botafogo 0x1 Atlético-MG / Atlético-MG 2x0 Botafogo,Atlético-MG,agregado,5.0
-Botafogo x Atlético-MG,2017-07-26,Copa do Brasil 2017,Quartas,Atlético-MG 1x0 Botafogo / Botafogo 3x0 Atlético-MG,Botafogo,agregado,4.0
-Botafogo x Atlético-MG,2013-08-28,Copa do Brasil 2013,Oitavas,Botafogo 4x2 Atlético-MG / Atlético-MG 2x2 Botafogo,Botafogo,agregado,4.0
-Corinthians x Grêmio,2024-08-07,Copa do Brasil 2024,Oitavas,Corinthians 0x0 Grêmio / Grêmio 0x0 Corinthians (pên. 1-3),Corinthians,pênaltis,6.0
-Corinthians x Grêmio,2013-10-23,Copa do Brasil 2013,Quartas,Corinthians 0x0 Grêmio / Grêmio 0x0 Corinthians (pên. 3-2),Grêmio,pênaltis,4.0
-Corinthians x Internacional,2026-08-06,Copa do Brasil 2026,Oitavas,Internacional 2x0 Corinthians / Corinthians 2x1 Internacional,Internacional,agregado,6.0
-Corinthians x Internacional,2017-04-19,Copa do Brasil 2017,4ª fase,Internacional 1x1 Corinthians / Corinthians 1x1 Internacional (pên. 3-4),Internacional,pênaltis,4.0
-Corinthians x Cruzeiro,2025-12-14,Copa do Brasil 2025,Semifinal,Cruzeiro 0x1 Corinthians / Corinthians 1x2 Cruzeiro (pên. 5-4),Corinthians,pênaltis,6.0
-Corinthians x Cruzeiro,2018-10-17,Copa do Brasil 2018,Final,Cruzeiro 1x0 Corinthians / Corinthians 1x2 Cruzeiro,Cruzeiro,agregado,6.25
-Corinthians x Cruzeiro,2016-10-19,Copa do Brasil 2016,Quartas,Corinthians 2x1 Cruzeiro / Cruzeiro 4x2 Corinthians,Cruzeiro,agregado,5.0
-Corinthians x Atlético-MG,2023-05-31,Copa do Brasil 2023,Oitavas,Atlético-MG 2x0 Corinthians / Corinthians 2x0 Atlético-MG (pên. 3-1),Corinthians,pênaltis,6.0
-Corinthians x Atlético-MG,2014-10-15,Copa do Brasil 2014,Quartas,Corinthians 2x0 Atlético-MG / Atlético-MG 4x1 Corinthians,Atlético-MG,agregado,4.0
-Palmeiras x Grêmio,2021-03-07,Copa do Brasil 2020,Final,Grêmio 0x1 Palmeiras / Palmeiras 2x0 Grêmio,Palmeiras,agregado,6.25
-Palmeiras x Grêmio,2019-08-27,Libertadores 2019,Quartas,Grêmio 0x1 Palmeiras / Palmeiras 1x2 Grêmio,Grêmio,gol fora,5.0
-Palmeiras x Grêmio,2016-10-19,Copa do Brasil 2016,Quartas,Grêmio 2x1 Palmeiras / Palmeiras 1x1 Grêmio,Grêmio,agregado,4.0
-Palmeiras x Internacional,2019-07-17,Copa do Brasil 2019,Quartas,Palmeiras 1x0 Internacional / Internacional 1x0 Palmeiras (pên. 5-4),Internacional,pênaltis,5.0
-Palmeiras x Internacional,2017-05-31,Copa do Brasil 2017,Oitavas,Palmeiras 1x0 Internacional / Internacional 2x1 Palmeiras,Palmeiras,gol fora,4.0
-Palmeiras x Internacional,2015-09-30,Copa do Brasil 2015,Quartas,Internacional 1x1 Palmeiras / Palmeiras 3x2 Internacional,Palmeiras,agregado,4.0
-Palmeiras x Cruzeiro,2018-09-26,Copa do Brasil 2018,Semifinal,Palmeiras 0x1 Cruzeiro / Cruzeiro 1x1 Palmeiras,Cruzeiro,agregado,5.0
-Palmeiras x Cruzeiro,2017-07-26,Copa do Brasil 2017,Quartas,Palmeiras 3x3 Cruzeiro / Cruzeiro 1x1 Palmeiras,Cruzeiro,gol fora,5.0
-Palmeiras x Cruzeiro,2015-08-26,Copa do Brasil 2015,Oitavas,Palmeiras 2x1 Cruzeiro / Cruzeiro 2x3 Palmeiras,Palmeiras,agregado,4.0
-Palmeiras x Atlético-MG,2023-08-09,Libertadores 2023,Oitavas,Atlético-MG 0x1 Palmeiras / Palmeiras 0x0 Atlético-MG,Palmeiras,agregado,6.0
-Palmeiras x Atlético-MG,2022-08-10,Libertadores 2022,Quartas,Atlético-MG 2x2 Palmeiras / Palmeiras 0x0 Atlético-MG (pên. 6-5),Palmeiras,pênaltis,5.0
-Palmeiras x Atlético-MG,2021-09-28,Libertadores 2021,Semifinal,Palmeiras 0x0 Atlético-MG / Atlético-MG 1x1 Palmeiras,Palmeiras,gol fora,5.0
-São Paulo x Grêmio,2020-12-30,Copa do Brasil 2020,Semifinal,Grêmio 1x0 São Paulo / São Paulo 0x0 Grêmio,Grêmio,agregado,5.0
-São Paulo x Cruzeiro,2017-04-19,Copa do Brasil 2017,4ª fase,São Paulo 0x2 Cruzeiro / Cruzeiro 1x2 São Paulo,Cruzeiro,agregado,5.0
-São Paulo x Cruzeiro,2015-05-13,Libertadores 2015,Oitavas,São Paulo 1x0 Cruzeiro / Cruzeiro 1x0 São Paulo (pên. 4-3),Cruzeiro,pênaltis,4.0
-São Paulo x Atlético-MG,2024-09-12,Copa do Brasil 2024,Quartas,São Paulo 0x1 Atlético-MG / Atlético-MG 0x0 São Paulo,Atlético-MG,agregado,6.0
-São Paulo x Atlético-MG,2016-05-18,Libertadores 2016,Quartas,São Paulo 1x0 Atlético-MG / Atlético-MG 2x1 São Paulo,São Paulo,gol fora,4.0
-Santos x Grêmio,2020-12-16,Libertadores 2020,Quartas,Grêmio 1x1 Santos / Santos 4x1 Grêmio,Santos,agregado,6.0
-Santos x Grêmio,2014-08-28,Copa do Brasil 2014,Oitavas,Grêmio 0x2 Santos,Santos,decisão do STJD,4.0
-Santos x Grêmio,2013-08-28,Copa do Brasil 2013,Oitavas,Santos 1x0 Grêmio / Grêmio 2x0 Santos,Grêmio,agregado,4.0
-Santos x Internacional,2016-10-19,Copa do Brasil 2016,Quartas,Santos 2x1 Internacional / Internacional 2x0 Santos,Internacional,agregado,5.0
-Santos x Cruzeiro,2018-08-15,Copa do Brasil 2018,Quartas,Santos 0x1 Cruzeiro / Cruzeiro 1x2 Santos (pên. 3-0),Cruzeiro,pênaltis,6.0
-Santos x Cruzeiro,2014-11-05,Copa do Brasil 2014,Semifinal,Cruzeiro 1x0 Santos / Santos 3x3 Cruzeiro,Cruzeiro,agregado,5.0
-Santos x Atlético-MG,2026-09-16,Sul-Americana 2026,Quartas,Santos 2x0 Atlético-MG / Atlético-MG 4x2 Santos (pên. 3-1),Atlético-MG,pênaltis,6.0
-Santos x Atlético-MG,2019-06-06,Copa do Brasil 2019,Oitavas,Atlético-MG 0x0 Santos / Santos 1x2 Atlético-MG,Atlético-MG,agregado,5.0
-Grêmio x Cruzeiro,2023-05-31,Copa do Brasil 2023,Oitavas,Grêmio 1x1 Cruzeiro / Cruzeiro 0x1 Grêmio,Grêmio,agregado,6.0
-Grêmio x Cruzeiro,2017-08-30,Primeira Liga 2017,Quartas,Cruzeiro 2x0 Grêmio,Cruzeiro,jogo,3.0
-Grêmio x Cruzeiro,2017-08-23,Copa do Brasil 2017,Semifinal,Grêmio 1x0 Cruzeiro / Cruzeiro 1x0 Grêmio (pên. 3-2),Cruzeiro,pênaltis,5.0
-Grêmio x Cruzeiro,2016-11-02,Copa do Brasil 2016,Semifinal,Cruzeiro 0x2 Grêmio / Grêmio 0x0 Cruzeiro,Grêmio,agregado,4.0
-Grêmio x Atlético-MG,2026-11-07,Copa do Brasil 2026,Semifinal,Grêmio 2x0 Atlético-MG / Atlético-MG 1x1 Grêmio,Grêmio,agregado,6.0
-Grêmio x Atlético-MG,2016-12-07,Copa do Brasil 2016,Final,Atlético-MG 1x3 Grêmio / Grêmio 1x1 Atlético-MG,Grêmio,agregado,5.0
-Internacional x Cruzeiro,2019-09-04,Copa do Brasil 2019,Semifinal,Cruzeiro 0x1 Internacional / Internacional 3x0 Cruzeiro,Internacional,agregado,6.0
-Internacional x Atlético-MG,2017-08-30,Primeira Liga 2017,Quartas,Internacional 0x1 Atlético-MG,Atlético-MG,jogo,3.0
-Internacional x Atlético-MG,2016-11-02,Copa do Brasil 2016,Semifinal,Internacional 1x2 Atlético-MG / Atlético-MG 2x2 Internacional,Atlético-MG,agregado,5.0
-Internacional x Atlético-MG,2015-05-13,Libertadores 2015,Oitavas,Atlético-MG 2x2 Internacional / Internacional 3x1 Atlético-MG,Internacional,agregado,4.0
+classico,data,competicao,fase,jogos,avancou,perdeu,agregado,partidas,como,peso
+Flamengo x Vasco,2025-03-08,Carioca 2025,Semifinal,Vasco 0x1 Flamengo / Flamengo 2x1 Vasco,Flamengo,Vasco,3 x 1,"[{'m': 'Vasco', 'gm': 0, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 2, 'gv': 1, 'v': 'Vasco', 'pen': ''}]",agregado,3.6
+Flamengo x Vasco,2023-03-19,Carioca 2023,Semifinal,Flamengo 3x2 Vasco / Vasco 1x3 Flamengo,Flamengo,Vasco,6 x 3,"[{'m': 'Flamengo', 'gm': 3, 'gv': 2, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 1, 'gv': 3, 'v': 'Flamengo', 'pen': ''}]",agregado,3.0
+Flamengo x Vasco,2022-03-20,Carioca 2022,Semifinal,Vasco 0x1 Flamengo / Flamengo 1x0 Vasco,Flamengo,Vasco,2 x 0,"[{'m': 'Vasco', 'gm': 0, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Vasco', 'pen': ''}]",agregado,3.0
+Flamengo x Vasco,2019-04-21,Carioca 2019,Final,Vasco 0x2 Flamengo / Flamengo 2x0 Vasco,Flamengo,Vasco,4 x 0,"[{'m': 'Vasco', 'gm': 0, 'gv': 2, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Vasco', 'pen': ''}]",agregado,3.0
+Flamengo x Vasco,2019-03-31,Carioca 2019,Final de turno,Vasco 1x1 Flamengo (pên. 1-3),Flamengo,Vasco,1 x 1,"[{'m': 'Vasco', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': '1-3'}]",pênaltis,2.4
+Flamengo x Fluminense,2026-03-08,Carioca 2026,Final,Fluminense 0x0 Flamengo (pên. 4-5),Flamengo,Fluminense,0 x 0,"[{'m': 'Fluminense', 'gm': 0, 'gv': 0, 'v': 'Flamengo', 'pen': '4-5'}]",pênaltis,4.5
+Flamengo x Fluminense,2025-03-16,Carioca 2025,Final,Fluminense 1x2 Flamengo / Flamengo 0x0 Fluminense,Flamengo,Fluminense,2 x 1,"[{'m': 'Fluminense', 'gm': 1, 'gv': 2, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 0, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",agregado,4.5
+Flamengo x Fluminense,2024-03-16,Carioca 2024,Semifinal,Fluminense 0x2 Flamengo / Flamengo 0x0 Fluminense,Flamengo,Fluminense,2 x 0,"[{'m': 'Fluminense', 'gm': 0, 'gv': 2, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 0, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",agregado,3.0
+Flamengo x Fluminense,2023-06-01,Copa do Brasil 2023,Oitavas,Fluminense 0x0 Flamengo / Flamengo 2x0 Fluminense,Flamengo,Fluminense,2 x 0,"[{'m': 'Fluminense', 'gm': 0, 'gv': 0, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",agregado,5.0
+Flamengo x Fluminense,2023-04-09,Carioca 2023,Final,Flamengo 2x0 Fluminense / Fluminense 4x1 Flamengo,Fluminense,Flamengo,4 x 3,"[{'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 4, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",agregado,3.75
+Flamengo x Fluminense,2022-04-02,Carioca 2022,Final,Flamengo 0x2 Fluminense / Fluminense 1x1 Flamengo,Fluminense,Flamengo,3 x 1,"[{'m': 'Flamengo', 'gm': 0, 'gv': 2, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",agregado,3.0
+Flamengo x Fluminense,2021-05-22,Carioca 2021,Final,Fluminense 1x1 Flamengo / Flamengo 3x1 Fluminense,Flamengo,Fluminense,4 x 2,"[{'m': 'Fluminense', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 3, 'gv': 1, 'v': 'Fluminense', 'pen': ''}]",agregado,3.0
+Flamengo x Botafogo,2026-02-15,Carioca 2026,Quartas,Botafogo 1x2 Flamengo,Flamengo,Botafogo,2 x 1,"[{'m': 'Botafogo', 'gm': 1, 'gv': 2, 'v': 'Flamengo', 'pen': ''}]",jogo,3.6
+Flamengo x Botafogo,2025-02-02,Supercopa 2025,Final,Botafogo 1x3 Flamengo,Flamengo,Botafogo,3 x 1,"[{'m': 'Botafogo', 'gm': 1, 'gv': 3, 'v': 'Flamengo', 'pen': ''}]",jogo,4.5
+Flamengo x Botafogo,2018-03-28,Carioca 2018,Semifinal,Flamengo 0x1 Botafogo,Botafogo,Flamengo,1 x 0,"[{'m': 'Flamengo', 'gm': 0, 'gv': 1, 'v': 'Botafogo', 'pen': ''}]",jogo,2.4
+Flamengo x Botafogo,2018-02-10,Carioca 2018,Semifinal,Flamengo 3x1 Botafogo,Flamengo,Botafogo,3 x 1,"[{'m': 'Flamengo', 'gm': 3, 'gv': 1, 'v': 'Botafogo', 'pen': ''}]",jogo,2.4
+Flamengo x Botafogo,2017-08-23,Copa do Brasil 2017,Semifinal,Botafogo 0x0 Flamengo / Flamengo 1x0 Botafogo,Flamengo,Botafogo,1 x 0,"[{'m': 'Botafogo', 'gm': 0, 'gv': 0, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",agregado,4.0
+Fluminense x Botafogo,2022-03-27,Carioca 2022,Semifinal,Botafogo 0x1 Fluminense / Fluminense 1x2 Botafogo,Fluminense,Botafogo,2 x 2,"[{'m': 'Botafogo', 'gm': 0, 'gv': 1, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 1, 'gv': 2, 'v': 'Botafogo', 'pen': ''}]",vantagem,3.0
+Fluminense x Botafogo,2020-07-05,Carioca 2020,Semifinal,Fluminense 0x0 Botafogo,Fluminense,Botafogo,0 x 0,"[{'m': 'Fluminense', 'gm': 0, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",vantagem,2.4
+Fluminense x Botafogo,2018-03-25,Carioca 2018,Final de turno,Fluminense 3x0 Botafogo,Fluminense,Botafogo,3 x 0,"[{'m': 'Fluminense', 'gm': 3, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",jogo,2.4
+Fluminense x Vasco,2026-08-05,Copa do Brasil 2026,Oitavas,Vasco 0x0 Fluminense / Fluminense 1x3 Vasco,Vasco,Fluminense,3 x 1,"[{'m': 'Vasco', 'gm': 0, 'gv': 0, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 1, 'gv': 3, 'v': 'Vasco', 'pen': ''}]",agregado,6.0
+Fluminense x Vasco,2026-03-01,Carioca 2026,Semifinal,Vasco 0x1 Fluminense / Fluminense 1x1 Vasco,Fluminense,Vasco,2 x 1,"[{'m': 'Vasco', 'gm': 0, 'gv': 1, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 1, 'gv': 1, 'v': 'Vasco', 'pen': ''}]",agregado,3.6
+Fluminense x Vasco,2025-12-14,Copa do Brasil 2025,Semifinal,Vasco 2x1 Fluminense / Fluminense 1x0 Vasco (pên. 3-4),Vasco,Fluminense,2 x 2,"[{'m': 'Vasco', 'gm': 2, 'gv': 1, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 1, 'gv': 0, 'v': 'Vasco', 'pen': '3-4'}]",pênaltis,6.0
+Fluminense x Vasco,2019-02-17,Carioca 2019,Final de turno,Vasco 1x0 Fluminense,Vasco,Fluminense,1 x 0,"[{'m': 'Vasco', 'gm': 1, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",jogo,2.4
+Fluminense x Vasco,2018-03-29,Carioca 2018,Semifinal,Fluminense 2x3 Vasco,Vasco,Fluminense,3 x 2,"[{'m': 'Fluminense', 'gm': 2, 'gv': 3, 'v': 'Vasco', 'pen': ''}]",jogo,2.4
+Vasco x Botafogo,2025-09-11,Copa do Brasil 2025,Quartas,Vasco 1x1 Botafogo / Botafogo 1x1 Vasco (pên. 3-5),Vasco,Botafogo,2 x 2,"[{'m': 'Vasco', 'gm': 1, 'gv': 1, 'v': 'Botafogo', 'pen': ''}, {'m': 'Botafogo', 'gm': 1, 'gv': 1, 'v': 'Vasco', 'pen': '3-5'}]",pênaltis,6.0
+Vasco x Botafogo,2021-05-22,Carioca 2021,Taça Rio (consolação),Botafogo 0x1 Vasco / Vasco 0x1 Botafogo (pên. 3-0),Vasco,Botafogo,1 x 1,"[{'m': 'Botafogo', 'gm': 0, 'gv': 1, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 0, 'gv': 1, 'v': 'Botafogo', 'pen': '3-0'}]",pênaltis,2.5
+Vasco x Botafogo,2020-09-23,Copa do Brasil 2020,4ª fase,Botafogo 1x0 Vasco / Vasco 0x0 Botafogo,Botafogo,Vasco,1 x 0,"[{'m': 'Botafogo', 'gm': 1, 'gv': 0, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 0, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",agregado,4.0
+Corinthians x Palmeiras,2025-08-06,Copa do Brasil 2025,Oitavas,Corinthians 1x0 Palmeiras / Palmeiras 0x2 Corinthians,Corinthians,Palmeiras,3 x 0,"[{'m': 'Corinthians', 'gm': 1, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 0, 'gv': 2, 'v': 'Corinthians', 'pen': ''}]",agregado,6.0
+Corinthians x Palmeiras,2025-03-27,Paulistão 2025,Final,Palmeiras 0x1 Corinthians / Corinthians 0x0 Palmeiras,Corinthians,Palmeiras,1 x 0,"[{'m': 'Palmeiras', 'gm': 0, 'gv': 1, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}]",agregado,4.5
+Corinthians x Palmeiras,2021-05-16,Paulistão 2021,Semifinal,Corinthians 0x2 Palmeiras,Palmeiras,Corinthians,2 x 0,"[{'m': 'Corinthians', 'gm': 0, 'gv': 2, 'v': 'Palmeiras', 'pen': ''}]",jogo,2.4
+Corinthians x Palmeiras,2020-08-08,Paulistão 2020,Final,Corinthians 0x0 Palmeiras / Palmeiras 1x1 Corinthians (pên. 4-3),Palmeiras,Corinthians,1 x 1,"[{'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 1, 'gv': 1, 'v': 'Corinthians', 'pen': '4-3'}]",pênaltis,3.0
+Corinthians x São Paulo,2023-08-16,Copa do Brasil 2023,Semifinal,Corinthians 2x1 São Paulo / São Paulo 2x0 Corinthians,São Paulo,Corinthians,3 x 2,"[{'m': 'Corinthians', 'gm': 2, 'gv': 1, 'v': 'São Paulo', 'pen': ''}, {'m': 'São Paulo', 'gm': 2, 'gv': 0, 'v': 'Corinthians', 'pen': ''}]",agregado,5.0
+Corinthians x São Paulo,2022-03-27,Paulistão 2022,Semifinal,São Paulo 2x1 Corinthians,São Paulo,Corinthians,2 x 1,"[{'m': 'São Paulo', 'gm': 2, 'gv': 1, 'v': 'Corinthians', 'pen': ''}]",jogo,3.0
+Corinthians x São Paulo,2019-04-21,Paulistão 2019,Final,São Paulo 0x0 Corinthians / Corinthians 2x1 São Paulo,Corinthians,São Paulo,2 x 1,"[{'m': 'São Paulo', 'gm': 0, 'gv': 0, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 2, 'gv': 1, 'v': 'São Paulo', 'pen': ''}]",agregado,3.0
+Corinthians x Santos,2025-03-09,Paulistão 2025,Semifinal,Corinthians 2x1 Santos,Corinthians,Santos,2 x 1,"[{'m': 'Corinthians', 'gm': 2, 'gv': 1, 'v': 'Santos', 'pen': ''}]",jogo,3.6
+Corinthians x Santos,2022-07-13,Copa do Brasil 2022,Oitavas,Corinthians 4x0 Santos / Santos 1x0 Corinthians,Corinthians,Santos,4 x 1,"[{'m': 'Corinthians', 'gm': 4, 'gv': 0, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 1, 'gv': 0, 'v': 'Corinthians', 'pen': ''}]",agregado,5.0
+Corinthians x Santos,2019-04-08,Paulistão 2019,Semifinal,Corinthians 2x1 Santos / Santos 1x0 Corinthians (pên. 6-7),Corinthians,Santos,2 x 2,"[{'m': 'Corinthians', 'gm': 2, 'gv': 1, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 1, 'gv': 0, 'v': 'Corinthians', 'pen': '6-7'}]",pênaltis,2.4
+Palmeiras x São Paulo,2026-03-01,Paulistão 2026,Semifinal,Palmeiras 2x1 São Paulo,Palmeiras,São Paulo,2 x 1,"[{'m': 'Palmeiras', 'gm': 2, 'gv': 1, 'v': 'São Paulo', 'pen': ''}]",jogo,3.6
+Palmeiras x São Paulo,2025-03-10,Paulistão 2025,Semifinal,Palmeiras 1x0 São Paulo,Palmeiras,São Paulo,1 x 0,"[{'m': 'Palmeiras', 'gm': 1, 'gv': 0, 'v': 'São Paulo', 'pen': ''}]",jogo,3.6
+Palmeiras x São Paulo,2024-02-04,Supercopa 2024,Final,Palmeiras 0x0 São Paulo (pên. 2-4),São Paulo,Palmeiras,0 x 0,"[{'m': 'Palmeiras', 'gm': 0, 'gv': 0, 'v': 'São Paulo', 'pen': '2-4'}]",pênaltis,3.75
+Palmeiras x São Paulo,2023-07-13,Copa do Brasil 2023,Quartas,São Paulo 1x0 Palmeiras / Palmeiras 1x2 São Paulo,São Paulo,Palmeiras,3 x 1,"[{'m': 'São Paulo', 'gm': 1, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 1, 'gv': 2, 'v': 'São Paulo', 'pen': ''}]",agregado,5.0
+Palmeiras x São Paulo,2022-07-14,Copa do Brasil 2022,Oitavas,São Paulo 1x0 Palmeiras / Palmeiras 2x1 São Paulo (pên. 3-4),São Paulo,Palmeiras,2 x 2,"[{'m': 'São Paulo', 'gm': 1, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 2, 'gv': 1, 'v': 'São Paulo', 'pen': '3-4'}]",pênaltis,5.0
+Palmeiras x São Paulo,2022-04-03,Paulistão 2022,Final,São Paulo 3x1 Palmeiras / Palmeiras 4x0 São Paulo,Palmeiras,São Paulo,5 x 3,"[{'m': 'São Paulo', 'gm': 3, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 4, 'gv': 0, 'v': 'São Paulo', 'pen': ''}]",agregado,3.0
+Palmeiras x São Paulo,2021-08-17,Libertadores 2021,Quartas,São Paulo 1x1 Palmeiras / Palmeiras 3x0 São Paulo,Palmeiras,São Paulo,4 x 1,"[{'m': 'São Paulo', 'gm': 1, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 3, 'gv': 0, 'v': 'São Paulo', 'pen': ''}]",agregado,4.0
+Palmeiras x São Paulo,2021-05-23,Paulistão 2021,Final,Palmeiras 0x0 São Paulo / São Paulo 2x0 Palmeiras,São Paulo,Palmeiras,2 x 0,"[{'m': 'Palmeiras', 'gm': 0, 'gv': 0, 'v': 'São Paulo', 'pen': ''}, {'m': 'São Paulo', 'gm': 2, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}]",agregado,3.0
+Palmeiras x Santos,2026-09-02,Copa do Brasil 2026,Quartas,Palmeiras 3x0 Santos / Santos 0x0 Palmeiras,Palmeiras,Santos,3 x 0,"[{'m': 'Palmeiras', 'gm': 3, 'gv': 0, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 0, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}]",agregado,6.0
+Palmeiras x Santos,2024-04-07,Paulistão 2024,Final,Santos 1x0 Palmeiras / Palmeiras 2x0 Santos,Palmeiras,Santos,2 x 1,"[{'m': 'Santos', 'gm': 1, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 2, 'gv': 0, 'v': 'Santos', 'pen': ''}]",agregado,4.5
+Palmeiras x Santos,2021-01-30,Libertadores 2020,Final,Palmeiras 1x0 Santos,Palmeiras,Santos,1 x 0,"[{'m': 'Palmeiras', 'gm': 1, 'gv': 0, 'v': 'Santos', 'pen': ''}]",jogo,5.0
+Palmeiras x Santos,2018-03-27,Paulistão 2018,Semifinal,Santos 0x1 Palmeiras / Palmeiras 1x2 Santos (pên. 5-3),Palmeiras,Santos,2 x 2,"[{'m': 'Santos', 'gm': 0, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 1, 'gv': 2, 'v': 'Santos', 'pen': '5-3'}]",pênaltis,2.4
+Grêmio x Internacional,2026-09-03,Copa do Brasil 2026,Quartas,Internacional 0x0 Grêmio / Grêmio 3x1 Internacional,Grêmio,Internacional,3 x 1,"[{'m': 'Internacional', 'gm': 0, 'gv': 0, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 3, 'gv': 1, 'v': 'Internacional', 'pen': ''}]",agregado,6.0
+Grêmio x Internacional,2026-03-08,Gauchão 2026,Final,Grêmio 3x0 Internacional / Internacional 1x1 Grêmio,Grêmio,Internacional,4 x 1,"[{'m': 'Grêmio', 'gm': 3, 'gv': 0, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 1, 'gv': 1, 'v': 'Grêmio', 'pen': ''}]",agregado,4.5
+Grêmio x Internacional,2025-03-16,Gauchão 2025,Final,Grêmio 0x2 Internacional / Internacional 1x1 Grêmio,Internacional,Grêmio,3 x 1,"[{'m': 'Grêmio', 'gm': 0, 'gv': 2, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 1, 'gv': 1, 'v': 'Grêmio', 'pen': ''}]",agregado,4.5
+Grêmio x Internacional,2022-03-23,Gauchão 2022,Semifinal,Internacional 0x3 Grêmio / Grêmio 0x1 Internacional,Grêmio,Internacional,3 x 1,"[{'m': 'Internacional', 'gm': 0, 'gv': 3, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 0, 'gv': 1, 'v': 'Internacional', 'pen': ''}]",agregado,3.0
+Grêmio x Internacional,2021-05-23,Gauchão 2021,Final,Internacional 1x2 Grêmio / Grêmio 1x1 Internacional,Grêmio,Internacional,3 x 2,"[{'m': 'Internacional', 'gm': 1, 'gv': 2, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 1, 'gv': 1, 'v': 'Internacional', 'pen': ''}]",agregado,3.0
+Grêmio x Internacional,2020-09-23,Libertadores 2020,E,Internacional 0x1 Grêmio,Grêmio,Internacional,1 x 0,"[{'m': 'Internacional', 'gm': 0, 'gv': 1, 'v': 'Grêmio', 'pen': ''}]",jogo,4.0
+Grêmio x Internacional,2020-08-05,Gauchão 2020,Final de turno,Grêmio 2x0 Internacional,Grêmio,Internacional,2 x 0,"[{'m': 'Grêmio', 'gm': 2, 'gv': 0, 'v': 'Internacional', 'pen': ''}]",jogo,2.4
+Cruzeiro x Atlético-MG,2026-09-01,Copa do Brasil 2026,Quartas,Cruzeiro 1x1 Atlético-MG / Atlético-MG 2x1 Cruzeiro,Atlético-MG,Cruzeiro,3 x 2,"[{'m': 'Cruzeiro', 'gm': 1, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 2, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}]",agregado,6.0
+Cruzeiro x Atlético-MG,2026-03-08,Mineiro 2026,Final,Cruzeiro 1x0 Atlético-MG,Cruzeiro,Atlético-MG,1 x 0,"[{'m': 'Cruzeiro', 'gm': 1, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}]",jogo,4.5
+Cruzeiro x Atlético-MG,2025-09-11,Copa do Brasil 2025,Quartas,Atlético-MG 0x2 Cruzeiro / Cruzeiro 2x0 Atlético-MG,Cruzeiro,Atlético-MG,4 x 0,"[{'m': 'Atlético-MG', 'gm': 0, 'gv': 2, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 2, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}]",agregado,6.0
+Cruzeiro x Atlético-MG,2024-04-07,Mineiro 2024,Final,Atlético-MG 2x2 Cruzeiro / Cruzeiro 1x3 Atlético-MG,Atlético-MG,Cruzeiro,5 x 3,"[{'m': 'Atlético-MG', 'gm': 2, 'gv': 2, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 3, 'v': 'Atlético-MG', 'pen': ''}]",agregado,3.75
+Cruzeiro x Atlético-MG,2022-04-02,Mineiro 2022,Final,Atlético-MG 3x1 Cruzeiro,Atlético-MG,Cruzeiro,3 x 1,"[{'m': 'Atlético-MG', 'gm': 3, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}]",jogo,3.75
+Cruzeiro x Atlético-MG,2019-07-17,Copa do Brasil 2019,Quartas,Cruzeiro 3x0 Atlético-MG / Atlético-MG 2x0 Cruzeiro,Cruzeiro,Atlético-MG,3 x 2,"[{'m': 'Cruzeiro', 'gm': 3, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 2, 'gv': 0, 'v': 'Cruzeiro', 'pen': ''}]",agregado,4.0
+Cruzeiro x Atlético-MG,2019-04-20,Mineiro 2019,Final,Cruzeiro 2x1 Atlético-MG / Atlético-MG 1x1 Cruzeiro,Cruzeiro,Atlético-MG,3 x 2,"[{'m': 'Cruzeiro', 'gm': 2, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 1, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}]",agregado,3.0
+Flamengo x Corinthians,2026-02-01,Supercopa 2026,Final,Flamengo 0x2 Corinthians,Corinthians,Flamengo,2 x 0,"[{'m': 'Flamengo', 'gm': 0, 'gv': 2, 'v': 'Corinthians', 'pen': ''}]",jogo,4.5
+Flamengo x Corinthians,2024-10-20,Copa do Brasil 2024,Semifinal,Flamengo 1x0 Corinthians / Corinthians 0x0 Flamengo,Flamengo,Corinthians,1 x 0,"[{'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Flamengo', 'pen': ''}]",agregado,6.0
+Flamengo x Corinthians,2022-10-19,Copa do Brasil 2022,Final,Corinthians 0x0 Flamengo / Flamengo 1x1 Corinthians (pên. 6-5),Flamengo,Corinthians,1 x 1,"[{'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 1, 'v': 'Corinthians', 'pen': '6-5'}]",pênaltis,6.25
+Flamengo x Corinthians,2022-08-09,Libertadores 2022,Quartas,Corinthians 0x2 Flamengo / Flamengo 1x0 Corinthians,Flamengo,Corinthians,3 x 0,"[{'m': 'Corinthians', 'gm': 0, 'gv': 2, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Corinthians', 'pen': ''}]",agregado,5.0
+Flamengo x Corinthians,2019-06-04,Copa do Brasil 2019,Oitavas,Corinthians 0x1 Flamengo / Flamengo 1x0 Corinthians,Flamengo,Corinthians,2 x 0,"[{'m': 'Corinthians', 'gm': 0, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Corinthians', 'pen': ''}]",agregado,4.0
+Flamengo x Corinthians,2018-09-26,Copa do Brasil 2018,Semifinal,Flamengo 0x0 Corinthians / Corinthians 2x1 Flamengo,Corinthians,Flamengo,2 x 1,"[{'m': 'Flamengo', 'gm': 0, 'gv': 0, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 2, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",agregado,4.0
+Flamengo x Palmeiras,2025-11-29,Libertadores 2025,Final,Palmeiras 0x1 Flamengo,Flamengo,Palmeiras,1 x 0,"[{'m': 'Palmeiras', 'gm': 0, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",jogo,7.5
+Flamengo x Palmeiras,2024-08-07,Copa do Brasil 2024,Oitavas,Flamengo 2x0 Palmeiras / Palmeiras 1x0 Flamengo,Flamengo,Palmeiras,2 x 1,"[{'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 1, 'gv': 0, 'v': 'Flamengo', 'pen': ''}]",agregado,6.0
+Flamengo x Palmeiras,2023-01-28,Supercopa 2023,Final,Palmeiras 4x3 Flamengo,Palmeiras,Flamengo,4 x 3,"[{'m': 'Palmeiras', 'gm': 4, 'gv': 3, 'v': 'Flamengo', 'pen': ''}]",jogo,3.75
+Flamengo x Palmeiras,2021-11-27,Libertadores 2021,Final,Palmeiras 2x1 Flamengo,Palmeiras,Flamengo,2 x 1,"[{'m': 'Palmeiras', 'gm': 2, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",jogo,6.25
+Flamengo x Palmeiras,2021-04-11,Supercopa 2021,Final,Flamengo 2x2 Palmeiras (pên. 6-5),Flamengo,Palmeiras,2 x 2,"[{'m': 'Flamengo', 'gm': 2, 'gv': 2, 'v': 'Palmeiras', 'pen': '6-5'}]",pênaltis,3.75
+Flamengo x São Paulo,2023-09-24,Copa do Brasil 2023,Final,Flamengo 0x1 São Paulo / São Paulo 1x1 Flamengo,São Paulo,Flamengo,2 x 1,"[{'m': 'Flamengo', 'gm': 0, 'gv': 1, 'v': 'São Paulo', 'pen': ''}, {'m': 'São Paulo', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",agregado,7.5
+Flamengo x São Paulo,2022-09-14,Copa do Brasil 2022,Semifinal,São Paulo 1x3 Flamengo / Flamengo 1x0 São Paulo,Flamengo,São Paulo,4 x 1,"[{'m': 'São Paulo', 'gm': 1, 'gv': 3, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'São Paulo', 'pen': ''}]",agregado,5.0
+Flamengo x São Paulo,2020-11-18,Copa do Brasil 2020,Quartas,Flamengo 1x2 São Paulo / São Paulo 3x0 Flamengo,São Paulo,Flamengo,5 x 1,"[{'m': 'Flamengo', 'gm': 1, 'gv': 2, 'v': 'São Paulo', 'pen': ''}, {'m': 'São Paulo', 'gm': 3, 'gv': 0, 'v': 'Flamengo', 'pen': ''}]",agregado,5.0
+Flamengo x Santos,2017-07-26,Copa do Brasil 2017,Quartas,Flamengo 2x0 Santos / Santos 4x2 Flamengo,Flamengo,Santos,4 x 4,"[{'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 4, 'gv': 2, 'v': 'Flamengo', 'pen': ''}]",gol fora,5.0
+Flamengo x Grêmio,2023-08-16,Copa do Brasil 2023,Semifinal,Grêmio 0x2 Flamengo / Flamengo 1x0 Grêmio,Flamengo,Grêmio,3 x 0,"[{'m': 'Grêmio', 'gm': 0, 'gv': 2, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Grêmio', 'pen': ''}]",agregado,6.0
+Flamengo x Grêmio,2021-09-15,Copa do Brasil 2021,Quartas,Grêmio 0x4 Flamengo / Flamengo 2x0 Grêmio,Flamengo,Grêmio,6 x 0,"[{'m': 'Grêmio', 'gm': 0, 'gv': 4, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Grêmio', 'pen': ''}]",agregado,5.0
+Flamengo x Grêmio,2019-10-23,Libertadores 2019,Semifinal,Grêmio 1x1 Flamengo / Flamengo 5x0 Grêmio,Flamengo,Grêmio,6 x 1,"[{'m': 'Grêmio', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 5, 'gv': 0, 'v': 'Grêmio', 'pen': ''}]",agregado,5.0
+Flamengo x Grêmio,2018-08-15,Copa do Brasil 2018,Quartas,Grêmio 1x1 Flamengo / Flamengo 1x0 Grêmio,Flamengo,Grêmio,2 x 1,"[{'m': 'Grêmio', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Grêmio', 'pen': ''}]",agregado,4.0
+Flamengo x Internacional,2025-08-20,Libertadores 2025,Oitavas,Flamengo 1x0 Internacional / Internacional 0x2 Flamengo,Flamengo,Internacional,3 x 0,"[{'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 0, 'gv': 2, 'v': 'Flamengo', 'pen': ''}]",agregado,6.0
+Flamengo x Internacional,2019-08-28,Libertadores 2019,Quartas,Flamengo 2x0 Internacional / Internacional 1x1 Flamengo,Flamengo,Internacional,3 x 1,"[{'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",agregado,5.0
+Flamengo x Cruzeiro,2026-08-19,Libertadores 2026,Oitavas,Cruzeiro 1x1 Flamengo / Flamengo 2x1 Cruzeiro,Flamengo,Cruzeiro,3 x 2,"[{'m': 'Cruzeiro', 'gm': 1, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 2, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}]",agregado,6.0
+Flamengo x Cruzeiro,2018-08-29,Libertadores 2018,Oitavas,Flamengo 0x2 Cruzeiro / Cruzeiro 0x1 Flamengo,Cruzeiro,Flamengo,2 x 1,"[{'m': 'Flamengo', 'gm': 0, 'gv': 2, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 0, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",agregado,5.0
+Flamengo x Cruzeiro,2017-09-27,Copa do Brasil 2017,Final,Flamengo 1x1 Cruzeiro / Cruzeiro 0x0 Flamengo (pên. 5-3),Cruzeiro,Flamengo,1 x 1,"[{'m': 'Flamengo', 'gm': 1, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 0, 'gv': 0, 'v': 'Flamengo', 'pen': '5-3'}]",pênaltis,6.25
+Flamengo x Cruzeiro,2013-08-28,Copa do Brasil 2013,Oitavas,Cruzeiro 2x1 Flamengo / Flamengo 1x0 Cruzeiro,Flamengo,Cruzeiro,2 x 2,"[{'m': 'Cruzeiro', 'gm': 2, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 1, 'gv': 0, 'v': 'Cruzeiro', 'pen': ''}]",gol fora,4.0
+Flamengo x Atlético-MG,2025-08-06,Copa do Brasil 2025,Oitavas,Flamengo 0x1 Atlético-MG / Atlético-MG 0x1 Flamengo (pên. 4-3),Atlético-MG,Flamengo,1 x 1,"[{'m': 'Flamengo', 'gm': 0, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 0, 'gv': 1, 'v': 'Flamengo', 'pen': '4-3'}]",pênaltis,6.0
+Flamengo x Atlético-MG,2024-11-10,Copa do Brasil 2024,Final,Flamengo 3x1 Atlético-MG / Atlético-MG 0x1 Flamengo,Flamengo,Atlético-MG,4 x 1,"[{'m': 'Flamengo', 'gm': 3, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 0, 'gv': 1, 'v': 'Flamengo', 'pen': ''}]",agregado,7.5
+Flamengo x Atlético-MG,2022-07-13,Copa do Brasil 2022,Oitavas,Atlético-MG 2x1 Flamengo / Flamengo 2x0 Atlético-MG,Flamengo,Atlético-MG,3 x 2,"[{'m': 'Atlético-MG', 'gm': 2, 'gv': 1, 'v': 'Flamengo', 'pen': ''}, {'m': 'Flamengo', 'gm': 2, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}]",agregado,5.0
+Flamengo x Atlético-MG,2022-02-20,Supercopa 2022,Final,Atlético-MG 2x2 Flamengo (pên. 8-7),Atlético-MG,Flamengo,2 x 2,"[{'m': 'Atlético-MG', 'gm': 2, 'gv': 2, 'v': 'Flamengo', 'pen': '8-7'}]",pênaltis,3.75
+Fluminense x Corinthians,2022-09-15,Copa do Brasil 2022,Semifinal,Fluminense 2x2 Corinthians / Corinthians 3x0 Fluminense,Corinthians,Fluminense,5 x 2,"[{'m': 'Fluminense', 'gm': 2, 'gv': 2, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 3, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",agregado,6.0
+Fluminense x Corinthians,2019-08-29,Sul-Americana 2019,Quartas,Corinthians 0x0 Fluminense / Fluminense 1x1 Corinthians,Corinthians,Fluminense,1 x 1,"[{'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 1, 'gv': 1, 'v': 'Corinthians', 'pen': ''}]",gol fora,5.0
+Fluminense x Corinthians,2016-09-21,Copa do Brasil 2016,Oitavas,Fluminense 1x1 Corinthians / Corinthians 1x0 Fluminense,Corinthians,Fluminense,2 x 1,"[{'m': 'Fluminense', 'gm': 1, 'gv': 1, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 1, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",agregado,4.0
+Fluminense x Palmeiras,2026-10-21,Libertadores 2026,Semifinal,Fluminense 1x2 Palmeiras / Palmeiras 0x1 Fluminense (pên. 5-3),Palmeiras,Fluminense,2 x 2,"[{'m': 'Fluminense', 'gm': 1, 'gv': 2, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 0, 'gv': 1, 'v': 'Fluminense', 'pen': '5-3'}]",pênaltis,6.0
+Fluminense x Palmeiras,2015-10-28,Copa do Brasil 2015,Semifinal,Fluminense 2x1 Palmeiras / Palmeiras 2x1 Fluminense (pên. 4-1),Palmeiras,Fluminense,3 x 3,"[{'m': 'Fluminense', 'gm': 2, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 2, 'gv': 1, 'v': 'Fluminense', 'pen': '4-1'}]",pênaltis,4.0
+Fluminense x Grêmio,2024-08-20,Libertadores 2024,Oitavas,Grêmio 2x1 Fluminense / Fluminense 2x1 Grêmio (pên. 4-2),Fluminense,Grêmio,3 x 3,"[{'m': 'Grêmio', 'gm': 2, 'gv': 1, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 2, 'gv': 1, 'v': 'Grêmio', 'pen': '4-2'}]",pênaltis,6.0
+Fluminense x Grêmio,2017-05-31,Copa do Brasil 2017,Oitavas,Grêmio 3x1 Fluminense / Fluminense 0x2 Grêmio,Grêmio,Fluminense,5 x 1,"[{'m': 'Grêmio', 'gm': 3, 'gv': 1, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 0, 'gv': 2, 'v': 'Grêmio', 'pen': ''}]",agregado,4.0
+Fluminense x Grêmio,2015-09-30,Copa do Brasil 2015,Quartas,Fluminense 0x0 Grêmio / Grêmio 1x1 Fluminense,Fluminense,Grêmio,1 x 1,"[{'m': 'Fluminense', 'gm': 0, 'gv': 0, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 1, 'gv': 1, 'v': 'Fluminense', 'pen': ''}]",gol fora,4.0
+Fluminense x Internacional,2025-08-06,Copa do Brasil 2025,Oitavas,Internacional 1x2 Fluminense / Fluminense 1x1 Internacional,Fluminense,Internacional,3 x 2,"[{'m': 'Internacional', 'gm': 1, 'gv': 2, 'v': 'Fluminense', 'pen': ''}, {'m': 'Fluminense', 'gm': 1, 'gv': 1, 'v': 'Internacional', 'pen': ''}]",agregado,6.0
+Fluminense x Internacional,2023-10-04,Libertadores 2023,Semifinal,Fluminense 2x2 Internacional / Internacional 1x2 Fluminense,Fluminense,Internacional,4 x 3,"[{'m': 'Fluminense', 'gm': 2, 'gv': 2, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 1, 'gv': 2, 'v': 'Fluminense', 'pen': ''}]",agregado,6.0
+Fluminense x Internacional,2016-03-23,Primeira Liga 2016,Semifinal,Fluminense 2x2 Internacional (pên. 3-2),Fluminense,Internacional,2 x 2,"[{'m': 'Fluminense', 'gm': 2, 'gv': 2, 'v': 'Internacional', 'pen': '3-2'}]",pênaltis,2.4
+Fluminense x Cruzeiro,2022-07-12,Copa do Brasil 2022,Oitavas,Fluminense 2x1 Cruzeiro / Cruzeiro 0x3 Fluminense,Fluminense,Cruzeiro,5 x 1,"[{'m': 'Fluminense', 'gm': 2, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 0, 'gv': 3, 'v': 'Fluminense', 'pen': ''}]",agregado,6.0
+Fluminense x Cruzeiro,2019-06-05,Copa do Brasil 2019,Oitavas,Fluminense 1x1 Cruzeiro / Cruzeiro 2x2 Fluminense (pên. 3-1),Cruzeiro,Fluminense,3 x 3,"[{'m': 'Fluminense', 'gm': 1, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 2, 'gv': 2, 'v': 'Fluminense', 'pen': '3-1'}]",pênaltis,5.0
+Fluminense x Atlético-MG,2024-09-25,Libertadores 2024,Quartas,Fluminense 1x0 Atlético-MG / Atlético-MG 2x0 Fluminense,Atlético-MG,Fluminense,2 x 1,"[{'m': 'Fluminense', 'gm': 1, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 2, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",agregado,6.0
+Fluminense x Atlético-MG,2021-09-15,Copa do Brasil 2021,Quartas,Fluminense 1x2 Atlético-MG / Atlético-MG 1x0 Fluminense,Atlético-MG,Fluminense,3 x 1,"[{'m': 'Fluminense', 'gm': 1, 'gv': 2, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 1, 'gv': 0, 'v': 'Fluminense', 'pen': ''}]",agregado,5.0
+Vasco x Corinthians,2025-12-21,Copa do Brasil 2025,Final,Corinthians 0x0 Vasco / Vasco 1x2 Corinthians,Corinthians,Vasco,2 x 1,"[{'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 1, 'gv': 2, 'v': 'Corinthians', 'pen': ''}]",agregado,7.5
+Vasco x Corinthians,2012-05-23,Libertadores 2012,Quartas,Vasco 0x0 Corinthians / Corinthians 1x0 Vasco,Corinthians,Vasco,1 x 0,"[{'m': 'Vasco', 'gm': 0, 'gv': 0, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 1, 'gv': 0, 'v': 'Vasco', 'pen': ''}]",agregado,4.0
+Vasco x Palmeiras,2026-11-08,Copa do Brasil 2026,Semifinal,Palmeiras 1x0 Vasco / Vasco 2x1 Palmeiras (pên. 4-5),Palmeiras,Vasco,2 x 2,"[{'m': 'Palmeiras', 'gm': 1, 'gv': 0, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 2, 'gv': 1, 'v': 'Palmeiras', 'pen': '4-5'}]",pênaltis,6.0
+Vasco x Palmeiras,2011-08-25,Sul-Americana 2011,2ª fase,Vasco 2x0 Palmeiras / Palmeiras 3x1 Vasco,Vasco,Palmeiras,3 x 3,"[{'m': 'Vasco', 'gm': 2, 'gv': 0, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 3, 'gv': 1, 'v': 'Vasco', 'pen': ''}]",gol fora,4.0
+Vasco x Palmeiras,2008-09-17,Sul-Americana 2008,1ª fase,Vasco 3x1 Palmeiras / Palmeiras 3x0 Vasco,Palmeiras,Vasco,4 x 3,"[{'m': 'Vasco', 'gm': 3, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 3, 'gv': 0, 'v': 'Vasco', 'pen': ''}]",agregado,4.0
+Vasco x São Paulo,2021-08-04,Copa do Brasil 2021,Oitavas,São Paulo 2x0 Vasco / Vasco 1x2 São Paulo,São Paulo,Vasco,4 x 1,"[{'m': 'São Paulo', 'gm': 2, 'gv': 0, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 1, 'gv': 2, 'v': 'São Paulo', 'pen': ''}]",agregado,6.0
+Vasco x São Paulo,2015-09-30,Copa do Brasil 2015,Quartas,São Paulo 3x0 Vasco / Vasco 1x1 São Paulo,São Paulo,Vasco,4 x 1,"[{'m': 'São Paulo', 'gm': 3, 'gv': 0, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 1, 'gv': 1, 'v': 'São Paulo', 'pen': ''}]",agregado,5.0
+Vasco x Santos,2019-04-24,Copa do Brasil 2019,4ª fase,Santos 2x0 Vasco / Vasco 2x1 Santos,Santos,Vasco,3 x 2,"[{'m': 'Santos', 'gm': 2, 'gv': 0, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 2, 'gv': 1, 'v': 'Santos', 'pen': ''}]",agregado,5.0
+Vasco x Santos,2016-09-21,Copa do Brasil 2016,Oitavas,Santos 3x1 Vasco / Vasco 2x2 Santos,Santos,Vasco,5 x 3,"[{'m': 'Santos', 'gm': 3, 'gv': 1, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 2, 'gv': 2, 'v': 'Santos', 'pen': ''}]",agregado,5.0
+Vasco x Atlético-MG,2024-10-19,Copa do Brasil 2024,Semifinal,Atlético-MG 2x1 Vasco / Vasco 1x1 Atlético-MG,Atlético-MG,Vasco,3 x 2,"[{'m': 'Atlético-MG', 'gm': 2, 'gv': 1, 'v': 'Vasco', 'pen': ''}, {'m': 'Vasco', 'gm': 1, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}]",agregado,6.0
+Botafogo x Palmeiras,2025-06-28,Mundial de Clubes 2025,Oitavas,Palmeiras 1x0 Botafogo,Palmeiras,Botafogo,1 x 0,"[{'m': 'Palmeiras', 'gm': 1, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",jogo,6.0
+Botafogo x Palmeiras,2024-08-21,Libertadores 2024,Oitavas,Botafogo 2x1 Palmeiras / Palmeiras 2x2 Botafogo,Botafogo,Palmeiras,4 x 3,"[{'m': 'Botafogo', 'gm': 2, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 2, 'gv': 2, 'v': 'Botafogo', 'pen': ''}]",agregado,6.0
+Botafogo x Palmeiras,2012-08-22,Sul-Americana 2012,2ª fase,Palmeiras 2x0 Botafogo / Botafogo 3x1 Palmeiras,Palmeiras,Botafogo,3 x 3,"[{'m': 'Palmeiras', 'gm': 2, 'gv': 0, 'v': 'Botafogo', 'pen': ''}, {'m': 'Botafogo', 'gm': 3, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}]",gol fora,4.0
+Botafogo x São Paulo,2024-09-25,Libertadores 2024,Quartas,Botafogo 0x0 São Paulo / São Paulo 1x1 Botafogo (pên. 4-5),Botafogo,São Paulo,1 x 1,"[{'m': 'Botafogo', 'gm': 0, 'gv': 0, 'v': 'São Paulo', 'pen': ''}, {'m': 'São Paulo', 'gm': 1, 'gv': 1, 'v': 'Botafogo', 'pen': '4-5'}]",pênaltis,6.0
+Botafogo x Santos,2014-10-16,Copa do Brasil 2014,Quartas,Botafogo 2x3 Santos / Santos 5x0 Botafogo,Santos,Botafogo,8 x 2,"[{'m': 'Botafogo', 'gm': 2, 'gv': 3, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 5, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",agregado,5.0
+Botafogo x Grêmio,2017-09-20,Libertadores 2017,Quartas,Botafogo 0x0 Grêmio / Grêmio 1x0 Botafogo,Grêmio,Botafogo,1 x 0,"[{'m': 'Botafogo', 'gm': 0, 'gv': 0, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 1, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",agregado,5.0
+Botafogo x Cruzeiro,2016-09-21,Copa do Brasil 2016,Oitavas,Botafogo 2x5 Cruzeiro / Cruzeiro 1x0 Botafogo,Cruzeiro,Botafogo,6 x 2,"[{'m': 'Botafogo', 'gm': 2, 'gv': 5, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",agregado,5.0
+Botafogo x Atlético-MG,2024-11-30,Libertadores 2024,Final,Atlético-MG 1x3 Botafogo,Botafogo,Atlético-MG,3 x 1,"[{'m': 'Atlético-MG', 'gm': 1, 'gv': 3, 'v': 'Botafogo', 'pen': ''}]",jogo,7.5
+Botafogo x Atlético-MG,2019-07-31,Sul-Americana 2019,Oitavas,Botafogo 0x1 Atlético-MG / Atlético-MG 2x0 Botafogo,Atlético-MG,Botafogo,3 x 0,"[{'m': 'Botafogo', 'gm': 0, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 2, 'gv': 0, 'v': 'Botafogo', 'pen': ''}]",agregado,5.0
+Botafogo x Atlético-MG,2017-07-26,Copa do Brasil 2017,Quartas,Atlético-MG 1x0 Botafogo / Botafogo 3x0 Atlético-MG,Botafogo,Atlético-MG,3 x 1,"[{'m': 'Atlético-MG', 'gm': 1, 'gv': 0, 'v': 'Botafogo', 'pen': ''}, {'m': 'Botafogo', 'gm': 3, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}]",agregado,4.0
+Botafogo x Atlético-MG,2013-08-28,Copa do Brasil 2013,Oitavas,Botafogo 4x2 Atlético-MG / Atlético-MG 2x2 Botafogo,Botafogo,Atlético-MG,6 x 4,"[{'m': 'Botafogo', 'gm': 4, 'gv': 2, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 2, 'gv': 2, 'v': 'Botafogo', 'pen': ''}]",agregado,4.0
+Corinthians x Grêmio,2024-08-07,Copa do Brasil 2024,Oitavas,Corinthians 0x0 Grêmio / Grêmio 0x0 Corinthians (pên. 1-3),Corinthians,Grêmio,0 x 0,"[{'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 0, 'gv': 0, 'v': 'Corinthians', 'pen': '1-3'}]",pênaltis,6.0
+Corinthians x Grêmio,2013-10-23,Copa do Brasil 2013,Quartas,Corinthians 0x0 Grêmio / Grêmio 0x0 Corinthians (pên. 3-2),Grêmio,Corinthians,0 x 0,"[{'m': 'Corinthians', 'gm': 0, 'gv': 0, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 0, 'gv': 0, 'v': 'Corinthians', 'pen': '3-2'}]",pênaltis,4.0
+Corinthians x Internacional,2026-08-06,Copa do Brasil 2026,Oitavas,Internacional 2x0 Corinthians / Corinthians 2x1 Internacional,Internacional,Corinthians,3 x 2,"[{'m': 'Internacional', 'gm': 2, 'gv': 0, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 2, 'gv': 1, 'v': 'Internacional', 'pen': ''}]",agregado,6.0
+Corinthians x Internacional,2017-04-19,Copa do Brasil 2017,4ª fase,Internacional 1x1 Corinthians / Corinthians 1x1 Internacional (pên. 3-4),Internacional,Corinthians,2 x 2,"[{'m': 'Internacional', 'gm': 1, 'gv': 1, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 1, 'gv': 1, 'v': 'Internacional', 'pen': '3-4'}]",pênaltis,4.0
+Corinthians x Cruzeiro,2025-12-14,Copa do Brasil 2025,Semifinal,Cruzeiro 0x1 Corinthians / Corinthians 1x2 Cruzeiro (pên. 5-4),Corinthians,Cruzeiro,2 x 2,"[{'m': 'Cruzeiro', 'gm': 0, 'gv': 1, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 1, 'gv': 2, 'v': 'Cruzeiro', 'pen': '5-4'}]",pênaltis,6.0
+Corinthians x Cruzeiro,2018-10-17,Copa do Brasil 2018,Final,Cruzeiro 1x0 Corinthians / Corinthians 1x2 Cruzeiro,Cruzeiro,Corinthians,3 x 1,"[{'m': 'Cruzeiro', 'gm': 1, 'gv': 0, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 1, 'gv': 2, 'v': 'Cruzeiro', 'pen': ''}]",agregado,6.25
+Corinthians x Cruzeiro,2016-10-19,Copa do Brasil 2016,Quartas,Corinthians 2x1 Cruzeiro / Cruzeiro 4x2 Corinthians,Cruzeiro,Corinthians,5 x 4,"[{'m': 'Corinthians', 'gm': 2, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 4, 'gv': 2, 'v': 'Corinthians', 'pen': ''}]",agregado,5.0
+Corinthians x Atlético-MG,2023-05-31,Copa do Brasil 2023,Oitavas,Atlético-MG 2x0 Corinthians / Corinthians 2x0 Atlético-MG (pên. 3-1),Corinthians,Atlético-MG,2 x 2,"[{'m': 'Atlético-MG', 'gm': 2, 'gv': 0, 'v': 'Corinthians', 'pen': ''}, {'m': 'Corinthians', 'gm': 2, 'gv': 0, 'v': 'Atlético-MG', 'pen': '3-1'}]",pênaltis,6.0
+Corinthians x Atlético-MG,2014-10-15,Copa do Brasil 2014,Quartas,Corinthians 2x0 Atlético-MG / Atlético-MG 4x1 Corinthians,Atlético-MG,Corinthians,4 x 3,"[{'m': 'Corinthians', 'gm': 2, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 4, 'gv': 1, 'v': 'Corinthians', 'pen': ''}]",agregado,4.0
+Palmeiras x Grêmio,2021-03-07,Copa do Brasil 2020,Final,Grêmio 0x1 Palmeiras / Palmeiras 2x0 Grêmio,Palmeiras,Grêmio,3 x 0,"[{'m': 'Grêmio', 'gm': 0, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 2, 'gv': 0, 'v': 'Grêmio', 'pen': ''}]",agregado,6.25
+Palmeiras x Grêmio,2019-08-27,Libertadores 2019,Quartas,Grêmio 0x1 Palmeiras / Palmeiras 1x2 Grêmio,Grêmio,Palmeiras,2 x 2,"[{'m': 'Grêmio', 'gm': 0, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 1, 'gv': 2, 'v': 'Grêmio', 'pen': ''}]",gol fora,5.0
+Palmeiras x Grêmio,2016-10-19,Copa do Brasil 2016,Quartas,Grêmio 2x1 Palmeiras / Palmeiras 1x1 Grêmio,Grêmio,Palmeiras,3 x 2,"[{'m': 'Grêmio', 'gm': 2, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 1, 'gv': 1, 'v': 'Grêmio', 'pen': ''}]",agregado,4.0
+Palmeiras x Internacional,2019-07-17,Copa do Brasil 2019,Quartas,Palmeiras 1x0 Internacional / Internacional 1x0 Palmeiras (pên. 5-4),Internacional,Palmeiras,1 x 1,"[{'m': 'Palmeiras', 'gm': 1, 'gv': 0, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 1, 'gv': 0, 'v': 'Palmeiras', 'pen': '5-4'}]",pênaltis,5.0
+Palmeiras x Internacional,2017-05-31,Copa do Brasil 2017,Oitavas,Palmeiras 1x0 Internacional / Internacional 2x1 Palmeiras,Palmeiras,Internacional,2 x 2,"[{'m': 'Palmeiras', 'gm': 1, 'gv': 0, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 2, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}]",gol fora,4.0
+Palmeiras x Internacional,2015-09-30,Copa do Brasil 2015,Quartas,Internacional 1x1 Palmeiras / Palmeiras 3x2 Internacional,Palmeiras,Internacional,4 x 3,"[{'m': 'Internacional', 'gm': 1, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 3, 'gv': 2, 'v': 'Internacional', 'pen': ''}]",agregado,4.0
+Palmeiras x Cruzeiro,2018-09-26,Copa do Brasil 2018,Semifinal,Palmeiras 0x1 Cruzeiro / Cruzeiro 1x1 Palmeiras,Cruzeiro,Palmeiras,2 x 1,"[{'m': 'Palmeiras', 'gm': 0, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}]",agregado,5.0
+Palmeiras x Cruzeiro,2017-07-26,Copa do Brasil 2017,Quartas,Palmeiras 3x3 Cruzeiro / Cruzeiro 1x1 Palmeiras,Cruzeiro,Palmeiras,4 x 4,"[{'m': 'Palmeiras', 'gm': 3, 'gv': 3, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}]",gol fora,5.0
+Palmeiras x Cruzeiro,2015-08-26,Copa do Brasil 2015,Oitavas,Palmeiras 2x1 Cruzeiro / Cruzeiro 2x3 Palmeiras,Palmeiras,Cruzeiro,5 x 3,"[{'m': 'Palmeiras', 'gm': 2, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 2, 'gv': 3, 'v': 'Palmeiras', 'pen': ''}]",agregado,4.0
+Palmeiras x Atlético-MG,2023-08-09,Libertadores 2023,Oitavas,Atlético-MG 0x1 Palmeiras / Palmeiras 0x0 Atlético-MG,Palmeiras,Atlético-MG,1 x 0,"[{'m': 'Atlético-MG', 'gm': 0, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 0, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}]",agregado,6.0
+Palmeiras x Atlético-MG,2022-08-10,Libertadores 2022,Quartas,Atlético-MG 2x2 Palmeiras / Palmeiras 0x0 Atlético-MG (pên. 6-5),Palmeiras,Atlético-MG,2 x 2,"[{'m': 'Atlético-MG', 'gm': 2, 'gv': 2, 'v': 'Palmeiras', 'pen': ''}, {'m': 'Palmeiras', 'gm': 0, 'gv': 0, 'v': 'Atlético-MG', 'pen': '6-5'}]",pênaltis,5.0
+Palmeiras x Atlético-MG,2021-09-28,Libertadores 2021,Semifinal,Palmeiras 0x0 Atlético-MG / Atlético-MG 1x1 Palmeiras,Palmeiras,Atlético-MG,1 x 1,"[{'m': 'Palmeiras', 'gm': 0, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 1, 'gv': 1, 'v': 'Palmeiras', 'pen': ''}]",gol fora,5.0
+São Paulo x Grêmio,2020-12-30,Copa do Brasil 2020,Semifinal,Grêmio 1x0 São Paulo / São Paulo 0x0 Grêmio,Grêmio,São Paulo,1 x 0,"[{'m': 'Grêmio', 'gm': 1, 'gv': 0, 'v': 'São Paulo', 'pen': ''}, {'m': 'São Paulo', 'gm': 0, 'gv': 0, 'v': 'Grêmio', 'pen': ''}]",agregado,5.0
+São Paulo x Cruzeiro,2017-04-19,Copa do Brasil 2017,4ª fase,São Paulo 0x2 Cruzeiro / Cruzeiro 1x2 São Paulo,Cruzeiro,São Paulo,3 x 2,"[{'m': 'São Paulo', 'gm': 0, 'gv': 2, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 2, 'v': 'São Paulo', 'pen': ''}]",agregado,5.0
+São Paulo x Cruzeiro,2015-05-13,Libertadores 2015,Oitavas,São Paulo 1x0 Cruzeiro / Cruzeiro 1x0 São Paulo (pên. 4-3),Cruzeiro,São Paulo,1 x 1,"[{'m': 'São Paulo', 'gm': 1, 'gv': 0, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 0, 'v': 'São Paulo', 'pen': '4-3'}]",pênaltis,4.0
+São Paulo x Atlético-MG,2024-09-12,Copa do Brasil 2024,Quartas,São Paulo 0x1 Atlético-MG / Atlético-MG 0x0 São Paulo,Atlético-MG,São Paulo,1 x 0,"[{'m': 'São Paulo', 'gm': 0, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 0, 'gv': 0, 'v': 'São Paulo', 'pen': ''}]",agregado,6.0
+São Paulo x Atlético-MG,2016-05-18,Libertadores 2016,Quartas,São Paulo 1x0 Atlético-MG / Atlético-MG 2x1 São Paulo,São Paulo,Atlético-MG,2 x 2,"[{'m': 'São Paulo', 'gm': 1, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 2, 'gv': 1, 'v': 'São Paulo', 'pen': ''}]",gol fora,4.0
+Santos x Grêmio,2020-12-16,Libertadores 2020,Quartas,Grêmio 1x1 Santos / Santos 4x1 Grêmio,Santos,Grêmio,5 x 2,"[{'m': 'Grêmio', 'gm': 1, 'gv': 1, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 4, 'gv': 1, 'v': 'Grêmio', 'pen': ''}]",agregado,6.0
+Santos x Grêmio,2014-08-28,Copa do Brasil 2014,Oitavas,Grêmio 0x2 Santos,Santos,Grêmio,2 x 0,"[{'m': 'Grêmio', 'gm': 0, 'gv': 2, 'v': 'Santos', 'pen': ''}]",decisão do STJD,4.0
+Santos x Grêmio,2013-08-28,Copa do Brasil 2013,Oitavas,Santos 1x0 Grêmio / Grêmio 2x0 Santos,Grêmio,Santos,2 x 1,"[{'m': 'Santos', 'gm': 1, 'gv': 0, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 2, 'gv': 0, 'v': 'Santos', 'pen': ''}]",agregado,4.0
+Santos x Internacional,2016-10-19,Copa do Brasil 2016,Quartas,Santos 2x1 Internacional / Internacional 2x0 Santos,Internacional,Santos,3 x 2,"[{'m': 'Santos', 'gm': 2, 'gv': 1, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 2, 'gv': 0, 'v': 'Santos', 'pen': ''}]",agregado,5.0
+Santos x Cruzeiro,2018-08-15,Copa do Brasil 2018,Quartas,Santos 0x1 Cruzeiro / Cruzeiro 1x2 Santos (pên. 3-0),Cruzeiro,Santos,2 x 2,"[{'m': 'Santos', 'gm': 0, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 2, 'v': 'Santos', 'pen': '3-0'}]",pênaltis,6.0
+Santos x Cruzeiro,2014-11-05,Copa do Brasil 2014,Semifinal,Cruzeiro 1x0 Santos / Santos 3x3 Cruzeiro,Cruzeiro,Santos,4 x 3,"[{'m': 'Cruzeiro', 'gm': 1, 'gv': 0, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 3, 'gv': 3, 'v': 'Cruzeiro', 'pen': ''}]",agregado,5.0
+Santos x Atlético-MG,2026-09-16,Sul-Americana 2026,Quartas,Santos 2x0 Atlético-MG / Atlético-MG 4x2 Santos (pên. 3-1),Atlético-MG,Santos,4 x 4,"[{'m': 'Santos', 'gm': 2, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 4, 'gv': 2, 'v': 'Santos', 'pen': '3-1'}]",pênaltis,6.0
+Santos x Atlético-MG,2019-06-06,Copa do Brasil 2019,Oitavas,Atlético-MG 0x0 Santos / Santos 1x2 Atlético-MG,Atlético-MG,Santos,2 x 1,"[{'m': 'Atlético-MG', 'gm': 0, 'gv': 0, 'v': 'Santos', 'pen': ''}, {'m': 'Santos', 'gm': 1, 'gv': 2, 'v': 'Atlético-MG', 'pen': ''}]",agregado,5.0
+Grêmio x Cruzeiro,2023-05-31,Copa do Brasil 2023,Oitavas,Grêmio 1x1 Cruzeiro / Cruzeiro 0x1 Grêmio,Grêmio,Cruzeiro,2 x 1,"[{'m': 'Grêmio', 'gm': 1, 'gv': 1, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 0, 'gv': 1, 'v': 'Grêmio', 'pen': ''}]",agregado,6.0
+Grêmio x Cruzeiro,2017-08-30,Primeira Liga 2017,Quartas,Cruzeiro 2x0 Grêmio,Cruzeiro,Grêmio,2 x 0,"[{'m': 'Cruzeiro', 'gm': 2, 'gv': 0, 'v': 'Grêmio', 'pen': ''}]",jogo,3.0
+Grêmio x Cruzeiro,2017-08-23,Copa do Brasil 2017,Semifinal,Grêmio 1x0 Cruzeiro / Cruzeiro 1x0 Grêmio (pên. 3-2),Cruzeiro,Grêmio,1 x 1,"[{'m': 'Grêmio', 'gm': 1, 'gv': 0, 'v': 'Cruzeiro', 'pen': ''}, {'m': 'Cruzeiro', 'gm': 1, 'gv': 0, 'v': 'Grêmio', 'pen': '3-2'}]",pênaltis,5.0
+Grêmio x Cruzeiro,2016-11-02,Copa do Brasil 2016,Semifinal,Cruzeiro 0x2 Grêmio / Grêmio 0x0 Cruzeiro,Grêmio,Cruzeiro,2 x 0,"[{'m': 'Cruzeiro', 'gm': 0, 'gv': 2, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 0, 'gv': 0, 'v': 'Cruzeiro', 'pen': ''}]",agregado,4.0
+Grêmio x Atlético-MG,2026-11-07,Copa do Brasil 2026,Semifinal,Grêmio 2x0 Atlético-MG / Atlético-MG 1x1 Grêmio,Grêmio,Atlético-MG,3 x 1,"[{'m': 'Grêmio', 'gm': 2, 'gv': 0, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 1, 'gv': 1, 'v': 'Grêmio', 'pen': ''}]",agregado,6.0
+Grêmio x Atlético-MG,2016-12-07,Copa do Brasil 2016,Final,Atlético-MG 1x3 Grêmio / Grêmio 1x1 Atlético-MG,Grêmio,Atlético-MG,4 x 2,"[{'m': 'Atlético-MG', 'gm': 1, 'gv': 3, 'v': 'Grêmio', 'pen': ''}, {'m': 'Grêmio', 'gm': 1, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}]",agregado,5.0
+Internacional x Cruzeiro,2019-09-04,Copa do Brasil 2019,Semifinal,Cruzeiro 0x1 Internacional / Internacional 3x0 Cruzeiro,Internacional,Cruzeiro,4 x 0,"[{'m': 'Cruzeiro', 'gm': 0, 'gv': 1, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 3, 'gv': 0, 'v': 'Cruzeiro', 'pen': ''}]",agregado,6.0
+Internacional x Atlético-MG,2017-08-30,Primeira Liga 2017,Quartas,Internacional 0x1 Atlético-MG,Atlético-MG,Internacional,1 x 0,"[{'m': 'Internacional', 'gm': 0, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}]",jogo,3.0
+Internacional x Atlético-MG,2016-11-02,Copa do Brasil 2016,Semifinal,Internacional 1x2 Atlético-MG / Atlético-MG 2x2 Internacional,Atlético-MG,Internacional,4 x 3,"[{'m': 'Internacional', 'gm': 1, 'gv': 2, 'v': 'Atlético-MG', 'pen': ''}, {'m': 'Atlético-MG', 'gm': 2, 'gv': 2, 'v': 'Internacional', 'pen': ''}]",agregado,5.0
+Internacional x Atlético-MG,2015-05-13,Libertadores 2015,Oitavas,Atlético-MG 2x2 Internacional / Internacional 3x1 Atlético-MG,Internacional,Atlético-MG,5 x 3,"[{'m': 'Atlético-MG', 'gm': 2, 'gv': 2, 'v': 'Internacional', 'pen': ''}, {'m': 'Internacional', 'gm': 3, 'gv': 1, 'v': 'Atlético-MG', 'pen': ''}]",agregado,4.0

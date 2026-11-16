@@ -259,10 +259,15 @@ def main(escopo, prefixo):
         for t in sorted(ties, key=lambda t: t["fim"], reverse=True):
             g = t["jogos"][-1]
             placares = " / ".join(f"{x['m']} {x['gm']}x{x['gv']} {x['v']}" + (f" (pên. {x['pen'][0]}-{x['pen'][1]})" if x["pen"] else "") for x in t["jogos"])
+            tot = defaultdict(int)
+            for x in t["jogos"]:
+                tot[x["m"]] += x["gm"]; tot[x["v"]] += x["gv"]
+            perdeu = next(k for k in tot if k != t["vencedor"])
+            partidas = [dict(m=x["m"], gm=x["gm"], gv=x["gv"], v=x["v"], pen=f"{x['pen'][0]}-{x['pen'][1]}" if x["pen"] else "") for x in t["jogos"]]
             nome = comp_nome(g, uf)
             matamatas.append(dict(classico=lab, data=g["data"], competicao=nome.split(" · ")[0],
                                   fase=nome.split(" · ")[1] if " · " in nome else g["fase"], jogos=placares,
-                                  avancou=t["vencedor"], como=t["como"], peso=round(REC[t["pos"] // 10] * imp(g), 2)))
+                                  avancou=t["vencedor"], perdeu=perdeu, agregado=f"{tot[t['vencedor']]} x {tot[perdeu]}", partidas=partidas, como=t["como"], peso=round(REC[t["pos"] // 10] * imp(g), 2)))
 
     ranking.sort(key=lambda r: -r["indice"])
     for p, r in enumerate(ranking, 1):
@@ -275,7 +280,7 @@ def main(escopo, prefixo):
                 r["pos"] = p
     indices.sort(key=lambda r: (FILTROS.index(r["filtro"]), -r["janela"], r["pos"]))
     cl_rows = []
-    F_, V_ = PESOS["limiar_freguesia"], PESOS["limiar_vantagem"]
+    F_, VC_, V_ = PESOS["limiar_freguesia"], PESOS["limiar_vantagem_clara"], PESOS["limiar_vantagem"]
     for J in JANELAS:
         rows = []
         for team, cl in clubes[J].items():
@@ -284,9 +289,11 @@ def main(escopo, prefixo):
             rows.append(dict(janela=J, clube=team, indice=ix(cl["num"], cl["den"]), jogos=cl["v"] + cl["e"] + cl["d"],
                              v=cl["v"], e=cl["e"], d=cl["d"], mm=f"{cl['mm_v']} x {cl['mm_d']}", adversarios=len(conf),
                              domina=pega(lambda x: x["indice"] >= F_),
-                             vantagem_sobre=pega(lambda x: V_ <= x["indice"] < F_),
+                             vantagem_clara_sobre=pega(lambda x: VC_ <= x["indice"] < F_),
+                             vantagem_sobre=pega(lambda x: V_ <= x["indice"] < VC_),
                              equilibrio=pega(lambda x: x["indice"] < V_ and x["adv_indice"] < V_),
-                             desvantagem_contra=pega(lambda x: V_ <= x["adv_indice"] < F_),
+                             desvantagem_contra=pega(lambda x: V_ <= x["adv_indice"] < VC_),
+                             desvantagem_clara_contra=pega(lambda x: VC_ <= x["adv_indice"] < F_),
                              fregues_de=pega(lambda x: x["adv_indice"] >= F_)))
         rows.sort(key=lambda r: -r["indice"])
         for p, r in enumerate(rows, 1):

@@ -174,18 +174,16 @@ footer.rodape a{color:var(--texto-2)}
 .ranking tbody tr:hover td.h2c,.ranking tr.ativo td.h2c{background:var(--s2)}
 .ranking tbody tr:hover td.h3c,.ranking tr.ativo td.h3c{background:var(--s3)}
 .ranking tbody tr:hover td.h4c,.ranking tr.ativo td.h4c{background:var(--s4)}
-.zebra tbody tr:nth-child(even) td{background:var(--fundo-sutil)}
-.zebra tbody tr:hover td{background:var(--s1)}
 .tag.v2{background:var(--s1);border-color:var(--s1);color:var(--texto)}
 .ix.v2 .trilho i{background:var(--s2)}
-.faixa{margin-top:18px;row-gap:18px}
+.faixa{margin-top:8px;margin-bottom:20px;row-gap:20px}
 .faixa i,.faixa i.w,.faixa i.d{background:#fff;border:1px solid var(--linha);display:flex;align-items:center;justify-content:center}
 .faixa i img{width:72%;height:72%;object-fit:contain;pointer-events:none}
 .faixa i.e::before{content:"";width:36%;height:2px;background:var(--cinza)}
 .faixa i.mm{border:2px solid var(--roxo)}
 .faixa i.mm::after{content:none}
 .faixa i[data-corte]{box-shadow:-4px 0 0 -1px var(--texto)}
-.faixa i .corte{position:absolute;top:-15px;left:-9px;font-size:10px;font-weight:700;color:var(--texto);line-height:1}
+.faixa i .corte{position:absolute;bottom:-16px;left:-9px;font-size:10px;font-weight:700;color:var(--texto);line-height:1}
 .leg i,.leg i.w,.leg i.d{background:#fff;border:1px solid var(--linha)}
 .leg i.mm{border:2px solid var(--roxo)}
 .leg i.mm::after{content:none}
@@ -193,6 +191,22 @@ footer.rodape a{color:var(--texto-2)}
 .chips.esc .chip{padding:3px 6px;display:inline-flex;align-items:center}
 .chips.esc .chip img{width:22px;height:22px;object-fit:contain}
 .chips.esc .chip[aria-pressed="true"]{background:var(--s2);border-color:var(--roxo);color:var(--texto)}
+
+.zebra tbody tr:nth-child(even) td:not(.h1c):not(.h2c):not(.h3c):not(.h4c){background:var(--fundo-sutil)}
+.zebra tbody tr.ativo td:not(.h1c):not(.h2c):not(.h3c):not(.h4c),.zebra tbody tr:hover td:not(.h1c):not(.h2c):not(.h3c):not(.h4c){background:var(--s1)}
+.ranking td.esq,.ranking th.esq{text-align:left}
+.ranking td.esq .clube{justify-content:flex-start}
+.placar{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.placar img{width:20px;height:20px;object-fit:contain}
+.placar small{color:var(--texto-2)}
+.partidas{display:inline-flex;flex-direction:column;gap:3px;align-items:flex-start}
+.picker{position:relative}
+.picker>button{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:14px;padding:5px 10px;border:1px solid var(--cinza);background:#fff;color:var(--texto);cursor:pointer;min-width:250px;justify-content:space-between}
+.picker img{width:22px;height:22px;object-fit:contain}
+.picker .lista-op{position:absolute;right:0;top:calc(100% + 4px);z-index:20;background:#fff;border:1px solid var(--cinza);box-shadow:0 4px 14px rgba(0,0,0,.1);max-height:380px;overflow:auto;min-width:290px}
+.picker .lista-op button{display:flex;align-items:center;gap:8px;width:100%;border:0;background:#fff;padding:6px 10px;font-family:var(--sans);font-size:13.5px;color:var(--texto);cursor:pointer;text-align:left}
+.picker .lista-op button:hover,.picker .lista-op button[aria-selected="true"]{background:var(--s1)}
+.sec-filtro .rot-sel{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2)}
 </style>
 </head>
 <body>
@@ -238,7 +252,7 @@ footer.rodape a{color:var(--texto-2)}
       </div>
     </div>
     <div class="tabela-wrap">
-      <table class="ranking" data-source="indices" data-row-key="classico,filtro,janela">
+      <table class="ranking zebra" data-source="indices" data-row-key="classico,filtro,janela">
         <thead>
           <tr>
             <th data-field="pos">#</th>
@@ -289,7 +303,7 @@ footer.rodape a{color:var(--texto-2)}
   <section class="bloco" id="detalhe">
     <div class="h2linha">
       <h2>O clássico em detalhe</h2>
-      <div class="sec-filtro"><label for="fg-sel">Clássico</label><select id="fg-sel" data-draw="sel" data-source="ranking" aria-label="Clássico"></select></div>
+      <div class="sec-filtro"><span class="rot-sel">Clássico</span><div class="picker" data-draw="sel"></div></div>
     </div>
     <div class="vs" data-draw="d-vs" data-source="ranking">—</div>
     <div class="kpis fatos">
@@ -339,6 +353,7 @@ footer.rodape a{color:var(--texto-2)}
             <th data-field="competicao">Competição</th>
             <th data-field="fase">Fase</th>
             <th data-field="jogos" class="lg">Jogos</th>
+            <th data-field="agregado">Agregado</th>
             <th data-field="avancou">Avançou</th>
             <th data-field="como">Como</th>
             <th data-field="peso">Peso</th>
@@ -351,7 +366,7 @@ footer.rodape a{color:var(--texto-2)}
     <h3 style="margin-top:26px">Lista de jogos</h3>
     <p class="h2sub">Peso = recência × importância do jogo. Na última partida de cada mata-mata aparece quem avançou.</p>
     <div class="lista">
-      <table class="ranking" data-source="jogos" data-row-key="classico,n">
+      <table class="ranking zebra" data-source="jogos" data-row-key="classico,n">
         <thead>
           <tr>
             <th data-field="n">#</th>
@@ -527,11 +542,19 @@ footer.rodape a{color:var(--texto-2)}
   });
 
   // Seletor do detalhe
-  dash.draw('sel', (s) => {
-    const rk = ok('ranking') || [];
-    s.replaceChildren(...rk.map((r) => new Option(r.classico, r.classico)));
-    const cur = sel(); if (cur) s.value = cur.classico;
-    s.onchange = () => pick(s.value, false);
+  dash.draw('sel', (box) => {
+    const rk = ok('ranking') || []; const cur = sel(); box.replaceChildren(); if (!cur) return;
+    const dupla = (r) => { const s = mk('span', 'clube'); s.append(crest(r.time_a), crest(r.time_b)); return s; };
+    const btn = mk('button'); btn.type = 'button'; btn.setAttribute('aria-haspopup', 'listbox'); btn.setAttribute('aria-expanded', 'false');
+    const lab = mk('span', 'clube'); lab.append(dupla(cur), document.createTextNode(' ' + cur.classico)); btn.append(lab, mk('span', 'x', '▾'));
+    const lst = mk('div', 'lista-op'); lst.hidden = true; lst.setAttribute('role', 'listbox');
+    for (const r of [...rk].sort((a, b) => a.classico.localeCompare(b.classico, 'pt'))) {
+      const o = mk('button'); o.type = 'button'; o.setAttribute('role', 'option'); o.setAttribute('aria-selected', String(r.classico === cur.classico));
+      o.append(dupla(r), document.createTextNode(r.classico)); o.onclick = () => { lst.hidden = true; pick(r.classico, false); }; lst.appendChild(o);
+    }
+    btn.onclick = (e) => { e.stopPropagation(); lst.hidden = !lst.hidden; btn.setAttribute('aria-expanded', String(!lst.hidden)); };
+    if (!window.__pickerFecha) { window.__pickerFecha = true; document.addEventListener('click', (e) => { document.querySelectorAll('.picker').forEach((p) => { if (!p.contains(e.target)) { const l = p.querySelector('.lista-op'); if (l) l.hidden = true; } }); }); }
+    box.append(btn, lst);
   });
   const textDraw = (name, fn) => dash.draw(name, (el) => { const r = sel(); el.textContent = r ? fn(r) : '—'; where(el, r); });
   dash.draw('d-vs', (el) => {
@@ -584,13 +607,16 @@ footer.rodape a{color:var(--texto-2)}
     el.appendChild(tip);
   });
 
+  const placar = (p) => { const s = mk('span', 'placar'); s.append(crest(p.m), mk('b', '', `${p.gm} x ${p.gv}`), crest(p.v)); if (p.pen) s.append(mk('small', '', `pên. ${p.pen}`)); return s; };
+  const partidasCell = (r) => { const box = mk('span', 'partidas'); (r.partidas || []).forEach((p) => box.append(placar(p))); return box; };
+  const aggCell = (r) => { if (!r.partidas || r.partidas.length < 2) return mk('span', 'cinza', '—'); const s = mk('span', 'placar'); s.append(crest(r.avancou), mk('b', '', r.agregado), crest(r.perdeu)); return s; };
   const COMO = { agregado: 'Agregado', 'pênaltis': 'Pênaltis', vantagem: 'Vantagem', jogo: 'Jogo único' };
   dash.draw('mm', (tb) => {
     const mm = ok('matamatas'); const cur = sel(); tb.replaceChildren(); if (!mm || !cur) return;
     for (const r of mm.filter((x) => x.classico === cur.classico)) {
       const tr = document.createElement('tr');
       tr.dataset.key = encodeURIComponent(r.classico) + ',' + encodeURIComponent(r.data);
-      td(tr, brc(r.data)); td(tr, r.competicao, 'l'); td(tr, r.fase); td(tr, r.jogos, 'lg l'); td(tr, so(r.avancou)); td(tr, COMO[r.como] || r.como); td(tr, f1(r.peso));
+      td(tr, brc(r.data)); td(tr, r.competicao, 'l'); td(tr, r.fase); td(tr, partidasCell(r), 'lg'); td(tr, aggCell(r)); td(tr, so(r.avancou)); td(tr, COMO[r.como] || r.como); td(tr, f1(r.peso));
       tb.appendChild(tr);
     }
   });
@@ -600,10 +626,8 @@ footer.rodape a{color:var(--texto-2)}
     for (const g of jg.filter((x) => x.classico === cur.classico)) {
       const tr = document.createElement('tr');
       tr.dataset.key = encodeURIComponent(g.classico) + ',' + encodeURIComponent(g.n);
-      const o = outcome(g, cur.dominante);
       td(tr, g.n, 'cinza'); td(tr, brc(g.data)); td(tr, so(g.mandante)); td(tr, g.gm, 'forte'); td(tr, g.gv, 'forte'); td(tr, so(g.visitante));
       td(tr, g.penaltis, 'lg'); td(tr, g.competicao, 'lg l'); td(tr, g.classificado ? so(g.classificado) : '', 'lg'); td(tr, f1(g.peso));
-      tr.firstChild.style.boxShadow = `inset 4px 0 0 ${o === 'w' ? 'var(--roxo)' : o === 'd' ? 'var(--verde)' : 'var(--cinza)'}`;
       tb.appendChild(tr);
     }
   });

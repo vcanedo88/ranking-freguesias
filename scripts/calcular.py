@@ -220,10 +220,15 @@ def main():
         for t in sorted(ties, key=lambda t: t["fim"], reverse=True):
             g = t["jogos"][-1]
             placares = " / ".join(f"{x['m']} {x['gm']}x{x['gv']} {x['v']}" + (f" (pên. {x['pen'][0]}-{x['pen'][1]})" if x["pen"] else "") for x in t["jogos"])
+            tot = defaultdict(int)
+            for x in t["jogos"]:
+                tot[x["m"]] += x["gm"]; tot[x["v"]] += x["gv"]
+            perdeu = next(k for k in tot if k != t["vencedor"])
+            partidas = [dict(m=x["m"], gm=x["gm"], gv=x["gv"], v=x["v"], pen=f"{x['pen'][0]}-{x['pen'][1]}" if x["pen"] else "") for x in t["jogos"]]
             nome = comp_nome(g, uf)
             matamatas.append(dict(classico=lab, data=g["data"], competicao=nome.split(" · ")[0],
                                   fase=nome.split(" · ")[1] if " · " in nome else g["fase"], jogos=placares,
-                                  avancou=t["vencedor"], como=t["como"], peso=round(REC[t["pos"] // 10] * imp(g), 2)))
+                                  avancou=t["vencedor"], perdeu=perdeu, agregado=f"{tot[t['vencedor']]} x {tot[perdeu]}", partidas=partidas, como=t["como"], peso=round(REC[t["pos"] // 10] * imp(g), 2)))
 
     ranking.sort(key=lambda r: -r["indice"])
     for p, r in enumerate(ranking, 1):
