@@ -1,0 +1,530 @@
+[
+ {
+  "id": "fla_vasco",
+  "time_a": "Flamengo",
+  "time_b": "Vasco",
+  "apelido": "Clássico dos Milhões",
+  "uf": "RJ",
+  "tipo": "Local"
+ },
+ {
+  "id": "fla_flu",
+  "time_a": "Flamengo",
+  "time_b": "Fluminense",
+  "apelido": "Fla-Flu",
+  "uf": "RJ",
+  "tipo": "Local"
+ },
+ {
+  "id": "fla_bota",
+  "time_a": "Flamengo",
+  "time_b": "Botafogo",
+  "apelido": "Clássico da Rivalidade",
+  "uf": "RJ",
+  "tipo": "Local"
+ },
+ {
+  "id": "flu_bota",
+  "time_a": "Fluminense",
+  "time_b": "Botafogo",
+  "apelido": "Clássico Vovô",
+  "uf": "RJ",
+  "tipo": "Local"
+ },
+ {
+  "id": "flu_vasco",
+  "time_a": "Fluminense",
+  "time_b": "Vasco",
+  "apelido": "Clássico dos Gigantes",
+  "uf": "RJ",
+  "tipo": "Local"
+ },
+ {
+  "id": "vasco_bota",
+  "time_a": "Vasco",
+  "time_b": "Botafogo",
+  "apelido": "Clássico da Amizade",
+  "uf": "RJ",
+  "tipo": "Local"
+ },
+ {
+  "id": "cor_pal",
+  "time_a": "Corinthians",
+  "time_b": "Palmeiras",
+  "apelido": "Derby",
+  "uf": "SP",
+  "tipo": "Local"
+ },
+ {
+  "id": "cor_spfc",
+  "time_a": "Corinthians",
+  "time_b": "São Paulo",
+  "apelido": "Majestoso",
+  "uf": "SP",
+  "tipo": "Local"
+ },
+ {
+  "id": "cor_san",
+  "time_a": "Corinthians",
+  "time_b": "Santos",
+  "apelido": "Clássico Alvinegro",
+  "uf": "SP",
+  "tipo": "Local"
+ },
+ {
+  "id": "pal_spfc",
+  "time_a": "Palmeiras",
+  "time_b": "São Paulo",
+  "apelido": "Choque-Rei",
+  "uf": "SP",
+  "tipo": "Local"
+ },
+ {
+  "id": "pal_san",
+  "time_a": "Palmeiras",
+  "time_b": "Santos",
+  "apelido": "Clássico da Saudade",
+  "uf": "SP",
+  "tipo": "Local"
+ },
+ {
+  "id": "spfc_san",
+  "time_a": "São Paulo",
+  "time_b": "Santos",
+  "apelido": "San-São",
+  "uf": "SP",
+  "tipo": "Local"
+ },
+ {
+  "id": "grenal",
+  "time_a": "Grêmio",
+  "time_b": "Internacional",
+  "apelido": "Gre-Nal",
+  "uf": "RS",
+  "tipo": "Local"
+ },
+ {
+  "id": "cru_cam",
+  "time_a": "Cruzeiro",
+  "time_b": "Atlético-MG",
+  "apelido": "Clássico Mineiro",
+  "uf": "MG",
+  "tipo": "Local"
+ },
+ {
+  "id": "fla_cor",
+  "time_a": "Flamengo",
+  "time_b": "Corinthians",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "fla_pal",
+  "time_a": "Flamengo",
+  "time_b": "Palmeiras",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "fla_spfc",
+  "time_a": "Flamengo",
+  "time_b": "São Paulo",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "fla_san",
+  "time_a": "Flamengo",
+  "time_b": "Santos",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "fla_gre",
+  "time_a": "Flamengo",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "fla_inter",
+  "time_a": "Flamengo",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "fla_cru",
+  "time_a": "Flamengo",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "fla_cam",
+  "time_a": "Flamengo",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_cor",
+  "time_a": "Fluminense",
+  "time_b": "Corinthians",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_pal",
+  "time_a": "Fluminense",
+  "time_b": "Palmeiras",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_spfc",
+  "time_a": "Fluminense",
+  "time_b": "São Paulo",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_san",
+  "time_a": "Fluminense",
+  "time_b": "Santos",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_gre",
+  "time_a": "Fluminense",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_inter",
+  "time_a": "Fluminense",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_cru",
+  "time_a": "Fluminense",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "flu_cam",
+  "time_a": "Fluminense",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_cor",
+  "time_a": "Vasco",
+  "time_b": "Corinthians",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_pal",
+  "time_a": "Vasco",
+  "time_b": "Palmeiras",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_spfc",
+  "time_a": "Vasco",
+  "time_b": "São Paulo",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_san",
+  "time_a": "Vasco",
+  "time_b": "Santos",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_gre",
+  "time_a": "Vasco",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_inter",
+  "time_a": "Vasco",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_cru",
+  "time_a": "Vasco",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "vasco_cam",
+  "time_a": "Vasco",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_cor",
+  "time_a": "Botafogo",
+  "time_b": "Corinthians",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_pal",
+  "time_a": "Botafogo",
+  "time_b": "Palmeiras",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_spfc",
+  "time_a": "Botafogo",
+  "time_b": "São Paulo",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_san",
+  "time_a": "Botafogo",
+  "time_b": "Santos",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_gre",
+  "time_a": "Botafogo",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_inter",
+  "time_a": "Botafogo",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_cru",
+  "time_a": "Botafogo",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "bota_cam",
+  "time_a": "Botafogo",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "cor_gre",
+  "time_a": "Corinthians",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "cor_inter",
+  "time_a": "Corinthians",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "cor_cru",
+  "time_a": "Corinthians",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "cor_cam",
+  "time_a": "Corinthians",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "pal_gre",
+  "time_a": "Palmeiras",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "pal_inter",
+  "time_a": "Palmeiras",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "pal_cru",
+  "time_a": "Palmeiras",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "pal_cam",
+  "time_a": "Palmeiras",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "spfc_gre",
+  "time_a": "São Paulo",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "spfc_inter",
+  "time_a": "São Paulo",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "spfc_cru",
+  "time_a": "São Paulo",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "spfc_cam",
+  "time_a": "São Paulo",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "san_gre",
+  "time_a": "Santos",
+  "time_b": "Grêmio",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "san_inter",
+  "time_a": "Santos",
+  "time_b": "Internacional",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "san_cru",
+  "time_a": "Santos",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "san_cam",
+  "time_a": "Santos",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "gre_cru",
+  "time_a": "Grêmio",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "gre_cam",
+  "time_a": "Grêmio",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "inter_cru",
+  "time_a": "Internacional",
+  "time_b": "Cruzeiro",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ },
+ {
+  "id": "inter_cam",
+  "time_a": "Internacional",
+  "time_b": "Atlético-MG",
+  "apelido": "",
+  "uf": "",
+  "tipo": "Interestadual"
+ }
+]

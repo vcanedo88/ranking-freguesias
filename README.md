@@ -24,6 +24,24 @@ Cada mata-mata (ida e volta ou jogo único) vira **um jogo extra** vencido por q
 
 Índice = Σ(peso × pontos) ÷ Σ(peso × 3). Freguesia a partir de 65; vantagem clara a partir de 55.
 
+## G12: os 66 confrontos entre os 12 grandes
+
+Página: https://vcanedo88.github.io/ranking-classicos/g12.html (aba "G12" no topo do site).
+
+Mesmo Índice de Freguesia 2.0, aplicado a todos os confrontos entre Flamengo, Fluminense, Vasco, Botafogo, Corinthians, Palmeiras, São Paulo, Santos, Grêmio, Internacional, Cruzeiro e Atlético-MG. Diferenças em relação ao ranking dos clássicos:
+
+- **Janela de 30 jogos oficiais** (recortes de 30, 20 e 10), com os pesos de recência 3 / 2,5 / 2 por bloco de 10. Os 14 clássicos locais também entram com 30 jogos nessa aba.
+- **Forma**: os últimos 5 jogos, mostrados como contexto, fora do ranking.
+- **Mando**: índice do dominante só nos jogos com cada mandante, sem os jogos em campo neutro e sem o bônus dos mata-matas.
+- **Ranking por clube**: aproveitamento ponderado de cada clube somando os seus 11 confrontos.
+- Mesmos pesos de importância. O Mundial de Clubes (Palmeiras x Botafogo, 2025) usa o peso de mata-mata de copa. Classificações pelo gol fora de casa e decisões do STJD ficam registradas em `avancou_por_vantagem` e `obs`.
+
+Arquivos: `dados/classicos_g12.json`, `dados/jogos_g12.csv` (52 confrontos interestaduais; os locais vêm de `dados/jogos.csv`), `scripts/calcular_g12.py`, `data/g12_*.json`, `csv/g12_*.csv`, `g12.html`.
+
+Conferência: oGol como fonte principal. Segunda fonte para cada jogo interestadual da janela: base do Brasileirão 2003–2025 (adaoduque/brasileirao_dataset), Transfermarkt para copas, Série B e 2026, e a imprensa nos casos em que as duas fontes divergiram (coluna `fonte2`).
+
+Para atualizar: acrescente o jogo em `dados/jogos.csv` (clássico local) ou `dados/jogos_g12.csv` (interestadual) e rode `python3 scripts/calcular.py && python3 scripts/calcular_g12.py`.
+
 ## Estrutura
 
 - `dados/jogos.csv` — base de jogos (conferida no oGol). Colunas especiais: `tipo` (`turno`, `consolacao`, `wo`) e `avancou_por_vantagem`.

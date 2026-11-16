@@ -1,0 +1,13 @@
+pos,clube,indice,v,e,d,mm,fregues_de,desvantagem_contra,domina,vantagem_sobre,pior,melhor
+1,Flamengo,60.0,165,80,85,33 x 13,,,"Vasco, Botafogo, Grêmio, Corinthians","Cruzeiro, Atlético-MG, Internacional, Santos",São Paulo,Vasco
+2,Palmeiras,55.0,145,103,82,25 x 16,,,Santos,"Vasco, Grêmio, São Paulo, Internacional, Botafogo, Fluminense",Flamengo,Santos
+3,Atlético-MG,46.4,128,80,122,15 x 17,,"Grêmio, Flamengo",,"Internacional, São Paulo, Fluminense",Grêmio,Internacional
+4,Grêmio,45.8,121,88,121,17 x 13,Flamengo,Palmeiras,,"Atlético-MG, Botafogo",Flamengo,Atlético-MG
+5,São Paulo,45.4,119,90,121,11 x 11,,"Palmeiras, Atlético-MG",,"Vasco, Cruzeiro",Palmeiras,Vasco
+6,Cruzeiro,45.3,114,91,125,18 x 11,,"Flamengo, São Paulo",,,Flamengo,Botafogo
+7,Corinthians,44.5,106,112,112,16 x 14,Flamengo,,Vasco,,Flamengo,Vasco
+8,Fluminense,44.3,121,82,127,12 x 18,,"Atlético-MG, Palmeiras",,,Atlético-MG,São Paulo
+9,Internacional,44.0,117,94,119,7 x 15,,"Atlético-MG, Flamengo, Palmeiras",,"Santos, Vasco",Atlético-MG,Santos
+10,Santos,42.1,111,90,129,5 x 14,Palmeiras,"Internacional, Flamengo",,Vasco,Palmeiras,Vasco
+11,Botafogo,41.5,110,76,144,7 x 15,Flamengo,"Palmeiras, Grêmio",,,Flamengo,Vasco
+12,Vasco,34.4,88,84,158,7 x 16,"Flamengo, Corinthians","Palmeiras, São Paulo, Santos, Internacional",,,Flamengo,Fluminense
