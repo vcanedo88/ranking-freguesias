@@ -167,6 +167,7 @@ footer.rodape a{color:var(--texto-2)}
 .abas a[aria-current="page"]{color:var(--fundo);background:var(--texto);border-color:var(--texto)}
 .abas a:hover:not([aria-current]){color:var(--roxo)}
 .faixa.f30{grid-template-columns:repeat(15,minmax(0,1fr))}
+.ranking tr.ativo td.h1c{background:var(--s1)}.ranking tr.ativo td.h2c{background:var(--s2)}.ranking tr.ativo td.h3c{background:var(--s3)}.ranking tr.ativo td.h4c{background:var(--s4)}
 </style>
 </head>
 <body>
@@ -497,7 +498,7 @@ footer.rodape a{color:var(--texto-2)}
     const ix = ok('g12_indices'); const cur = sel(); tb.replaceChildren(); if (!ix || !cur) return;
     for (const r of ix.filter((x) => x.classico === cur.classico && x.filtro === 'Todas').sort((a, b) => b.janela - a.janela)) {
       const tr = document.createElement('tr');
-      td(tr, r.janela + ' jogos'); td(tr, so(r.dominante)); td(tr, f1(r.indice), 'roxo ' + heatCls(r.indice)); td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, brc(r.inicio));
+      td(tr, r.janela + ' jogos'); td(tr, so(r.dominante)); td(tr, f1(r.indice), 'forte ' + heatCls(r.indice)); td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, brc(r.inicio));
       tb.appendChild(tr);
     }
     const tr = document.createElement('tr');
