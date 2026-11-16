@@ -6,21 +6,21 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 5,Grêmio x Atlético-MG,Interestadual,Todas,30,Grêmio,Atlético-MG,61.8,30,16,5,9,2,0,2013-06-09,N,Vantagem clara
 6,Palmeiras x Grêmio,Interestadual,Todas,30,Palmeiras,Grêmio,61.0,30,16,8,6,1,2,2014-06-01,N,Vantagem clara
 7,Flamengo x Atlético-MG,Interestadual,Todas,30,Flamengo,Atlético-MG,60.3,30,16,5,9,2,2,2016-01-27,N,Vantagem clara
-8,Vasco x São Paulo,Interestadual,Todas,30,São Paulo,Vasco,59.6,30,14,8,8,2,0,2010-08-25,N,Vantagem clara
-9,Internacional x Atlético-MG,Interestadual,Todas,30,Atlético-MG,Internacional,59.1,30,16,5,9,2,1,2013-11-14,N,Vantagem clara
-10,Flamengo x Cruzeiro,Interestadual,Todas,30,Flamengo,Cruzeiro,58.9,30,16,7,7,2,2,2013-08-21,N,Vantagem clara
-11,Vasco x Santos,Interestadual,Todas,30,Santos,Vasco,57.7,30,14,6,10,2,0,2008-07-27,N,Vantagem clara
-12,Flamengo x Santos,Interestadual,Todas,30,Flamengo,Santos,57.1,30,14,7,9,1,0,2012-06-17,N,Vantagem clara
-13,Flamengo x Internacional,Interestadual,Todas,30,Flamengo,Internacional,56.9,30,13,8,9,2,0,2013-07-21,N,Vantagem clara
-14,Vasco x Internacional,Interestadual,Todas,30,Internacional,Vasco,56.9,30,15,5,10,0,0,2005-10-16,N,Vantagem clara
-15,Botafogo x Palmeiras,Interestadual,Todas,30,Palmeiras,Botafogo,56.9,30,15,6,9,2,1,2011-08-31,N,Vantagem clara
-16,Palmeiras x Internacional,Interestadual,Todas,30,Palmeiras,Internacional,56.9,30,14,8,8,2,1,2014-08-30,N,Vantagem clara
-17,Fluminense x Atlético-MG,Interestadual,Todas,30,Atlético-MG,Fluminense,56.2,30,13,8,9,2,0,2014-05-28,N,Vantagem clara
-18,Botafogo x Grêmio,Interestadual,Todas,30,Grêmio,Botafogo,56.0,30,15,5,10,1,0,2010-09-04,N,Vantagem clara
-19,Fluminense x Palmeiras,Interestadual,Todas,30,Palmeiras,Fluminense,55.9,30,15,4,11,2,0,2014-04-26,N,Vantagem clara
-20,São Paulo x Atlético-MG,Interestadual,Todas,30,Atlético-MG,São Paulo,55.9,30,14,8,8,1,1,2014-05-31,N,Vantagem clara
-21,São Paulo x Cruzeiro,Interestadual,Todas,30,São Paulo,Cruzeiro,55.8,30,17,4,9,0,2,2011-07-09,N,Vantagem clara
-22,Santos x Internacional,Interestadual,Todas,30,Internacional,Santos,55.8,30,12,12,6,1,0,2012-03-07,N,Vantagem clara
+8,Vasco x São Paulo,Interestadual,Todas,30,São Paulo,Vasco,59.6,30,14,8,8,2,0,2010-08-25,N,Vantagem
+9,Internacional x Atlético-MG,Interestadual,Todas,30,Atlético-MG,Internacional,59.1,30,16,5,9,2,1,2013-11-14,N,Vantagem
+10,Flamengo x Cruzeiro,Interestadual,Todas,30,Flamengo,Cruzeiro,58.9,30,16,7,7,2,2,2013-08-21,N,Vantagem
+11,Vasco x Santos,Interestadual,Todas,30,Santos,Vasco,57.7,30,14,6,10,2,0,2008-07-27,N,Vantagem
+12,Flamengo x Santos,Interestadual,Todas,30,Flamengo,Santos,57.1,30,14,7,9,1,0,2012-06-17,N,Vantagem
+13,Flamengo x Internacional,Interestadual,Todas,30,Flamengo,Internacional,56.9,30,13,8,9,2,0,2013-07-21,N,Vantagem
+14,Vasco x Internacional,Interestadual,Todas,30,Internacional,Vasco,56.9,30,15,5,10,0,0,2005-10-16,N,Vantagem
+15,Botafogo x Palmeiras,Interestadual,Todas,30,Palmeiras,Botafogo,56.9,30,15,6,9,2,1,2011-08-31,N,Vantagem
+16,Palmeiras x Internacional,Interestadual,Todas,30,Palmeiras,Internacional,56.9,30,14,8,8,2,1,2014-08-30,N,Vantagem
+17,Fluminense x Atlético-MG,Interestadual,Todas,30,Atlético-MG,Fluminense,56.2,30,13,8,9,2,0,2014-05-28,N,Vantagem
+18,Botafogo x Grêmio,Interestadual,Todas,30,Grêmio,Botafogo,56.0,30,15,5,10,1,0,2010-09-04,N,Vantagem
+19,Fluminense x Palmeiras,Interestadual,Todas,30,Palmeiras,Fluminense,55.9,30,15,4,11,2,0,2014-04-26,N,Vantagem
+20,São Paulo x Atlético-MG,Interestadual,Todas,30,Atlético-MG,São Paulo,55.9,30,14,8,8,1,1,2014-05-31,N,Vantagem
+21,São Paulo x Cruzeiro,Interestadual,Todas,30,São Paulo,Cruzeiro,55.8,30,17,4,9,0,2,2011-07-09,N,Vantagem
+22,Santos x Internacional,Interestadual,Todas,30,Internacional,Santos,55.8,30,12,12,6,1,0,2012-03-07,N,Vantagem
 23,Fluminense x Grêmio,Interestadual,Todas,30,Grêmio,Fluminense,54.7,30,15,7,8,1,2,2014-05-18,N,Equilíbrio
 24,Botafogo x Cruzeiro,Interestadual,Todas,30,Cruzeiro,Botafogo,54.6,30,12,11,7,1,0,2010-05-26,N,Equilíbrio
 25,Fluminense x São Paulo,Interestadual,Todas,30,Fluminense,São Paulo,54.2,30,14,7,9,0,0,2011-08-31,N,Equilíbrio
@@ -66,22 +66,22 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 13,Corinthians x Cruzeiro,Interestadual,Todas,20,Cruzeiro,Corinthians,60.1,20,10,5,5,2,1,2016-10-19,N,Vantagem clara
 14,Santos x Internacional,Interestadual,Todas,20,Internacional,Santos,60.1,20,9,8,3,1,0,2016-05-29,N,Vantagem clara
 15,Internacional x Atlético-MG,Interestadual,Todas,20,Atlético-MG,Internacional,60.1,20,10,4,6,2,0,2016-11-02,N,Vantagem clara
-16,Vasco x São Paulo,Interestadual,Todas,20,São Paulo,Vasco,59.4,20,9,5,6,2,0,2015-09-30,N,Vantagem clara
-17,Fluminense x Atlético-MG,Interestadual,Todas,20,Atlético-MG,Fluminense,59.3,20,9,6,5,2,0,2019-08-10,N,Vantagem clara
-18,Flamengo x Cruzeiro,Interestadual,Todas,20,Flamengo,Cruzeiro,59.2,20,11,6,3,1,2,2017-07-16,N,Vantagem clara
-19,Flamengo x Internacional,Interestadual,Todas,20,Flamengo,Internacional,59.1,20,8,8,4,2,0,2019-05-01,N,Vantagem clara
-20,Flamengo x Palmeiras,Interestadual,Todas,20,Flamengo,Palmeiras,58.6,20,9,7,4,3,2,2019-12-01,N,Vantagem clara
-21,Palmeiras x Atlético-MG,Interestadual,Todas,20,Palmeiras,Atlético-MG,57.5,20,7,9,4,3,0,2020-11-02,N,Vantagem clara
-22,Botafogo x Cruzeiro,Interestadual,Todas,20,Cruzeiro,Botafogo,57.4,20,8,9,3,1,0,2016-06-01,N,Vantagem clara
-23,Palmeiras x Internacional,Interestadual,Todas,20,Palmeiras,Internacional,57.0,20,10,6,4,0,1,2018-04-22,N,Vantagem clara
-24,São Paulo x Atlético-MG,Interestadual,Todas,20,Atlético-MG,São Paulo,56.8,20,8,8,4,1,0,2018-05-05,N,Vantagem clara
-25,Botafogo x Palmeiras,Interestadual,Todas,20,Palmeiras,Botafogo,56.5,20,10,5,5,1,1,2017-11-27,N,Vantagem clara
-26,Santos x Atlético-MG,Interestadual,Todas,20,Atlético-MG,Santos,56.5,20,9,4,7,2,0,2018-08-12,N,Vantagem clara
-27,Grêmio x Cruzeiro,Interestadual,Todas,20,Cruzeiro,Grêmio,56.2,20,10,4,6,2,1,2017-08-16,N,Vantagem clara
-28,Vasco x Grêmio,Interestadual,Todas,20,Grêmio,Vasco,55.6,20,10,4,6,0,0,2015-07-11,N,Vantagem clara
-29,São Paulo x Grêmio,Interestadual,Todas,20,Grêmio,São Paulo,55.5,20,9,5,6,1,0,2017-07-24,N,Vantagem clara
-30,Fluminense x Grêmio,Interestadual,Todas,20,Grêmio,Fluminense,55.3,20,11,3,6,0,1,2017-06-15,N,Vantagem clara
-31,Fluminense x Cruzeiro,Interestadual,Todas,20,Fluminense,Cruzeiro,55.0,20,9,6,5,1,1,2016-02-17,N,Vantagem clara
+16,Vasco x São Paulo,Interestadual,Todas,20,São Paulo,Vasco,59.4,20,9,5,6,2,0,2015-09-30,N,Vantagem
+17,Fluminense x Atlético-MG,Interestadual,Todas,20,Atlético-MG,Fluminense,59.3,20,9,6,5,2,0,2019-08-10,N,Vantagem
+18,Flamengo x Cruzeiro,Interestadual,Todas,20,Flamengo,Cruzeiro,59.2,20,11,6,3,1,2,2017-07-16,N,Vantagem
+19,Flamengo x Internacional,Interestadual,Todas,20,Flamengo,Internacional,59.1,20,8,8,4,2,0,2019-05-01,N,Vantagem
+20,Flamengo x Palmeiras,Interestadual,Todas,20,Flamengo,Palmeiras,58.6,20,9,7,4,3,2,2019-12-01,N,Vantagem
+21,Palmeiras x Atlético-MG,Interestadual,Todas,20,Palmeiras,Atlético-MG,57.5,20,7,9,4,3,0,2020-11-02,N,Vantagem
+22,Botafogo x Cruzeiro,Interestadual,Todas,20,Cruzeiro,Botafogo,57.4,20,8,9,3,1,0,2016-06-01,N,Vantagem
+23,Palmeiras x Internacional,Interestadual,Todas,20,Palmeiras,Internacional,57.0,20,10,6,4,0,1,2018-04-22,N,Vantagem
+24,São Paulo x Atlético-MG,Interestadual,Todas,20,Atlético-MG,São Paulo,56.8,20,8,8,4,1,0,2018-05-05,N,Vantagem
+25,Botafogo x Palmeiras,Interestadual,Todas,20,Palmeiras,Botafogo,56.5,20,10,5,5,1,1,2017-11-27,N,Vantagem
+26,Santos x Atlético-MG,Interestadual,Todas,20,Atlético-MG,Santos,56.5,20,9,4,7,2,0,2018-08-12,N,Vantagem
+27,Grêmio x Cruzeiro,Interestadual,Todas,20,Cruzeiro,Grêmio,56.2,20,10,4,6,2,1,2017-08-16,N,Vantagem
+28,Vasco x Grêmio,Interestadual,Todas,20,Grêmio,Vasco,55.6,20,10,4,6,0,0,2015-07-11,N,Vantagem
+29,São Paulo x Grêmio,Interestadual,Todas,20,Grêmio,São Paulo,55.5,20,9,5,6,1,0,2017-07-24,N,Vantagem
+30,Fluminense x Grêmio,Interestadual,Todas,20,Grêmio,Fluminense,55.3,20,11,3,6,0,1,2017-06-15,N,Vantagem
+31,Fluminense x Cruzeiro,Interestadual,Todas,20,Fluminense,Cruzeiro,55.0,20,9,6,5,1,1,2016-02-17,N,Vantagem
 32,Internacional x Cruzeiro,Interestadual,Todas,20,Internacional,Cruzeiro,54.5,20,8,6,6,1,0,2013-09-29,N,Equilíbrio
 33,São Paulo x Cruzeiro,Interestadual,Todas,20,São Paulo,Cruzeiro,54.4,20,11,2,7,0,1,2015-07-26,N,Equilíbrio
 34,Vasco x Atlético-MG,Interestadual,Todas,20,Atlético-MG,Vasco,54.3,20,9,4,7,1,0,2013-09-22,N,Equilíbrio
@@ -129,12 +129,12 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 24,Flamengo x Corinthians,Interestadual,Todas,10,Flamengo,Corinthians,60.4,10,5,3,2,1,1,2023-10-07,N,Vantagem clara
 25,Fluminense x Santos,Interestadual,Todas,10,Fluminense,Santos,60.0,10,5,3,2,0,0,2021-06-17,N,Vantagem clara
 26,Palmeiras x Internacional,Interestadual,Todas,10,Palmeiras,Internacional,60.0,10,5,3,2,0,0,2022-07-24,N,Vantagem clara
-27,Flamengo x São Paulo,Interestadual,Todas,10,São Paulo,Flamengo,59.7,10,4,4,2,1,0,2023-08-13,N,Vantagem clara
-28,Grêmio x Cruzeiro,Interestadual,Todas,10,Cruzeiro,Grêmio,58.8,10,6,2,2,0,1,2023-04-22,N,Vantagem clara
-29,Grêmio x Atlético-MG,Interestadual,Todas,10,Grêmio,Atlético-MG,58.3,10,5,1,4,1,0,2023-07-22,N,Vantagem clara
-30,Santos x Internacional,Interestadual,Todas,10,Internacional,Santos,56.7,10,4,5,1,0,0,2021-08-22,N,Vantagem clara
-31,Corinthians x Atlético-MG,Interestadual,Todas,10,Corinthians,Atlético-MG,55.0,10,4,3,3,1,0,2022-11-13,N,Vantagem clara
-32,Santos x Atlético-MG,Interestadual,Todas,10,Atlético-MG,Santos,55.0,10,4,3,3,1,0,2022-06-11,N,Vantagem clara
+27,Flamengo x São Paulo,Interestadual,Todas,10,São Paulo,Flamengo,59.7,10,4,4,2,1,0,2023-08-13,N,Vantagem
+28,Grêmio x Cruzeiro,Interestadual,Todas,10,Cruzeiro,Grêmio,58.8,10,6,2,2,0,1,2023-04-22,N,Vantagem
+29,Grêmio x Atlético-MG,Interestadual,Todas,10,Grêmio,Atlético-MG,58.3,10,5,1,4,1,0,2023-07-22,N,Vantagem
+30,Santos x Internacional,Interestadual,Todas,10,Internacional,Santos,56.7,10,4,5,1,0,0,2021-08-22,N,Vantagem
+31,Corinthians x Atlético-MG,Interestadual,Todas,10,Corinthians,Atlético-MG,55.0,10,4,3,3,1,0,2022-11-13,N,Vantagem
+32,Santos x Atlético-MG,Interestadual,Todas,10,Atlético-MG,Santos,55.0,10,4,3,3,1,0,2022-06-11,N,Vantagem
 33,Botafogo x São Paulo,Interestadual,Todas,10,Botafogo,São Paulo,54.6,10,3,6,1,1,0,2022-10-09,N,Equilíbrio
 34,Botafogo x Internacional,Interestadual,Todas,10,Botafogo,Internacional,53.3,10,5,1,4,0,0,2022-06-19,N,Equilíbrio
 35,Fluminense x Corinthians,Interestadual,Todas,10,Corinthians,Fluminense,52.7,10,4,2,4,1,0,2022-09-15,N,Equilíbrio
@@ -162,16 +162,16 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 5,Palmeiras x Grêmio,Interestadual,Brasileirão,30,Palmeiras,Grêmio,63.7,24,13,7,4,0,0,2014-06-01,N,Vantagem clara
 6,São Paulo x Cruzeiro,Interestadual,Brasileirão,30,São Paulo,Cruzeiro,61.1,26,15,4,7,0,0,2011-07-09,N,Vantagem clara
 7,Grêmio x Cruzeiro,Interestadual,Brasileirão,30,Cruzeiro,Grêmio,60.8,23,12,5,6,0,0,2013-11-10,N,Vantagem clara
-8,Internacional x Atlético-MG,Interestadual,Brasileirão,30,Atlético-MG,Internacional,59.9,25,14,3,8,0,0,2013-11-14,N,Vantagem clara
-9,Botafogo x Palmeiras,Interestadual,Brasileirão,30,Palmeiras,Botafogo,58.6,25,13,5,7,0,0,2011-08-31,N,Vantagem clara
-10,Flamengo x Atlético-MG,Interestadual,Brasileirão,30,Flamengo,Atlético-MG,57.6,22,11,4,7,0,0,2016-01-27,N,Vantagem clara
-11,Grêmio x Atlético-MG,Interestadual,Brasileirão,30,Grêmio,Atlético-MG,57.2,26,14,3,9,0,0,2013-06-09,N,Vantagem clara
-12,Vasco x Internacional,Interestadual,Brasileirão,30,Internacional,Vasco,56.9,30,15,5,10,0,0,2005-10-16,N,Vantagem clara
-13,Fluminense x Grêmio,Interestadual,Brasileirão,30,Grêmio,Fluminense,56.8,24,12,5,7,0,0,2014-05-18,N,Vantagem clara
-14,Santos x Internacional,Interestadual,Brasileirão,30,Internacional,Santos,56.8,26,11,11,4,0,0,2012-03-07,N,Vantagem clara
-15,Palmeiras x Internacional,Interestadual,Brasileirão,30,Palmeiras,Internacional,56.7,24,11,7,6,0,0,2014-08-30,N,Vantagem clara
-16,Flamengo x Santos,Interestadual,Brasileirão,30,Flamengo,Santos,56.0,28,13,7,8,0,0,2012-06-17,N,Vantagem clara
-17,Flamengo x Grêmio,Interestadual,Brasileirão,30,Flamengo,Grêmio,55.0,21,10,3,8,0,0,2015-11-01,N,Vantagem clara
+8,Internacional x Atlético-MG,Interestadual,Brasileirão,30,Atlético-MG,Internacional,59.9,25,14,3,8,0,0,2013-11-14,N,Vantagem
+9,Botafogo x Palmeiras,Interestadual,Brasileirão,30,Palmeiras,Botafogo,58.6,25,13,5,7,0,0,2011-08-31,N,Vantagem
+10,Flamengo x Atlético-MG,Interestadual,Brasileirão,30,Flamengo,Atlético-MG,57.6,22,11,4,7,0,0,2016-01-27,N,Vantagem
+11,Grêmio x Atlético-MG,Interestadual,Brasileirão,30,Grêmio,Atlético-MG,57.2,26,14,3,9,0,0,2013-06-09,N,Vantagem
+12,Vasco x Internacional,Interestadual,Brasileirão,30,Internacional,Vasco,56.9,30,15,5,10,0,0,2005-10-16,N,Vantagem
+13,Fluminense x Grêmio,Interestadual,Brasileirão,30,Grêmio,Fluminense,56.8,24,12,5,7,0,0,2014-05-18,N,Vantagem
+14,Santos x Internacional,Interestadual,Brasileirão,30,Internacional,Santos,56.8,26,11,11,4,0,0,2012-03-07,N,Vantagem
+15,Palmeiras x Internacional,Interestadual,Brasileirão,30,Palmeiras,Internacional,56.7,24,11,7,6,0,0,2014-08-30,N,Vantagem
+16,Flamengo x Santos,Interestadual,Brasileirão,30,Flamengo,Santos,56.0,28,13,7,8,0,0,2012-06-17,N,Vantagem
+17,Flamengo x Grêmio,Interestadual,Brasileirão,30,Flamengo,Grêmio,55.0,21,10,3,8,0,0,2015-11-01,N,Vantagem
 18,São Paulo x Atlético-MG,Interestadual,Brasileirão,30,Atlético-MG,São Paulo,54.9,26,12,7,7,0,0,2014-05-31,N,Equilíbrio
 19,Fluminense x São Paulo,Interestadual,Brasileirão,30,Fluminense,São Paulo,54.2,30,14,7,9,0,0,2011-08-31,N,Equilíbrio
 20,Vasco x Grêmio,Interestadual,Brasileirão,30,Grêmio,Vasco,54.1,30,14,7,9,0,0,2008-05-31,N,Equilíbrio
@@ -219,15 +219,15 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 10,Palmeiras x Internacional,Interestadual,Brasileirão,20,Palmeiras,Internacional,61.0,18,9,6,3,0,0,2018-04-22,N,Vantagem clara
 11,Flamengo x Atlético-MG,Interestadual,Brasileirão,20,Flamengo,Atlético-MG,60.6,13,7,2,4,0,0,2020-11-08,N,Vantagem clara
 12,Botafogo x Palmeiras,Interestadual,Brasileirão,20,Palmeiras,Botafogo,60.1,17,9,4,4,0,0,2017-11-27,N,Vantagem clara
-13,Fluminense x Grêmio,Interestadual,Brasileirão,20,Grêmio,Fluminense,59.9,18,10,3,5,0,0,2017-06-15,N,Vantagem clara
-14,Flamengo x Santos,Interestadual,Brasileirão,20,Flamengo,Santos,59.7,18,10,2,6,0,0,2017-06-28,N,Vantagem clara
-15,Santos x Internacional,Interestadual,Brasileirão,20,Internacional,Santos,59.0,18,8,8,2,0,0,2016-05-29,N,Vantagem clara
-16,São Paulo x Cruzeiro,Interestadual,Brasileirão,20,São Paulo,Cruzeiro,58.0,18,10,2,6,0,0,2015-07-26,N,Vantagem clara
-17,Vasco x Santos,Interestadual,Brasileirão,20,Santos,Vasco,57.0,16,8,3,5,0,0,2015-08-12,N,Vantagem clara
-18,Grêmio x Atlético-MG,Interestadual,Brasileirão,20,Grêmio,Atlético-MG,56.8,18,10,1,7,0,0,2017-08-06,N,Vantagem clara
-19,Internacional x Atlético-MG,Interestadual,Brasileirão,20,Atlético-MG,Internacional,56.7,18,9,3,6,0,0,2016-11-02,N,Vantagem clara
-20,Fluminense x Corinthians,Interestadual,Brasileirão,20,Fluminense,Corinthians,55.8,16,8,3,5,0,0,2019-08-22,N,Vantagem clara
-21,Vasco x Grêmio,Interestadual,Brasileirão,20,Grêmio,Vasco,55.6,20,10,4,6,0,0,2015-07-11,N,Vantagem clara
+13,Fluminense x Grêmio,Interestadual,Brasileirão,20,Grêmio,Fluminense,59.9,18,10,3,5,0,0,2017-06-15,N,Vantagem
+14,Flamengo x Santos,Interestadual,Brasileirão,20,Flamengo,Santos,59.7,18,10,2,6,0,0,2017-06-28,N,Vantagem
+15,Santos x Internacional,Interestadual,Brasileirão,20,Internacional,Santos,59.0,18,8,8,2,0,0,2016-05-29,N,Vantagem
+16,São Paulo x Cruzeiro,Interestadual,Brasileirão,20,São Paulo,Cruzeiro,58.0,18,10,2,6,0,0,2015-07-26,N,Vantagem
+17,Vasco x Santos,Interestadual,Brasileirão,20,Santos,Vasco,57.0,16,8,3,5,0,0,2015-08-12,N,Vantagem
+18,Grêmio x Atlético-MG,Interestadual,Brasileirão,20,Grêmio,Atlético-MG,56.8,18,10,1,7,0,0,2017-08-06,N,Vantagem
+19,Internacional x Atlético-MG,Interestadual,Brasileirão,20,Atlético-MG,Internacional,56.7,18,9,3,6,0,0,2016-11-02,N,Vantagem
+20,Fluminense x Corinthians,Interestadual,Brasileirão,20,Fluminense,Corinthians,55.8,16,8,3,5,0,0,2019-08-22,N,Vantagem
+21,Vasco x Grêmio,Interestadual,Brasileirão,20,Grêmio,Vasco,55.6,20,10,4,6,0,0,2015-07-11,N,Vantagem
 22,Botafogo x Santos,Interestadual,Brasileirão,20,Santos,Botafogo,54.3,18,8,6,4,0,0,2014-10-01,N,Equilíbrio
 23,Fluminense x Internacional,Interestadual,Brasileirão,20,Fluminense,Internacional,54.0,16,8,2,6,0,0,2019-08-03,N,Equilíbrio
 24,Palmeiras x Atlético-MG,Interestadual,Brasileirão,20,Palmeiras,Atlético-MG,53.0,14,6,4,4,0,0,2020-11-02,N,Equilíbrio
@@ -277,11 +277,11 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 16,Corinthians x Internacional,Interestadual,Brasileirão,10,Internacional,Corinthians,62.5,8,4,3,1,0,0,2023-08-05,N,Vantagem clara
 17,Fluminense x Santos,Interestadual,Brasileirão,10,Fluminense,Santos,60.0,10,5,3,2,0,0,2021-06-17,N,Vantagem clara
 18,Palmeiras x Internacional,Interestadual,Brasileirão,10,Palmeiras,Internacional,60.0,10,5,3,2,0,0,2022-07-24,N,Vantagem clara
-19,Flamengo x Cruzeiro,Interestadual,Brasileirão,10,Flamengo,Cruzeiro,58.3,8,4,2,2,0,0,2023-05-27,N,Vantagem clara
-20,Palmeiras x Atlético-MG,Interestadual,Brasileirão,10,Palmeiras,Atlético-MG,58.3,8,4,2,2,0,0,2023-05-28,N,Vantagem clara
-21,São Paulo x Atlético-MG,Interestadual,Brasileirão,10,Atlético-MG,São Paulo,58.3,8,4,2,2,0,0,2023-08-06,N,Vantagem clara
-22,Flamengo x Palmeiras,Interestadual,Brasileirão,10,Flamengo,Palmeiras,57.1,7,3,3,1,0,0,2023-07-08,N,Vantagem clara
-23,Santos x Internacional,Interestadual,Brasileirão,10,Internacional,Santos,56.7,10,4,5,1,0,0,2021-08-22,N,Vantagem clara
+19,Flamengo x Cruzeiro,Interestadual,Brasileirão,10,Flamengo,Cruzeiro,58.3,8,4,2,2,0,0,2023-05-27,N,Vantagem
+20,Palmeiras x Atlético-MG,Interestadual,Brasileirão,10,Palmeiras,Atlético-MG,58.3,8,4,2,2,0,0,2023-05-28,N,Vantagem
+21,São Paulo x Atlético-MG,Interestadual,Brasileirão,10,Atlético-MG,São Paulo,58.3,8,4,2,2,0,0,2023-08-06,N,Vantagem
+22,Flamengo x Palmeiras,Interestadual,Brasileirão,10,Flamengo,Palmeiras,57.1,7,3,3,1,0,0,2023-07-08,N,Vantagem
+23,Santos x Internacional,Interestadual,Brasileirão,10,Internacional,Santos,56.7,10,4,5,1,0,0,2021-08-22,N,Vantagem
 24,Fluminense x Palmeiras,Interestadual,Brasileirão,10,Fluminense,Palmeiras,54.2,8,4,1,3,0,0,2023-08-05,N,Equilíbrio
 25,Vasco x São Paulo,Interestadual,Brasileirão,10,São Paulo,Vasco,54.2,8,4,1,3,0,0,2021-07-28,N,Equilíbrio
 26,Vasco x Atlético-MG,Interestadual,Brasileirão,10,Vasco,Atlético-MG,54.2,8,4,1,3,0,0,2021-01-23,N,Equilíbrio
@@ -334,10 +334,10 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 21,Corinthians x Internacional,Interestadual,Copas,30,Internacional,Corinthians,62.2,4,1,2,1,2,0,2013-09-04,N,Vantagem clara
 22,Flamengo x São Paulo,Interestadual,Copas,30,São Paulo,Flamengo,61.9,6,3,1,2,2,1,2015-05-10,N,Vantagem clara
 23,São Paulo x Atlético-MG,Interestadual,Copas,30,Atlético-MG,São Paulo,60.0,4,2,1,1,1,1,2014-05-31,N,Vantagem clara
-24,Botafogo x Atlético-MG,Interestadual,Copas,30,Botafogo,Atlético-MG,59.9,7,3,1,3,3,1,2013-08-22,N,Vantagem clara
-25,Palmeiras x Internacional,Interestadual,Copas,30,Palmeiras,Internacional,57.3,6,3,1,2,2,1,2014-08-30,N,Vantagem clara
-26,Internacional x Atlético-MG,Interestadual,Copas,30,Atlético-MG,Internacional,56.2,5,2,2,1,2,1,2013-11-14,N,Vantagem clara
-27,Grêmio x Cruzeiro,Interestadual,Copas,30,Grêmio,Cruzeiro,55.6,7,3,2,2,2,2,2013-11-10,N,Vantagem clara
+24,Botafogo x Atlético-MG,Interestadual,Copas,30,Botafogo,Atlético-MG,59.9,7,3,1,3,3,1,2013-08-22,N,Vantagem
+25,Palmeiras x Internacional,Interestadual,Copas,30,Palmeiras,Internacional,57.3,6,3,1,2,2,1,2014-08-30,N,Vantagem
+26,Internacional x Atlético-MG,Interestadual,Copas,30,Atlético-MG,Internacional,56.2,5,2,2,1,2,1,2013-11-14,N,Vantagem
+27,Grêmio x Cruzeiro,Interestadual,Copas,30,Grêmio,Cruzeiro,55.6,7,3,2,2,2,2,2013-11-10,N,Vantagem
 28,Palmeiras x Grêmio,Interestadual,Copas,30,Palmeiras,Grêmio,54.8,6,3,1,2,1,2,2014-06-01,N,Equilíbrio
 29,Corinthians x Atlético-MG,Interestadual,Copas,30,Corinthians,Atlético-MG,53.3,4,2,0,2,1,1,2013-10-06,N,Equilíbrio
 30,Flamengo x Palmeiras,Interestadual,Copas,30,Flamengo,Palmeiras,52.9,6,2,1,3,3,2,2014-09-17,N,Equilíbrio
@@ -355,7 +355,7 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 42,São Paulo x Grêmio,Interestadual,Copas,30,Grêmio,São Paulo,77.8,2,1,1,0,1,0,2012-08-12,S,Freguesia
 43,Flamengo x Santos,Interestadual,Copas,30,Flamengo,Santos,66.7,2,1,0,1,1,0,2012-06-17,S,Freguesia
 44,Vasco x Cruzeiro,Interestadual,Copas,30,Cruzeiro,Vasco,66.7,2,1,1,0,0,0,2010-08-28,S,Freguesia
-45,Botafogo x São Paulo,Interestadual,Copas,30,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2010-09-12,S,Vantagem clara
+45,Botafogo x São Paulo,Interestadual,Copas,30,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2010-09-12,S,Vantagem
 1,Flamengo x Grêmio,Interestadual,Copas,20,Flamengo,Grêmio,93.1,6,5,1,0,3,0,2019-08-10,N,Freguesia
 2,Flamengo x Internacional,Interestadual,Copas,20,Flamengo,Internacional,89.9,4,3,1,0,2,0,2019-05-01,N,Freguesia
 3,Vasco x São Paulo,Interestadual,Copas,20,São Paulo,Vasco,88.1,3,2,1,0,2,0,2015-09-30,N,Freguesia
@@ -399,8 +399,8 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 41,Palmeiras x Internacional,Interestadual,Copas,20,Internacional,Palmeiras,66.7,2,1,0,1,1,0,2018-04-22,S,Freguesia
 42,São Paulo x Cruzeiro,Interestadual,Copas,20,Cruzeiro,São Paulo,66.7,2,1,0,1,1,0,2015-07-26,S,Freguesia
 43,Santos x Internacional,Interestadual,Copas,20,Internacional,Santos,66.7,2,1,0,1,1,0,2016-05-29,S,Freguesia
-44,Botafogo x São Paulo,Interestadual,Copas,20,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem clara
-45,Corinthians x Grêmio,Interestadual,Copas,20,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem clara
+44,Botafogo x São Paulo,Interestadual,Copas,20,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem
+45,Corinthians x Grêmio,Interestadual,Copas,20,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem
 1,Fluminense x Internacional,Interestadual,Copas,10,Fluminense,Internacional,86.7,3,2,1,0,2,0,2023-10-04,N,Freguesia
 2,Flamengo x Palmeiras,Interestadual,Copas,10,Flamengo,Palmeiras,81.8,3,2,0,1,2,0,2023-07-08,N,Freguesia
 3,Flamengo x Atlético-MG,Interestadual,Copas,10,Flamengo,Atlético-MG,70.4,4,3,0,1,1,1,2024-07-03,N,Freguesia
@@ -430,8 +430,8 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 27,Corinthians x Cruzeiro,Interestadual,Copas,10,Corinthians,Cruzeiro,66.7,2,1,0,1,1,0,2023-04-16,S,Freguesia
 28,Corinthians x Atlético-MG,Interestadual,Copas,10,Corinthians,Atlético-MG,66.7,2,1,0,1,1,0,2022-11-13,S,Freguesia
 29,Santos x Atlético-MG,Interestadual,Copas,10,Atlético-MG,Santos,66.7,2,1,0,1,1,0,2022-06-11,S,Freguesia
-30,Botafogo x São Paulo,Interestadual,Copas,10,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2022-10-09,S,Vantagem clara
-31,Corinthians x Grêmio,Interestadual,Copas,10,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2021-12-05,S,Vantagem clara
+30,Botafogo x São Paulo,Interestadual,Copas,10,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2022-10-09,S,Vantagem
+31,Corinthians x Grêmio,Interestadual,Copas,10,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2021-12-05,S,Vantagem
 32,Santos x Cruzeiro,Interestadual,Copas,10,Santos,Cruzeiro,50.0,1,1,0,0,0,1,2018-08-15,S,Equilíbrio
 1,Flamengo x Grêmio,Interestadual,Mata-mata,30,Flamengo,Grêmio,90.0,8,6,2,0,4,0,2015-11-01,N,Freguesia
 2,Flamengo x Internacional,Interestadual,Mata-mata,30,Flamengo,Internacional,89.9,4,3,1,0,2,0,2013-07-21,N,Freguesia
@@ -456,10 +456,10 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 21,Corinthians x Internacional,Interestadual,Mata-mata,30,Internacional,Corinthians,62.2,4,1,2,1,2,0,2013-09-04,N,Vantagem clara
 22,Flamengo x São Paulo,Interestadual,Mata-mata,30,São Paulo,Flamengo,61.9,6,3,1,2,2,1,2015-05-10,N,Vantagem clara
 23,São Paulo x Atlético-MG,Interestadual,Mata-mata,30,Atlético-MG,São Paulo,60.0,4,2,1,1,1,1,2014-05-31,N,Vantagem clara
-24,Botafogo x Atlético-MG,Interestadual,Mata-mata,30,Botafogo,Atlético-MG,59.9,7,3,1,3,3,1,2013-08-22,N,Vantagem clara
-25,Palmeiras x Internacional,Interestadual,Mata-mata,30,Palmeiras,Internacional,57.3,6,3,1,2,2,1,2014-08-30,N,Vantagem clara
-26,Internacional x Atlético-MG,Interestadual,Mata-mata,30,Atlético-MG,Internacional,56.2,5,2,2,1,2,1,2013-11-14,N,Vantagem clara
-27,Grêmio x Cruzeiro,Interestadual,Mata-mata,30,Grêmio,Cruzeiro,55.6,7,3,2,2,2,2,2013-11-10,N,Vantagem clara
+24,Botafogo x Atlético-MG,Interestadual,Mata-mata,30,Botafogo,Atlético-MG,59.9,7,3,1,3,3,1,2013-08-22,N,Vantagem
+25,Palmeiras x Internacional,Interestadual,Mata-mata,30,Palmeiras,Internacional,57.3,6,3,1,2,2,1,2014-08-30,N,Vantagem
+26,Internacional x Atlético-MG,Interestadual,Mata-mata,30,Atlético-MG,Internacional,56.2,5,2,2,1,2,1,2013-11-14,N,Vantagem
+27,Grêmio x Cruzeiro,Interestadual,Mata-mata,30,Grêmio,Cruzeiro,55.6,7,3,2,2,2,2,2013-11-10,N,Vantagem
 28,Palmeiras x Grêmio,Interestadual,Mata-mata,30,Palmeiras,Grêmio,54.8,6,3,1,2,1,2,2014-06-01,N,Equilíbrio
 29,Corinthians x Atlético-MG,Interestadual,Mata-mata,30,Corinthians,Atlético-MG,53.3,4,2,0,2,1,1,2013-10-06,N,Equilíbrio
 30,Flamengo x Palmeiras,Interestadual,Mata-mata,30,Flamengo,Palmeiras,52.9,6,2,1,3,3,2,2014-09-17,N,Equilíbrio
@@ -476,7 +476,7 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 41,São Paulo x Grêmio,Interestadual,Mata-mata,30,Grêmio,São Paulo,77.8,2,1,1,0,1,0,2012-08-12,S,Freguesia
 42,Flamengo x Santos,Interestadual,Mata-mata,30,Flamengo,Santos,66.7,2,1,0,1,1,0,2012-06-17,S,Freguesia
 43,Santos x Internacional,Interestadual,Mata-mata,30,Internacional,Santos,66.7,2,1,0,1,1,0,2012-03-07,S,Freguesia
-44,Botafogo x São Paulo,Interestadual,Mata-mata,30,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2010-09-12,S,Vantagem clara
+44,Botafogo x São Paulo,Interestadual,Mata-mata,30,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2010-09-12,S,Vantagem
 1,Flamengo x Grêmio,Interestadual,Mata-mata,20,Flamengo,Grêmio,93.1,6,5,1,0,3,0,2019-08-10,N,Freguesia
 2,Flamengo x Internacional,Interestadual,Mata-mata,20,Flamengo,Internacional,89.9,4,3,1,0,2,0,2019-05-01,N,Freguesia
 3,Vasco x São Paulo,Interestadual,Mata-mata,20,São Paulo,Vasco,88.1,3,2,1,0,2,0,2015-09-30,N,Freguesia
@@ -519,8 +519,8 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 40,Palmeiras x Internacional,Interestadual,Mata-mata,20,Internacional,Palmeiras,66.7,2,1,0,1,1,0,2018-04-22,S,Freguesia
 41,São Paulo x Cruzeiro,Interestadual,Mata-mata,20,Cruzeiro,São Paulo,66.7,2,1,0,1,1,0,2015-07-26,S,Freguesia
 42,Santos x Internacional,Interestadual,Mata-mata,20,Internacional,Santos,66.7,2,1,0,1,1,0,2016-05-29,S,Freguesia
-43,Botafogo x São Paulo,Interestadual,Mata-mata,20,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem clara
-44,Corinthians x Grêmio,Interestadual,Mata-mata,20,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem clara
+43,Botafogo x São Paulo,Interestadual,Mata-mata,20,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem
+44,Corinthians x Grêmio,Interestadual,Mata-mata,20,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2016-08-14,S,Vantagem
 1,Fluminense x Internacional,Interestadual,Mata-mata,10,Fluminense,Internacional,86.7,3,2,1,0,2,0,2023-10-04,N,Freguesia
 2,Flamengo x Palmeiras,Interestadual,Mata-mata,10,Flamengo,Palmeiras,81.8,3,2,0,1,2,0,2023-07-08,N,Freguesia
 3,Flamengo x Atlético-MG,Interestadual,Mata-mata,10,Flamengo,Atlético-MG,70.4,4,3,0,1,1,1,2024-07-03,N,Freguesia
@@ -550,6 +550,6 @@ pos,classico,tipo,filtro,janela,dominante,fregues,indice,jogos,v,e,d,mm_dom,mm_f
 27,Corinthians x Cruzeiro,Interestadual,Mata-mata,10,Corinthians,Cruzeiro,66.7,2,1,0,1,1,0,2023-04-16,S,Freguesia
 28,Corinthians x Atlético-MG,Interestadual,Mata-mata,10,Corinthians,Atlético-MG,66.7,2,1,0,1,1,0,2022-11-13,S,Freguesia
 29,Santos x Atlético-MG,Interestadual,Mata-mata,10,Atlético-MG,Santos,66.7,2,1,0,1,1,0,2022-06-11,S,Freguesia
-30,Botafogo x São Paulo,Interestadual,Mata-mata,10,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2022-10-09,S,Vantagem clara
-31,Corinthians x Grêmio,Interestadual,Mata-mata,10,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2021-12-05,S,Vantagem clara
+30,Botafogo x São Paulo,Interestadual,Mata-mata,10,Botafogo,São Paulo,55.6,2,0,2,0,1,0,2022-10-09,S,Vantagem
+31,Corinthians x Grêmio,Interestadual,Mata-mata,10,Corinthians,Grêmio,55.6,2,0,2,0,1,0,2021-12-05,S,Vantagem
 32,Santos x Cruzeiro,Interestadual,Mata-mata,10,Santos,Cruzeiro,50.0,1,1,0,0,0,1,2018-08-15,S,Equilíbrio

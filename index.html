@@ -168,6 +168,31 @@ footer.rodape a{color:var(--texto-2)}
 .abas a[aria-current="page"]{color:var(--fundo);background:var(--texto);border-color:var(--texto)}
 .abas a:hover:not([aria-current]){color:var(--roxo)}
 .faixa.f30{grid-template-columns:repeat(15,minmax(0,1fr))}
+
+/* ajustes 16/11: hover sem apagar o mapa de calor, faixa com escudos, níveis, zebra */
+.ranking tbody tr:hover td.h1c,.ranking tr.ativo td.h1c{background:var(--s1)}
+.ranking tbody tr:hover td.h2c,.ranking tr.ativo td.h2c{background:var(--s2)}
+.ranking tbody tr:hover td.h3c,.ranking tr.ativo td.h3c{background:var(--s3)}
+.ranking tbody tr:hover td.h4c,.ranking tr.ativo td.h4c{background:var(--s4)}
+.zebra tbody tr:nth-child(even) td{background:var(--fundo-sutil)}
+.zebra tbody tr:hover td{background:var(--s1)}
+.tag.v2{background:var(--s1);border-color:var(--s1);color:var(--texto)}
+.ix.v2 .trilho i{background:var(--s2)}
+.faixa{margin-top:18px}
+.faixa i,.faixa i.w,.faixa i.d{background:#fff;border:1px solid var(--linha);display:flex;align-items:center;justify-content:center}
+.faixa i img{width:72%;height:72%;object-fit:contain;pointer-events:none}
+.faixa i.e::before{content:"";width:36%;height:2px;background:var(--cinza)}
+.faixa i.mm{border:2px solid var(--roxo)}
+.faixa i.mm::after{content:none}
+.faixa i[data-corte]{box-shadow:-4px 0 0 -1px var(--texto)}
+.faixa i .corte{position:absolute;top:-15px;left:-9px;font-size:10px;font-weight:700;color:var(--texto);line-height:1}
+.leg i,.leg i.w,.leg i.d{background:#fff;border:1px solid var(--linha)}
+.leg i.mm{border:2px solid var(--roxo)}
+.leg i.mm::after{content:none}
+.leg i.corte{width:3px;background:var(--texto);border:0}
+.chips.esc .chip{padding:3px 6px;display:inline-flex;align-items:center}
+.chips.esc .chip img{width:22px;height:22px;object-fit:contain}
+.chips.esc .chip[aria-pressed="true"]{background:var(--s2);border-color:var(--roxo);color:var(--texto)}
 </style>
 </head>
 <body>
@@ -234,7 +259,7 @@ footer.rodape a{color:var(--texto-2)}
         <tbody data-draw="rk"></tbody>
       </table>
     </div>
-    <p class="nota">Clássico: à esquerda o escudo do dominante (no equilíbrio, de quem tem mais vitórias na janela) · Índice: de 0 a 100, freguesia a partir de <span data-draw="t-f">—</span> e vantagem clara a partir de <span data-draw="t-v">—</span> · V, E, D: do ponto de vista do dominante · Jejum: quem está há mais jogos sem vencer o rival hoje · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro (menos de 12% da janela), o clássico fica no fim da lista, em cinza.</p>
+    <p class="nota">Clássico: à esquerda o escudo do dominante (no equilíbrio, de quem tem mais vitórias na janela) · Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D: do ponto de vista do dominante · Jejum: quem está há mais jogos sem vencer o rival hoje · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro (menos de 12% da janela), o clássico fica no fim da lista, em cinza.</p>
   </section>
 
   <section class="bloco">
@@ -300,7 +325,7 @@ footer.rodape a{color:var(--texto-2)}
         <h3>Os últimos 50 jogos</h3>
         <p class="h2sub">Do mais recente (canto superior esquerdo) ao mais antigo. Passe o mouse para ver o placar.</p>
         <div class="faixa" data-draw="strip" data-source="jogos"></div>
-        <div class="leg"><span><i class="w"></i>vitória do dominante</span><span><i></i>empate</span><span><i class="d"></i>vitória do freguês</span><span><i class="mm"></i>mata-mata</span></div>
+        <div class="leg"><span>Escudo: quem venceu o jogo</span><span><i class="e"></i>empate</span><span><i class="mm"></i>mata-mata</span><span><i class="corte"></i>início dos últimos 10, 20, 30 e 40 jogos</span></div>
       </div>
     </div>
 
@@ -359,7 +384,7 @@ footer.rodape a{color:var(--texto-2)}
     <div class="met-grid" style="margin-top:22px">
       <div class="met"><h3>Exemplo</h3><p>Uma semifinal de Copa do Brasil entre os 10 jogos mais recentes vale 3 × 2 = <b>6</b>. Uma semifinal de estadual no mesmo bloco vale 3 × 1,2 = <b>3,6</b>. Quem passa nos pênaltis ou no agregado leva vantagem mesmo com os jogos empatados.</p></div>
       <div class="met"><h3>Turnos e consolação</h3><p>Finais de turno do Carioca (Taça Guanabara e Taça Rio até 2019), do Gauchão 2020 e do Paranaense 2019 valem como mata-mata. A Taça Rio de consolação (2021 em diante) vale como fase de classificação.</p></div>
-      <div class="met"><h3>Nível</h3><p><b>Freguesia</b> a partir de 65, <b>vantagem clara</b> a partir de 55, abaixo disso equilíbrio. Dominante é o time de índice maior. O Vitória 0 x 3 Bahia de 2018 vale como W.O.</p></div>
+      <div class="met"><h3>Nível</h3><p><b>Freguesia</b> a partir de 65, <b>vantagem clara</b> de 60 a 64,9, <b>vantagem</b> de 55 a 59,9 e, abaixo disso, equilíbrio. Dominante é o time de índice maior. O Vitória 0 x 3 Bahia de 2018 vale como W.O.</p></div>
     </div>
     <div class="fora">
       <h3>O que fica de fora</h3>
@@ -394,9 +419,9 @@ footer.rodape a{color:var(--texto-2)}
   const so = (team) => { const s = mk('span', 'clube'); s.title = team; s.append(crest(team), mk('span', 'sr', team)); return s; };
   const par = (a, b, label) => { const s = mk('span', 'clube'); s.title = label; s.append(crest(a), mk('span', 'x', '×'), crest(b), mk('span', 'sr', label)); return s; };
   const nome = (team) => { const s = mk('span', 'nome'); s.append(crest(team), document.createTextNode(team)); return s; };
-  const nivelTag = (n) => mk('span', 'tag ' + (n === 'Freguesia' ? 'f' : n === 'Vantagem clara' ? 'v' : ''), n);
+  const nivelTag = (n) => mk('span', 'tag ' + (n === 'Freguesia' ? 'f' : n === 'Vantagem clara' ? 'v' : n === 'Vantagem' ? 'v2' : ''), n);
   const idxCell = (v, nivel) => {
-    const box = mk('span', 'ix ' + (nivel === 'Freguesia' ? 'f' : nivel === 'Vantagem clara' ? 'v' : ''));
+    const box = mk('span', 'ix ' + (nivel === 'Freguesia' ? 'f' : nivel === 'Vantagem clara' ? 'v' : nivel === 'Vantagem' ? 'v2' : ''));
     const tr = mk('span', 'trilho'); const i = mk('i'); const x = num(v);
     i.style.width = (isNaN(x) ? 0 : Math.max(0, Math.min(100, ((x - 33.3) / (100 - 33.3)) * 100))) + '%';
     tr.appendChild(i); box.append(mk('b', '', f1(v)), tr); return box;
@@ -538,7 +563,10 @@ footer.rodape a{color:var(--texto-2)}
     const jg = ok('jogos'); const cur = sel(); el.replaceChildren(); if (!jg || !cur) return;
     const tip = mk('div', 'tip'); tip.hidden = true;
     for (const g of jg.filter((x) => x.classico === cur.classico)) {
-      const i = mk('i', outcome(g, cur.dominante) + (g.mata_mata === 'S' ? ' mm' : ''));
+      const o = outcome(g, cur.dominante);
+      const i = mk('i', (o === 'e' ? 'e' : 'v') + (g.mata_mata === 'S' ? ' mm' : ''));
+      if (o !== 'e') i.appendChild(crest(o === 'w' ? cur.dominante : cur.fregues));
+      if ([10, 20, 30, 40].includes(num(g.n) - 1)) { i.dataset.corte = String(num(g.n) - 1); i.appendChild(mk('span', 'corte', String(num(g.n) - 1))); }
       const pen = g.penaltis ? ` (pên. ${g.penaltis})` : '';
       i.setAttribute('aria-label', `${br(g.data)}: ${g.mandante} ${g.gm} x ${g.gv} ${g.visitante}${pen}`);
       const show = () => {

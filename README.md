@@ -22,7 +22,7 @@ Para cada clássico, o índice mede o aproveitamento do time dominante nos **úl
 
 Cada mata-mata (ida e volta ou jogo único) vira **um jogo extra** vencido por quem avançou, com o peso da fase. Pênaltis contam como empate no jogo; quem vence a disputa leva o jogo extra. Confronto empatado sem pênaltis: avança quem tinha a vantagem do regulamento.
 
-Índice = Σ(peso × pontos) ÷ Σ(peso × 3). Freguesia a partir de 65; vantagem clara a partir de 55.
+Índice = Σ(peso × pontos) ÷ Σ(peso × 3). Níveis: freguesia a partir de 65; vantagem clara de 60 a 64,9; vantagem de 55 a 59,9; abaixo disso, equilíbrio.
 
 ## G12: os 66 confrontos entre os 12 grandes
 
@@ -39,7 +39,7 @@ Mesmo Índice de Freguesia 2.0, aplicado a todos os confrontos entre Flamengo, F
 - **Ranking por clube**: aproveitamento ponderado de cada clube somando os seus 11 confrontos.
 - Mesmos pesos de importância. O Mundial de Clubes (Palmeiras x Botafogo, 2025) usa o peso de mata-mata de copa. Classificações pelo gol fora de casa e decisões do STJD ficam registradas em `avancou_por_vantagem` e `obs`.
 
-Arquivos: `dados/classicos_g12.json`, `dados/jogos_g12.csv` (52 confrontos interestaduais; os locais vêm de `dados/jogos.csv`), `scripts/calcular_g12.py`, `data/g12_*.json` e `csv/g12_*.csv` (aba G12), `data/g12c_*.json` e `csv/g12c_*.csv` (aba G12 com clássicos), `g12.html`, `g12-classicos.html`.
+Arquivos: `dados/classicos_g12.json`, `dados/jogos_g12.csv`, `scripts/paginas_g12.py` (gera g12.html a partir de g12-classicos.html, a página mestre) (52 confrontos interestaduais; os locais vêm de `dados/jogos.csv`), `scripts/calcular_g12.py`, `data/g12_*.json` e `csv/g12_*.csv` (aba G12), `data/g12c_*.json` e `csv/g12c_*.csv` (aba G12 com clássicos), `g12.html`, `g12-classicos.html`.
 
 Conferência: oGol como fonte principal. Segunda fonte para cada jogo interestadual da janela: base do Brasileirão 2003–2025 (adaoduque/brasileirao_dataset), Transfermarkt para copas, Série B e 2026, e a imprensa nos casos em que as duas fontes divergiram (coluna `fonte2`).
 

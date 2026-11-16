@@ -168,6 +168,31 @@ footer.rodape a{color:var(--texto-2)}
 .abas a:hover:not([aria-current]){color:var(--roxo)}
 .faixa.f30{grid-template-columns:repeat(15,minmax(0,1fr))}
 .ranking tr.ativo td.h1c{background:var(--s1)}.ranking tr.ativo td.h2c{background:var(--s2)}.ranking tr.ativo td.h3c{background:var(--s3)}.ranking tr.ativo td.h4c{background:var(--s4)}
+
+/* ajustes 16/11: hover sem apagar o mapa de calor, faixa com escudos, níveis, zebra */
+.ranking tbody tr:hover td.h1c,.ranking tr.ativo td.h1c{background:var(--s1)}
+.ranking tbody tr:hover td.h2c,.ranking tr.ativo td.h2c{background:var(--s2)}
+.ranking tbody tr:hover td.h3c,.ranking tr.ativo td.h3c{background:var(--s3)}
+.ranking tbody tr:hover td.h4c,.ranking tr.ativo td.h4c{background:var(--s4)}
+.zebra tbody tr:nth-child(even) td{background:var(--fundo-sutil)}
+.zebra tbody tr:hover td{background:var(--s1)}
+.tag.v2{background:var(--s1);border-color:var(--s1);color:var(--texto)}
+.ix.v2 .trilho i{background:var(--s2)}
+.faixa{margin-top:18px}
+.faixa i,.faixa i.w,.faixa i.d{background:#fff;border:1px solid var(--linha);display:flex;align-items:center;justify-content:center}
+.faixa i img{width:72%;height:72%;object-fit:contain;pointer-events:none}
+.faixa i.e::before{content:"";width:36%;height:2px;background:var(--cinza)}
+.faixa i.mm{border:2px solid var(--roxo)}
+.faixa i.mm::after{content:none}
+.faixa i[data-corte]{box-shadow:-4px 0 0 -1px var(--texto)}
+.faixa i .corte{position:absolute;top:-15px;left:-9px;font-size:10px;font-weight:700;color:var(--texto);line-height:1}
+.leg i,.leg i.w,.leg i.d{background:#fff;border:1px solid var(--linha)}
+.leg i.mm{border:2px solid var(--roxo)}
+.leg i.mm::after{content:none}
+.leg i.corte{width:3px;background:var(--texto);border:0}
+.chips.esc .chip{padding:3px 6px;display:inline-flex;align-items:center}
+.chips.esc .chip img{width:22px;height:22px;object-fit:contain}
+.chips.esc .chip[aria-pressed="true"]{background:var(--s2);border-color:var(--roxo);color:var(--texto)}
 </style>
 </head>
 <body>
@@ -208,7 +233,7 @@ footer.rodape a{color:var(--texto-2)}
           <button type="button" class="chip" data-j="10" aria-pressed="false">10</button>
         </div>
       </div>
-      <div class="ctl"><label class="rot" for="clube-sel">Clube</label><select id="clube-sel" data-draw="clube-sel" aria-label="Clube"></select></div>
+      <div class="ctl"><span class="rot">Clube</span><div class="chips esc" role="group" aria-label="Clube" data-draw="clube-sel"></div></div>
     </div>
     <div class="tabela-wrap">
       <table class="ranking">
@@ -233,26 +258,37 @@ footer.rodape a{color:var(--texto-2)}
         <tbody data-draw="rk"></tbody>
       </table>
     </div>
-    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65 e vantagem clara a partir de 55 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando, nos 30 jogos, sem os jogos em campo neutro e sem o bônus dos mata-matas · Forma: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
+    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando (cerca de 15 de cada lado), nos 30 jogos, sem os jogos em campo neutro e sem o bônus dos mata-matas · Forma: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
   </section>
 
   <section class="bloco" id="clubes">
     <h2>Ranking por clube</h2>
-    <p class="h2sub">Aproveitamento ponderado de cada clube contra os grandes de outros estados, somando os seus confrontos (30 jogos de cada, mesmos pesos). Os clubes do Rio e de São Paulo têm 8 adversários; os de Minas e do Rio Grande do Sul, 10. Ao lado, de quem cada um é freguês e sobre quem tem domínio.</p>
+    <p class="h2sub">Aproveitamento ponderado de cada clube contra os grandes de outros estados, somando os seus confrontos (mesmos pesos). Os clubes do Rio e de São Paulo têm 8 adversários (240 jogos no recorte de 30); os de Minas e do Rio Grande do Sul, 10 (300 jogos). Ao lado, de quem cada um é freguês e sobre quem tem domínio.</p>
+    <div class="controles">
+      <div class="ctl"><span class="rot">Últimos jogos de cada confronto</span>
+        <div class="chips" role="group" aria-label="Últimos jogos (clubes)">
+          <button type="button" class="chip" data-jc="30" aria-pressed="true">30</button>
+          <button type="button" class="chip" data-jc="20" aria-pressed="false">20</button>
+          <button type="button" class="chip" data-jc="10" aria-pressed="false">10</button>
+        </div>
+      </div>
+    </div>
     <div class="tabela-wrap">
-      <table class="ranking">
+      <table class="ranking zebra">
         <thead>
           <tr>
             <th>#</th>
             <th>Clube</th>
             <th>Índice contra o G12</th>
+            <th>Jogos</th>
             <th>V</th>
             <th>E</th>
             <th>D</th>
             <th>Mata-matas</th>
             <th>Domina (65+)</th>
-            <th class="lg">Vantagem clara sobre</th>
-            <th class="lg">Em desvantagem contra</th>
+            <th class="lg">Vantagem sobre (55 a 64,9)</th>
+            <th class="lg">Equilíbrio</th>
+            <th class="lg">Em desvantagem contra (55 a 64,9)</th>
             <th>Freguês de (65+)</th>
           </tr>
         </thead>
@@ -290,7 +326,7 @@ footer.rodape a{color:var(--texto-2)}
         <h3>Os últimos 30 jogos</h3>
         <p class="h2sub">Do mais recente (canto superior esquerdo) ao mais antigo. Passe o mouse para ver o placar.</p>
         <div class="faixa f30" data-draw="strip"></div>
-        <div class="leg"><span><i class="w"></i>vitória do dominante</span><span><i></i>empate</span><span><i class="d"></i>vitória do outro</span><span><i class="mm"></i>mata-mata</span></div>
+        <div class="leg"><span>Escudo: quem venceu o jogo</span><span><i class="e"></i>empate</span><span><i class="mm"></i>mata-mata</span><span><i class="corte"></i>início dos últimos 10 e 20 jogos</span></div>
       </div>
     </div>
 
@@ -338,7 +374,7 @@ footer.rodape a{color:var(--texto-2)}
 <script src="assets/escudos.js"></script>
 <script>
 (() => {
-  const st = { sel: null, tipo: 'Todos', filtro: 'Todas', janela: '30', clube: '' };
+  const st = { sel: null, tipo: 'Todos', filtro: 'Todas', janela: '30', clube: '', jcl: '30' };
   const num = (v) => (v === '' || v == null ? NaN : Number(v));
   const f1 = (v) => (isNaN(num(v)) ? '—' : num(v).toFixed(1).replace('.', ','));
   const br = (d) => (d ? d.slice(8, 10) + '/' + d.slice(5, 7) + '/' + d.slice(0, 4) : '—');
@@ -353,10 +389,10 @@ footer.rodape a{color:var(--texto-2)}
   const so = (team) => { const s = mk('span', 'clube'); s.title = team; s.append(crest(team), mk('span', 'sr', team)); return s; };
   const par = (a, b, label) => { const s = mk('span', 'clube'); s.title = label; s.append(crest(a), mk('span', 'x', '×'), crest(b), mk('span', 'sr', label)); return s; };
   const nome = (team) => { const s = mk('span', 'nome'); s.append(crest(team), document.createTextNode(team)); return s; };
-  const lvl = (i) => (num(i) >= 65 ? 'Freguesia' : num(i) >= 55 ? 'Vantagem clara' : 'Equilíbrio');
-  const nivelTag = (n) => mk('span', 'tag ' + (n === 'Freguesia' ? 'f' : n === 'Vantagem clara' ? 'v' : ''), n);
+  const lvl = (i) => (num(i) >= 65 ? 'Freguesia' : num(i) >= 60 ? 'Vantagem clara' : num(i) >= 55 ? 'Vantagem' : 'Equilíbrio');
+  const nivelTag = (n) => mk('span', 'tag ' + (n === 'Freguesia' ? 'f' : n === 'Vantagem clara' ? 'v' : n === 'Vantagem' ? 'v2' : ''), n);
   const idxCell = (v, nivel) => {
-    const box = mk('span', 'ix ' + (nivel === 'Freguesia' ? 'f' : nivel === 'Vantagem clara' ? 'v' : ''));
+    const box = mk('span', 'ix ' + (nivel === 'Freguesia' ? 'f' : nivel === 'Vantagem clara' ? 'v' : nivel === 'Vantagem' ? 'v2' : ''));
     const tr = mk('span', 'trilho'); const i = mk('i'); const x = num(v);
     i.style.width = (isNaN(x) ? 0 : Math.max(0, Math.min(100, ((x - 33.3) / (100 - 33.3)) * 100))) + '%';
     tr.appendChild(i); box.append(mk('b', '', f1(v)), tr); return box;
@@ -380,18 +416,20 @@ footer.rodape a{color:var(--texto-2)}
     if (x.dataset.f) x.setAttribute('aria-pressed', String(x.dataset.f === st.filtro));
     if (x.dataset.j) x.setAttribute('aria-pressed', String(x.dataset.j === st.janela));
     if (x.dataset.t) x.setAttribute('aria-pressed', String(x.dataset.t === st.tipo));
+    if (x.dataset.jc) x.setAttribute('aria-pressed', String(x.dataset.jc === st.jcl));
   });
   syncBtns();
   document.querySelectorAll('.chips .chip').forEach((b) => b.addEventListener('click', () => {
     if (b.dataset.f) st.filtro = b.dataset.f;
     if (b.dataset.j) st.janela = b.dataset.j;
     if (b.dataset.t) st.tipo = b.dataset.t;
+    if (b.dataset.jc) { st.jcl = b.dataset.jc; syncBtns(); dash.draw('cl'); return; }
     syncBtns(); dash.draw('rk');
   }));
-  dash.draw('clube-sel', (s) => {
-    const cl = ok('g12_clubes') || [];
-    s.replaceChildren(new Option('Todos', ''), ...cl.map((r) => r.clube).sort((a, b) => a.localeCompare(b, 'pt')).map((c) => new Option(c, c)));
-    s.value = st.clube; s.onchange = () => { st.clube = s.value; dash.draw('rk'); };
+  dash.draw('clube-sel', (box) => {
+    const cl = [...new Set((ok('g12_clubes') || []).map((r) => r.clube))].sort((a, b) => a.localeCompare(b, 'pt'));
+    const mkb = (val, child, title) => { const b = mk('button', 'chip'); b.type = 'button'; b.title = title; b.setAttribute('aria-label', title); b.setAttribute('aria-pressed', String(st.clube === val)); b.append(child); b.onclick = () => { st.clube = val; dash.draw('clube-sel'); dash.draw('rk'); }; return b; };
+    box.replaceChildren(mkb('', document.createTextNode('Todos'), 'Todos os clubes'), ...cl.map((c) => mkb(c, crest(c), c)));
   });
   dash.draw('ate', (el) => { const m = ok('g12_meta'); el.textContent = m ? br(m.ultimo_jogo) : '—'; });
 
@@ -399,9 +437,9 @@ footer.rodape a{color:var(--texto-2)}
   const rk0 = () => (ok('g12_ranking') || [])[0] || null;
   const clubes = () => ok('g12_clubes') || [];
   const esc = (el, list, label) => { el.replaceChildren(); list.forEach((t) => el.append(crest(t))); el.append(mk('strong', '', label)); };
-  dash.draw('k1-esc', (el) => { const r = rk0(); if (r) esc(el, [r.dominante, r.fregues], r.classico); });
+  dash.draw('k1-esc', (el) => { const r = rk0(); if (r) esc(el, [r.dominante, r.fregues], `${r.dominante} x ${r.fregues}`); });
   dash.draw('k1-v', (el) => { const r = rk0(); el.textContent = r ? f1(r.indice) : '—'; });
-  dash.draw('k1-t', (el) => { const r = rk0(); el.textContent = r ? `índice do ${r.dominante} contra o ${r.fregues} · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
+  dash.draw('k1-t', (el) => { const r = rk0(); el.textContent = r ? `${r.dominante} x ${r.fregues} · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
   dash.draw('k2-esc', (el) => { const c = clubes(); const r = c[c.length - 1]; if (r) esc(el, [r.clube], r.clube); });
   dash.draw('k2-v', (el) => { const c = clubes(); const r = c[c.length - 1]; el.textContent = r ? f1(r.indice) : '—'; });
   dash.draw('k2-t', (el) => { const c = clubes(); const r = c[c.length - 1]; el.textContent = r ? `índice contra os grandes de outros estados · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
@@ -410,7 +448,7 @@ footer.rodape a{color:var(--texto-2)}
   dash.draw('k3-t', (el) => { const r = clubes()[0]; el.textContent = r ? `índice contra os grandes de outros estados · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
   const k4 = () => (ok('g12_ranking') || []).filter((r) => r.casa_dom_jogos >= 10 && r.casa_fre_jogos >= 10)
     .sort((a, b) => (num(b.casa_dom_indice) - num(b.casa_fre_indice)) - (num(a.casa_dom_indice) - num(a.casa_fre_indice)))[0] || null;
-  dash.draw('k4-esc', (el) => { const r = k4(); if (r) esc(el, [r.dominante, r.fregues], r.classico); });
+  dash.draw('k4-esc', (el) => { const r = k4(); if (r) esc(el, [r.dominante, r.fregues], `${r.dominante} x ${r.fregues}`); });
   dash.draw('k4-v', (el) => { const r = k4(); el.textContent = r ? `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}` : '—'; });
   dash.draw('k4-t', (el) => { const r = k4(); el.textContent = r ? `índice do ${r.dominante} em casa x na casa do ${r.fregues}` : '—'; });
 
@@ -434,8 +472,8 @@ footer.rodape a{color:var(--texto-2)}
       td(tr, `${r.mm_dom} x ${r.mm_fre}`);
       // mando e forma vêm do recorte de 30, do ponto de vista do dominante de 30
       const same = base.dominante === r.dominante;
-      td(tr, same ? `${f1(base.casa_dom_indice)} (${base.casa_dom_jogos})` : '—', 'lg ' + (same ? heatCls(base.casa_dom_indice) : ''));
-      td(tr, same ? `${f1(base.casa_fre_indice)} (${base.casa_fre_jogos})` : '—', 'lg ' + (same ? heatCls(base.casa_fre_indice) : ''));
+      td(tr, same ? f1(base.casa_dom_indice) : '—', 'lg ' + (same ? heatCls(base.casa_dom_indice) : ''));
+      td(tr, same ? f1(base.casa_fre_indice) : '—', 'lg ' + (same ? heatCls(base.casa_fre_indice) : ''));
       const fz = mk('span', 'clube'); if (base.forma_time) { fz.append(crest(base.forma_time), document.createTextNode(' ' + base.forma)); }
       td(tr, fz, 'lg');
       td(tr, brc(r.inicio));
@@ -448,14 +486,14 @@ footer.rodape a{color:var(--texto-2)}
   // Ranking por clube
   dash.draw('cl', (tb) => {
     const cl = ok('g12_clubes'); tb.replaceChildren(); if (!cl) return;
-    for (const r of cl) {
+    for (const r of cl.filter((x) => String(x.janela) === st.jcl)) {
       const tr = document.createElement('tr');
       td(tr, r.pos, 'cinza'); td(tr, nome(r.clube), 'l');
       td(tr, idxCell(r.indice, lvl(r.indice)));
-      td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, r.mm);
-      td(tr, escList(r.domina)); td(tr, escList(r.vantagem_sobre), 'lg'); td(tr, escList(r.desvantagem_contra), 'lg'); td(tr, escList(r.fregues_de));
+      td(tr, r.jogos); td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, r.mm);
+      td(tr, escList(r.domina)); td(tr, escList(r.vantagem_sobre), 'lg'); td(tr, escList(r.equilibrio), 'lg'); td(tr, escList(r.desvantagem_contra), 'lg'); td(tr, escList(r.fregues_de));
       tr.tabIndex = 0;
-      tr.addEventListener('click', () => { st.clube = r.clube; const s = document.getElementById('clube-sel'); if (s) s.value = r.clube; dash.draw('rk'); document.getElementById('ranking').scrollIntoView({ behavior: 'smooth' }); });
+      tr.addEventListener('click', () => { st.clube = r.clube; dash.draw('clube-sel'); dash.draw('rk'); document.getElementById('ranking').scrollIntoView({ behavior: 'smooth' }); });
       tb.appendChild(tr);
     }
   });
@@ -497,7 +535,8 @@ footer.rodape a{color:var(--texto-2)}
     const tr = document.createElement('tr');
     td(tr, '5 jogos', 'cinza'); td(tr, so(cur.forma_time)); td(tr, f1(cur.forma_indice), 'cinza');
     const m = String(cur.forma).match(/(\d+)V (\d+)E (\d+)D/) || [];
-    td(tr, m[1], 'cinza'); td(tr, m[2], 'cinza'); td(tr, m[3], 'cinza'); td(tr, 'forma', 'cinza');
+    td(tr, m[1], 'cinza'); td(tr, m[2], 'cinza'); td(tr, m[3], 'cinza');
+    const j5 = (ok('g12_jogos') || []).find((x) => x.classico === cur.classico && num(x.n) === 5); td(tr, j5 ? brc(j5.data) : '—', 'cinza');
     tb.appendChild(tr);
   });
   const outcome = (g, dom) => { const gm = num(g.gm), gv = num(g.gv); if (gm === gv) return 'e'; return (gm > gv ? g.mandante : g.visitante) === dom ? 'w' : 'd'; };
@@ -505,7 +544,10 @@ footer.rodape a{color:var(--texto-2)}
     const jg = ok('g12_jogos'); const cur = sel(); el.replaceChildren(); if (!jg || !cur) return;
     const tip = mk('div', 'tip'); tip.hidden = true;
     for (const g of jg.filter((x) => x.classico === cur.classico)) {
-      const i = mk('i', outcome(g, cur.dominante) + (g.mata_mata === 'S' ? ' mm' : ''));
+      const o = outcome(g, cur.dominante);
+      const i = mk('i', (o === 'e' ? 'e' : 'v') + (g.mata_mata === 'S' ? ' mm' : ''));
+      if (o !== 'e') i.appendChild(crest(o === 'w' ? cur.dominante : cur.fregues));
+      if ([10, 20].includes(num(g.n) - 1)) { i.dataset.corte = String(num(g.n) - 1); i.appendChild(mk('span', 'corte', String(num(g.n) - 1))); }
       const pen = g.penaltis ? ` (pên. ${g.penaltis})` : '';
       i.setAttribute('aria-label', `${br(g.data)}: ${g.mandante} ${g.gm} x ${g.gv} ${g.visitante}${pen}`);
       const show = () => {

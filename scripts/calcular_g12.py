@@ -148,7 +148,11 @@ def ix(num, den):
 
 
 def nivel(i):
-    return "Freguesia" if i >= PESOS["limiar_freguesia"] else ("Vantagem clara" if i >= PESOS["limiar_vantagem"] else "Equilíbrio")
+    if i >= PESOS["limiar_freguesia"]:
+        return "Freguesia"
+    if i >= PESOS["limiar_vantagem_clara"]:
+        return "Vantagem clara"
+    return "Vantagem" if i >= PESOS["limiar_vantagem"] else "Equilíbrio"
 
 
 def br(d):
@@ -167,7 +171,7 @@ def main(escopo, prefixo):
     """escopo: lista de clássicos (os 52 interestaduais ou os 66); prefixo: g12 ou g12c."""
     por = ler()
     ranking, indices, jogos, matamatas = [], [], [], []
-    clubes = defaultdict(lambda: dict(num=0.0, den=0.0, v=0, e=0, d=0, mm_v=0, mm_d=0, conf=[]))
+    clubes = {J: defaultdict(lambda: dict(num=0.0, den=0.0, v=0, e=0, d=0, mm_v=0, mm_d=0, conf=[])) for J in JANELAS}
     for c in escopo:
         k, a, b = c["id"], c["time_a"], c["time_b"]
         games = por[k]
@@ -189,11 +193,6 @@ def main(escopo, prefixo):
         ia, ib = ix(ra[0], ra[1]), ix(rb[0], rb[1])
         dom, fre = (a, b) if ia >= ib else (b, a)
         r = ra if dom == a else rb
-        # clubes: aproveitamento ponderado contra o G12, somando os 11 confrontos
-        for team, rr, opp in ((a, ra, b), (b, rb, a)):
-            cl = clubes[team]; cl["num"] += rr[0]; cl["den"] += rr[1]; cl["v"] += rr[3]; cl["e"] += rr[4]; cl["d"] += rr[5]
-            cl["mm_v"] += rr[6]; cl["mm_d"] += rr[7]
-            cl["conf"].append(dict(adversario=opp, indice=ix(rr[0], rr[1]), adv_indice=ix(*(rb if team == a else ra)[:2])))
 
         def sem_vencer(team):
             for n, g in enumerate(games):
@@ -206,6 +205,12 @@ def main(escopo, prefixo):
         # recortes com peso (30/20/10) x filtro
         for J in JANELAS:
             gJ = G[:J]; limJ = gN[J - 1]["data"]; tJ = [t for t in ties if t["fim"] >= limJ]
+            # clubes: aproveitamento ponderado somando os confrontos de cada um, no recorte J
+            ca, cb = soma(a, gJ, tJ), soma(b, gJ, tJ)
+            for team, rr, oo, opp in ((a, ca, cb, b), (b, cb, ca, a)):
+                cl = clubes[J][team]; cl["num"] += rr[0]; cl["den"] += rr[1]; cl["v"] += rr[3]; cl["e"] += rr[4]; cl["d"] += rr[5]
+                cl["mm_v"] += rr[6]; cl["mm_d"] += rr[7]
+                cl["conf"].append(dict(adversario=opp, indice=ix(rr[0], rr[1]), adv_indice=ix(oo[0], oo[1])))
             for f in FILTROS:
                 sa, sb = soma(a, gJ, tJ, f), soma(b, gJ, tJ, f)
                 if sa[2] == 0:
@@ -270,19 +275,23 @@ def main(escopo, prefixo):
                 r["pos"] = p
     indices.sort(key=lambda r: (FILTROS.index(r["filtro"]), -r["janela"], r["pos"]))
     cl_rows = []
-    for team, cl in clubes.items():
-        conf = sorted(cl["conf"], key=lambda x: x["indice"] - x["adv_indice"])
-        fregues_de = [x["adversario"] for x in conf if x["adv_indice"] >= PESOS["limiar_freguesia"]]
-        desv = [x["adversario"] for x in conf if PESOS["limiar_vantagem"] <= x["adv_indice"] < PESOS["limiar_freguesia"]]
-        domina = [x["adversario"] for x in conf[::-1] if x["indice"] >= PESOS["limiar_freguesia"]]
-        vant = [x["adversario"] for x in conf[::-1] if PESOS["limiar_vantagem"] <= x["indice"] < PESOS["limiar_freguesia"]]
-        cl_rows.append(dict(clube=team, indice=ix(cl["num"], cl["den"]), v=cl["v"], e=cl["e"], d=cl["d"],
-                            mm=f"{cl['mm_v']} x {cl['mm_d']}", fregues_de=", ".join(fregues_de), desvantagem_contra=", ".join(desv),
-                            domina=", ".join(domina), vantagem_sobre=", ".join(vant),
-                            pior=conf[0]["adversario"], melhor=conf[-1]["adversario"]))
-    cl_rows.sort(key=lambda r: -r["indice"])
-    for p, r in enumerate(cl_rows, 1):
-        r["pos"] = p
+    F_, V_ = PESOS["limiar_freguesia"], PESOS["limiar_vantagem"]
+    for J in JANELAS:
+        rows = []
+        for team, cl in clubes[J].items():
+            conf = sorted(cl["conf"], key=lambda x: x["adv_indice"] - x["indice"])   # do melhor para o pior confronto
+            pega = lambda f: ", ".join(x["adversario"] for x in conf if f(x))
+            rows.append(dict(janela=J, clube=team, indice=ix(cl["num"], cl["den"]), jogos=cl["v"] + cl["e"] + cl["d"],
+                             v=cl["v"], e=cl["e"], d=cl["d"], mm=f"{cl['mm_v']} x {cl['mm_d']}", adversarios=len(conf),
+                             domina=pega(lambda x: x["indice"] >= F_),
+                             vantagem_sobre=pega(lambda x: V_ <= x["indice"] < F_),
+                             equilibrio=pega(lambda x: x["indice"] < V_ and x["adv_indice"] < V_),
+                             desvantagem_contra=pega(lambda x: V_ <= x["adv_indice"] < F_),
+                             fregues_de=pega(lambda x: x["adv_indice"] >= F_)))
+        rows.sort(key=lambda r: -r["indice"])
+        for p, r in enumerate(rows, 1):
+            r["pos"] = p
+        cl_rows += rows
     meta = dict(atualizado=dt.date.today().isoformat(), ultimo_jogo=max(g["data"] for v in por.values() for g in v), janela=N,
                 confrontos=len(ranking))
     os.makedirs(P("data"), exist_ok=True); os.makedirs(P("csv"), exist_ok=True)
@@ -295,7 +304,7 @@ def main(escopo, prefixo):
     print(f"== {prefixo}: {len(ranking)} confrontos")
     for r in ranking[:5]:
         print(f"{r['pos']}. {r['classico']}: {r['dominante']} {r['indice']} ({r['nivel']})")
-    print("Clubes:", ", ".join(f"{r['clube']} {r['indice']}" for r in cl_rows))
+    print("Clubes (30):", ", ".join(f"{r['clube']} {r['indice']}" for r in cl_rows if r["janela"] == 30))
 
 
 if __name__ == "__main__":

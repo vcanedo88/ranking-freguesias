@@ -128,7 +128,11 @@ def indice(team, gN, tN, filtro):
 
 
 def nivel(i):
-    return "Freguesia" if i >= PESOS["limiar_freguesia"] else ("Vantagem clara" if i >= PESOS["limiar_vantagem"] else "Equilíbrio")
+    if i >= PESOS["limiar_freguesia"]:
+        return "Freguesia"
+    if i >= PESOS["limiar_vantagem_clara"]:
+        return "Vantagem clara"
+    return "Vantagem" if i >= PESOS["limiar_vantagem"] else "Equilíbrio"
 
 
 def br(d):
