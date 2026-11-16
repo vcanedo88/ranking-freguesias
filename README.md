@@ -2,7 +2,7 @@
 
 Índice de Freguesia 2.0 dos 16 principais clássicos do futebol brasileiro, feito para o **Canal do Canedo**.
 
-Site: https://vcanedo88.github.io/ranking-classicos/
+Site: https://vcanedo88.github.io/ranking-freguesias/
 
 ## O que é
 
@@ -28,8 +28,8 @@ Cada mata-mata (ida e volta ou jogo único) vira **um jogo extra** vencido por q
 
 Duas abas no topo do site:
 
-- **G12** (https://vcanedo88.github.io/ranking-classicos/g12.html): só os 52 confrontos interestaduais. No ranking por clube, os clubes do Rio e de São Paulo têm 8 adversários; os de Minas e do Rio Grande do Sul, 10.
-- **G12 com clássicos** (https://vcanedo88.github.io/ranking-classicos/g12-classicos.html): os 66 confrontos, com os 14 clássicos locais; cada clube tem 11 adversários.
+- **G12** (https://vcanedo88.github.io/ranking-freguesias/g12.html): só os 52 confrontos interestaduais. No ranking por clube, os clubes do Rio e de São Paulo têm 8 adversários; os de Minas e do Rio Grande do Sul, 10.
+- **G12 com clássicos** (https://vcanedo88.github.io/ranking-freguesias/g12-classicos.html): os 66 confrontos, com os 14 clássicos locais; cada clube tem 11 adversários.
 
 Mesmo Índice de Freguesia 2.0, aplicado a todos os confrontos entre Flamengo, Fluminense, Vasco, Botafogo, Corinthians, Palmeiras, São Paulo, Santos, Grêmio, Internacional, Cruzeiro e Atlético-MG. Diferenças em relação ao ranking dos clássicos:
 
