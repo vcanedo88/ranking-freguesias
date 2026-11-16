@@ -213,7 +213,7 @@ footer.rodape a{color:var(--texto-2)}
 #clubes td.esq .clube img{width:18px;height:18px}
 #clubes th.eq,#clubes td.eq{text-align:center}
 #clubes td.eq .clube{justify-content:center}
-#clubes td.esq .clube{max-width:138px}
+#clubes td.esq .clube{max-width:138px;box-sizing:border-box}
 #clubes td.eq .clube{margin:0 auto}
 #clubes td.esq,#clubes th.esq{padding-left:12px;padding-right:12px}
 .picker .filtro-esc{display:flex;flex-wrap:wrap;gap:4px;padding:8px 10px;border-bottom:1px solid var(--linha);position:sticky;top:0;background:#fff;z-index:1}
@@ -523,12 +523,17 @@ footer.rodape a{color:var(--texto-2)}
   // Ranking por clube
   dash.draw('cl', (tb) => {
     const cl = ok('g12c_clubes'); tb.replaceChildren(); if (!cl) return;
-    for (const r of cl.filter((x) => String(x.janela) === st.jcl)) {
+    const linhas = cl.filter((x) => String(x.janela) === st.jcl);
+    // largura fixa por coluna: até 6 escudos por linha, alinhados entre as linhas
+    const COLS = ['domina', 'vantagem_clara_sobre', 'vantagem_sobre', 'equilibrio', 'desvantagem_contra', 'desvantagem_clara_contra', 'fregues_de'];
+    const larg = {}; for (const c of COLS) { const k = Math.min(6, Math.max(1, ...linhas.map((r) => teams(r[c]).length))); larg[c] = k * 18 + (k - 1) * 6; }
+    const escCol = (r, c) => { const b = escList(r[c]); b.style.width = larg[c] + 'px'; return b; };
+    for (const r of linhas) {
       const tr = document.createElement('tr');
       td(tr, r.pos, 'cinza'); td(tr, nome(r.clube), 'l esq');
       td(tr, idxCell(r.indice, lvl(r.indice)));
       td(tr, r.jogos); td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, r.mm);
-      td(tr, escList(r.domina), 'esq'); td(tr, escList(r.vantagem_clara_sobre), 'esq lg'); td(tr, escList(r.vantagem_sobre), 'esq lg'); td(tr, escList(r.equilibrio), 'esq lg eq'); td(tr, escList(r.desvantagem_contra), 'esq lg'); td(tr, escList(r.desvantagem_clara_contra), 'esq lg'); td(tr, escList(r.fregues_de), 'esq');
+      td(tr, escCol(r, 'domina'), 'esq'); td(tr, escCol(r, 'vantagem_clara_sobre'), 'esq lg'); td(tr, escCol(r, 'vantagem_sobre'), 'esq lg'); td(tr, escCol(r, 'equilibrio'), 'esq lg eq'); td(tr, escCol(r, 'desvantagem_contra'), 'esq lg'); td(tr, escCol(r, 'desvantagem_clara_contra'), 'esq lg'); td(tr, escCol(r, 'fregues_de'), 'esq');
       tr.tabIndex = 0;
       tr.addEventListener('click', () => { st.clube = r.clube; dash.draw('clube-sel'); dash.draw('rk'); document.getElementById('ranking').scrollIntoView({ behavior: 'smooth' }); });
       tb.appendChild(tr);
