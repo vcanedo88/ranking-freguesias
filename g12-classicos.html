@@ -211,6 +211,8 @@ footer.rodape a{color:var(--texto-2)}
 #clubes th{white-space:nowrap}
 #clubes td.esq .clube{gap:6px;flex-wrap:wrap;row-gap:4px}
 #clubes td.esq .clube img{width:18px;height:18px}
+#clubes th.eq,#clubes td.eq{text-align:center}
+#clubes td.eq .clube{justify-content:center}
 .picker .filtro-esc{display:flex;flex-wrap:wrap;gap:4px;padding:8px 10px;border-bottom:1px solid var(--linha);position:sticky;top:0;background:#fff;z-index:1}
 .picker .filtro-esc button{width:auto;padding:3px 6px;border:1px solid var(--cinza);display:inline-flex}
 .picker .filtro-esc button[aria-pressed="true"]{background:var(--s2);border-color:var(--roxo)}
@@ -317,7 +319,7 @@ footer.rodape a{color:var(--texto-2)}
             <th class="esq">Domina</th>
             <th class="esq lg">Vantagem clara</th>
             <th class="esq lg">Vantagem</th>
-            <th class="esq lg">Equilíbrio</th>
+            <th class="esq lg eq">Equilíbrio</th>
             <th class="esq lg">Desvantagem</th>
             <th class="esq lg">Desvantagem clara</th>
             <th class="esq">Freguês de</th>
@@ -523,7 +525,7 @@ footer.rodape a{color:var(--texto-2)}
       td(tr, r.pos, 'cinza'); td(tr, nome(r.clube), 'l esq');
       td(tr, idxCell(r.indice, lvl(r.indice)));
       td(tr, r.jogos); td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, r.mm);
-      td(tr, escList(r.domina), 'esq'); td(tr, escList(r.vantagem_clara_sobre), 'esq lg'); td(tr, escList(r.vantagem_sobre), 'esq lg'); td(tr, escList(r.equilibrio), 'esq lg'); td(tr, escList(r.desvantagem_contra), 'esq lg'); td(tr, escList(r.desvantagem_clara_contra), 'esq lg'); td(tr, escList(r.fregues_de), 'esq');
+      td(tr, escList(r.domina), 'esq'); td(tr, escList(r.vantagem_clara_sobre), 'esq lg'); td(tr, escList(r.vantagem_sobre), 'esq lg'); td(tr, escList(r.equilibrio), 'esq lg eq'); td(tr, escList(r.desvantagem_contra), 'esq lg'); td(tr, escList(r.desvantagem_clara_contra), 'esq lg'); td(tr, escList(r.fregues_de), 'esq');
       tr.tabIndex = 0;
       tr.addEventListener('click', () => { st.clube = r.clube; dash.draw('clube-sel'); dash.draw('rk'); document.getElementById('ranking').scrollIntoView({ behavior: 'smooth' }); });
       tb.appendChild(tr);
