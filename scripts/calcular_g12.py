@@ -2,7 +2,7 @@
 
 Uso:  python3 scripts/calcular_g12.py
 Entrada: dados/classicos_g12.json, dados/jogos.csv (14 clássicos locais) e dados/jogos_g12.csv (52 interestaduais)
-Saída:  data/g12_*.json (lidos por g12.html) e csv/g12_*.csv
+Saída:  data/g12_*.json (aba G12, 52 interestaduais, g12.html) e data/g12c_*.json (aba G12 com clássicos, 66, g12-classicos.html), mais csv/
 
 Mesmo método do ranking local (dados/pesos.json): recência por bloco de 10 jogos, peso de importância,
 jogo extra para quem avançou em cada mata-mata. Diferenças: janela de 30 jogos (recortes 30/20/10),
@@ -163,11 +163,12 @@ def comp_nome(g, uf):
     return f"{c} {g['temp']}" + (f" · {fase}" if fase else "")
 
 
-def main():
+def main(escopo, prefixo):
+    """escopo: lista de clássicos (os 52 interestaduais ou os 66); prefixo: g12 ou g12c."""
     por = ler()
     ranking, indices, jogos, matamatas = [], [], [], []
     clubes = defaultdict(lambda: dict(num=0.0, den=0.0, v=0, e=0, d=0, mm_v=0, mm_d=0, conf=[]))
-    for c in CLASSICOS:
+    for c in escopo:
         k, a, b = c["id"], c["time_a"], c["time_b"]
         games = por[k]
         if len(games) < N:
@@ -286,15 +287,17 @@ def main():
                 confrontos=len(ranking))
     os.makedirs(P("data"), exist_ok=True); os.makedirs(P("csv"), exist_ok=True)
     for nome, rows in (("ranking", ranking), ("indices", indices), ("jogos", jogos), ("matamatas", matamatas), ("clubes", cl_rows)):
-        json.dump(rows, open(P("data", f"g12_{nome}.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        json.dump(rows, open(P("data", f"{prefixo}_{nome}.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
         cols = (["pos"] + [x for x in rows[0] if x != "pos"]) if "pos" in rows[0] else list(rows[0].keys())
-        with open(P("csv", f"g12_{nome}.csv"), "w", newline="", encoding="utf-8") as fh:
+        with open(P("csv", f"{prefixo}_{nome}.csv"), "w", newline="", encoding="utf-8") as fh:
             w = csv.DictWriter(fh, fieldnames=cols); w.writeheader(); w.writerows(rows)
-    json.dump(meta, open(P("data", "g12_meta.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    for r in ranking[:8]:
+    json.dump(meta, open(P("data", f"{prefixo}_meta.json"), "w", encoding="utf-8"), ensure_ascii=False)
+    print(f"== {prefixo}: {len(ranking)} confrontos")
+    for r in ranking[:5]:
         print(f"{r['pos']}. {r['classico']}: {r['dominante']} {r['indice']} ({r['nivel']})")
     print("Clubes:", ", ".join(f"{r['clube']} {r['indice']}" for r in cl_rows))
 
 
 if __name__ == "__main__":
-    main()
+    main([c for c in CLASSICOS if c["tipo"] == "Interestadual"], "g12")   # aba G12: só os 52 interestaduais
+    main(CLASSICOS, "g12c")                                              # aba G12 com clássicos: os 66

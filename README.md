@@ -26,17 +26,20 @@ Cada mata-mata (ida e volta ou jogo único) vira **um jogo extra** vencido por q
 
 ## G12: os 66 confrontos entre os 12 grandes
 
-Página: https://vcanedo88.github.io/ranking-classicos/g12.html (aba "G12" no topo do site).
+Duas abas no topo do site:
+
+- **G12** (https://vcanedo88.github.io/ranking-classicos/g12.html): só os 52 confrontos interestaduais. No ranking por clube, os clubes do Rio e de São Paulo têm 8 adversários; os de Minas e do Rio Grande do Sul, 10.
+- **G12 com clássicos** (https://vcanedo88.github.io/ranking-classicos/g12-classicos.html): os 66 confrontos, com os 14 clássicos locais; cada clube tem 11 adversários.
 
 Mesmo Índice de Freguesia 2.0, aplicado a todos os confrontos entre Flamengo, Fluminense, Vasco, Botafogo, Corinthians, Palmeiras, São Paulo, Santos, Grêmio, Internacional, Cruzeiro e Atlético-MG. Diferenças em relação ao ranking dos clássicos:
 
-- **Janela de 30 jogos oficiais** (recortes de 30, 20 e 10), com os pesos de recência 3 / 2,5 / 2 por bloco de 10. Os 14 clássicos locais também entram com 30 jogos nessa aba.
+- **Janela de 30 jogos oficiais** (recortes de 30, 20 e 10), com os pesos de recência 3 / 2,5 / 2 por bloco de 10. Na aba "G12 com clássicos", os 14 clássicos locais também entram com 30 jogos.
 - **Forma**: os últimos 5 jogos, mostrados como contexto, fora do ranking.
 - **Mando**: índice do dominante só nos jogos com cada mandante, sem os jogos em campo neutro e sem o bônus dos mata-matas.
 - **Ranking por clube**: aproveitamento ponderado de cada clube somando os seus 11 confrontos.
 - Mesmos pesos de importância. O Mundial de Clubes (Palmeiras x Botafogo, 2025) usa o peso de mata-mata de copa. Classificações pelo gol fora de casa e decisões do STJD ficam registradas em `avancou_por_vantagem` e `obs`.
 
-Arquivos: `dados/classicos_g12.json`, `dados/jogos_g12.csv` (52 confrontos interestaduais; os locais vêm de `dados/jogos.csv`), `scripts/calcular_g12.py`, `data/g12_*.json`, `csv/g12_*.csv`, `g12.html`.
+Arquivos: `dados/classicos_g12.json`, `dados/jogos_g12.csv` (52 confrontos interestaduais; os locais vêm de `dados/jogos.csv`), `scripts/calcular_g12.py`, `data/g12_*.json` e `csv/g12_*.csv` (aba G12), `data/g12c_*.json` e `csv/g12c_*.csv` (aba G12 com clássicos), `g12.html`, `g12-classicos.html`.
 
 Conferência: oGol como fonte principal. Segunda fonte para cada jogo interestadual da janela: base do Brasileirão 2003–2025 (adaoduque/brasileirao_dataset), Transfermarkt para copas, Série B e 2026, e a imprensa nos casos em que as duas fontes divergiram (coluna `fonte2`).
 

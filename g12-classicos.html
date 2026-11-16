@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ranking das Freguesias · G12 com clássicos</title>
+<meta name="description" content="Índice de Freguesia dos 66 confrontos entre os 12 grandes do futebol brasileiro, nos últimos 30 jogos de cada um. Por @vcanedo.">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="assets/marca-c.png">
+<link rel="stylesheet" href="assets/fonte.css">
+<script>
+window.dash = (() => {
+  const store = {}, draws = {}, ids = ['g12c_ranking', 'g12c_indices', 'g12c_jogos', 'g12c_matamatas', 'g12c_clubes', 'g12c_meta', 'pesos'];
+  const api = {
+    data(id) { return store[id] ? { status: 'ok', data: store[id] } : { status: 'loading', data: [] }; },
+    draw(name, fn) { if (fn) draws[name] = fn; run(name); },
+  };
+  function run(name) {
+    const fn = draws[name]; if (!fn) return;
+    document.querySelectorAll('[data-draw="' + name + '"]').forEach((el) => { try { fn(el); } catch (e) { console.error(name, e); } });
+  }
+  Promise.all(ids.map((id) => fetch('data/' + id + '.json', { cache: 'no-cache' }).then((r) => r.json()).then((d) => { store[id] = d; })))
+    .then(() => Object.keys(draws).forEach(run)).catch((e) => console.error('Falha ao carregar dados', e));
+  return api;
+})();
+</script>
+<style>html,body{margin:0;background:#FFFFFF}</style>
+<style>
+/* Layout no padrão dos painéis do canal (Horários, Última rodada, Quem vai cair): página branca, Poppins, escanteio, cabeçalho com crédito à direita, blocos sem cartão, tabelas centralizadas; cabe em 4:3 sem rolagem lateral. */
+.pagina{
+  --fundo:#FFFFFF; --fundo-sutil:#F5F5F5; --linha:#E3E3E3; --cinza:#CFCFCF;
+  --texto:#141414; --texto-2:#5C5C5C; --roxo:#400078; --verde:#16DE37; --verde-escuro:#00AB48;
+  --s1:#F1EBF6; --s2:#D9C8E8; --s3:#B392D1; --s4:#7A47A8; --s5:#400078;
+  --sans:"Poppins",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+  background:var(--fundo);color:var(--texto);font-family:var(--sans);font-size:15px;line-height:1.45;
+  max-width:1240px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));position:relative
+}
+.pagina *{box-sizing:border-box}
+.escanteio{position:absolute;left:max(4px,env(safe-area-inset-left,0px));top:6px;width:56px;height:56px}
+.escanteio .lados{fill:none;stroke:var(--linha);stroke-width:3}
+.escanteio .arco{fill:none;stroke:var(--verde);stroke-width:3}
+header.topo{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-left:28px}
+.titulos{flex:1 1 420px;min-width:0}
+.pagina h1{font-size:clamp(26px,3.4vw,40px);line-height:1.1;margin:0;font-weight:700;text-wrap:balance}
+.pagina h1 em{font-style:normal;color:var(--roxo)}
+.sub{margin:6px 0 0;color:var(--texto-2);font-size:clamp(14px,1.6vw,18px)}
+.sub a{color:var(--roxo)}
+.credito{display:flex;align-items:center;gap:10px;color:var(--texto-2);font-weight:500}
+.credito img{height:40px;width:auto}
+.cred-txt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.redes{display:flex;gap:10px}
+.redes a{display:inline-flex;width:26px;height:26px;align-items:center;justify-content:center;color:var(--texto-2)}
+.redes a:hover,.redes a:focus-visible{color:var(--roxo)}
+.redes svg{width:20px;height:20px;fill:currentColor}
+
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0 18px}
+.kpi{border-top:3px solid var(--texto);padding:10px 2px 0;min-width:0}
+.kpi.destaque{border-top-color:var(--roxo)}
+.kpi .rot{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2);margin-bottom:6px}
+.kpi-esc{display:flex;align-items:center;gap:6px;min-height:30px}
+.kpi-esc img{width:28px;height:28px;object-fit:contain}
+.kpi-esc strong{font-size:15px;font-weight:700}
+.kpi b{display:block;font-size:clamp(26px,3vw,38px);line-height:1.05;font-variant-numeric:tabular-nums;margin-top:4px}
+.kpi.destaque b{color:var(--roxo)}
+.kpi > span:last-child{color:var(--texto-2);font-size:13px;display:block;margin-top:4px}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.controles{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end;padding:12px 0;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);margin-bottom:16px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl .rot,.sec-filtro label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--sans);font-size:13px;padding:5px 10px;border:1px solid var(--cinza);background:var(--fundo);color:var(--texto);cursor:pointer;border-radius:0}
+.chip[aria-pressed="true"]{background:var(--texto);color:var(--fundo);border-color:var(--texto)}
+.pagina select{font-family:var(--sans);font-size:14px;padding:6px 8px;border:1px solid var(--cinza);background:var(--fundo);color:var(--texto);border-radius:0;max-width:100%}
+.pagina button:focus-visible,.pagina select:focus-visible,.pagina tr[tabindex]:focus-visible{outline:2px solid var(--roxo);outline-offset:2px}
+
+section.bloco{margin-top:34px}
+.pagina h2{font-size:20px;margin:0 0 4px;font-weight:700}
+.pagina h3{font-size:16px;margin:0 0 4px;font-weight:700}
+.h2sub{color:var(--texto-2);font-size:13px;margin:0 0 12px;max-width:900px}
+.h2linha{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.h2linha h2{margin:0}
+.sec-filtro{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--texto-2)}
+.duas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+@media (max-width:900px){.duas{grid-template-columns:minmax(0,1fr)}}
+
+.tabela-wrap{overflow-x:auto}
+table.ranking{width:100%;border-collapse:collapse;font-size:13.5px}
+.ranking th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--texto-2);font-weight:700;text-align:center;padding:8px 4px;border-bottom:2px solid var(--texto);white-space:normal;line-height:1.15;vertical-align:bottom}
+.ranking td{padding:6px 4px;border-bottom:1px solid var(--linha);font-variant-numeric:tabular-nums;text-align:center;vertical-align:middle;white-space:nowrap}
+.ranking td.l{white-space:normal;min-width:7rem}
+.ranking td.forte{font-weight:700}
+.ranking td.roxo{color:var(--roxo);font-weight:700}
+.ranking td.cinza{color:var(--texto-2)}
+.ranking tr[tabindex]{cursor:pointer}
+.ranking tbody tr:hover td{background:var(--fundo-sutil)}
+.ranking tr.ativo td{background:var(--s1)}
+.ranking tr.poucos td{color:var(--texto-2)}
+.tabela-wrap,.lista,.clube,.nome,.kpi-esc{position:relative}
+.clube{display:inline-flex;align-items:center;justify-content:center;gap:4px}
+.clube img{width:26px;height:26px;object-fit:contain}
+.clube .x{font-size:11px;color:var(--texto-2)}
+.nome{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.nome img{width:22px;height:22px;object-fit:contain}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ix{display:inline-flex;align-items:center;gap:8px}
+.ix b{min-width:34px;text-align:right;font-size:15px}
+.ix .trilho{width:70px;height:10px;background:var(--fundo-sutil)}
+.ix .trilho i{display:block;height:100%;background:var(--cinza)}
+.ix.f b{color:var(--roxo)}.ix.f .trilho i{background:var(--roxo)}
+.ix.v .trilho i{background:var(--s3)}
+.tag{display:inline-block;font-size:11.5px;padding:1px 7px;border:1px solid var(--cinza);white-space:nowrap;font-weight:500}
+.tag.f{background:var(--roxo);border-color:var(--roxo);color:#fff;font-weight:700}
+.tag.v{background:var(--s2);border-color:var(--s2);color:var(--texto)}
+.h1c{background:var(--s1)}.h2c{background:var(--s2)}.h3c{background:var(--s3)}.h4c{background:var(--s4);color:#fff}
+.nota{font-size:12px;color:var(--texto-2);margin-top:8px;max-width:1000px}
+@media (max-width:700px){.ranking .lg{display:none}.ranking{font-size:12.5px}.ix .trilho{display:none}}
+
+.vs{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:6px 0 14px;font-size:clamp(20px,2.4vw,28px);font-weight:700}
+.vs img{width:44px;height:44px;object-fit:contain}
+.vs .contra{font-size:15px;font-weight:500;color:var(--texto-2)}
+.vs .t{display:inline-flex;align-items:center;gap:10px}
+.fatos{grid-template-columns:repeat(5,minmax(0,1fr));margin:6px 0 22px}
+.fatos .kpi b{font-size:clamp(20px,2.2vw,28px)}
+.fatos .kpi b.txt{font-size:15px;line-height:1.3}
+@media (max-width:900px){.fatos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.faixa{position:relative;display:grid;grid-template-columns:repeat(25,minmax(0,1fr));gap:3px;margin-top:6px}
+.faixa i{aspect-ratio:1;display:block;position:relative;background:var(--cinza)}
+.faixa i.w{background:var(--roxo)}.faixa i.d{background:var(--verde)}
+.faixa i.mm::after{content:"";position:absolute;inset:32%;border-radius:50%;background:#fff}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--texto-2);margin-top:10px}
+.leg i{display:inline-block;width:14px;height:10px;margin-right:5px;vertical-align:middle;background:var(--cinza);position:relative}
+.leg i.w{background:var(--roxo)}.leg i.d{background:var(--verde)}
+.leg i.mm::after{content:"";position:absolute;inset:25% 32%;border-radius:50%;background:#fff}
+.tip{position:absolute;z-index:5;pointer-events:none;background:#fff;border:1px solid var(--cinza);padding:6px 9px;font-size:12px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.tip b{display:block}
+.tip em{display:block;font-style:normal;color:var(--texto-2)}
+.lista{max-height:420px;overflow:auto;border-top:1px solid var(--linha)}
+.lista .ranking th{position:sticky;top:0;background:var(--fundo);z-index:1}
+
+.met-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:6px}
+@media (max-width:900px){.met-grid{grid-template-columns:minmax(0,1fr)}}
+.met{border-top:3px solid var(--texto);padding-top:10px}
+.met h3{display:inline-block;font-size:17px;margin:0 0 6px}
+.met-n{font-weight:700;color:var(--roxo);font-size:17px;margin-right:8px}
+.met p{margin:0 0 8px;font-size:14px}
+.met p b{color:var(--roxo)}
+.met-h3{font-size:17px;margin:26px 0 8px}
+.pesos{border:1px solid var(--linha);padding:6px 16px}
+.peso-l{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) 52px;gap:14px;align-items:center;padding:8px 0;border-bottom:1px solid var(--linha);font-size:14px;font-weight:500}
+.peso-l:last-child{border-bottom:0}
+.peso-l small{display:block;font-weight:400;color:var(--texto-2);font-size:12px}
+.peso-b{height:12px;background:var(--fundo-sutil)}
+.peso-b i{display:block;height:100%;background:var(--roxo)}
+.peso-l b{text-align:right;color:var(--roxo);font-size:17px;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.peso-l{grid-template-columns:minmax(0,1fr) 44px}.peso-b{display:none}}
+.fora{margin-top:18px;background:var(--fundo-sutil);padding:12px 16px}
+.fora h3{font-size:15px;margin:0 0 4px}
+.fora p{margin:0;font-size:13.5px;color:var(--texto-2)}
+footer.rodape{margin-top:36px;border-top:1px solid var(--linha);padding-top:12px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;color:var(--texto-2);font-size:12px}
+footer.rodape p{margin:0;max-width:900px}
+footer.rodape a{color:var(--texto-2)}
+
+.abas{display:flex;gap:0;margin:18px 0 0;border-bottom:2px solid var(--texto)}
+.abas a{font-family:var(--sans);font-size:14px;font-weight:700;padding:8px 16px;color:var(--texto-2);text-decoration:none;border:1px solid transparent;border-bottom:0;margin-bottom:-2px}
+.abas a[aria-current="page"]{color:var(--fundo);background:var(--texto);border-color:var(--texto)}
+.abas a:hover:not([aria-current]){color:var(--roxo)}
+.faixa.f30{grid-template-columns:repeat(15,minmax(0,1fr))}
+.ranking tr.ativo td.h1c{background:var(--s1)}.ranking tr.ativo td.h2c{background:var(--s2)}.ranking tr.ativo td.h3c{background:var(--s3)}.ranking tr.ativo td.h4c{background:var(--s4)}
+</style>
+</head>
+<body>
+<div class="pagina">
+  <svg class="escanteio" viewBox="0 0 140 140" aria-hidden="true"><path class="lados" d="M2 140V2H140"/><path class="arco" d="M2 42A40 40 0 0 0 42 2"/></svg>
+  <header class="topo">
+    <div class="titulos">
+      <h1>Ranking das <em>Freguesias</em> · G12 com clássicos</h1>
+      <p class="sub">Índice 2.0 · últimos 30 jogos oficiais dos 66 confrontos entre os 12 grandes, clássicos locais incluídos · jogos até <span data-draw="ate">—</span> · <a href="#metodo">como foi feito</a></p>
+    </div>
+    <div class="credito"><div class="cred-txt"><span>@vcanedo</span><nav class="redes" aria-label="Redes sociais"><a href="https://youtube.com/@vcanedo" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://www.instagram.com/vcanedo/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a><a href="https://www.tiktok.com/@vcanedo88" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://x.com/vcanedo" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></nav></div><img src="assets/marca-c.png" alt="Canedo"></div>
+  </header>
+  <nav class="abas" aria-label="Rankings"><a href="index.html">Clássicos locais</a><a href="g12.html">G12</a><a href="g12-classicos.html" aria-current="page">G12 com clássicos</a></nav>
+
+  <div class="kpis">
+    <div class="kpi destaque"><span class="rot">Maior freguesia do G12</span><div class="kpi-esc" data-draw="k1-esc"></div><b data-draw="k1-v">—</b><span data-draw="k1-t">—</span></div>
+    <div class="kpi"><span class="rot">Maior freguês do G12</span><div class="kpi-esc" data-draw="k2-esc"></div><b data-draw="k2-v">—</b><span data-draw="k2-t">—</span></div>
+    <div class="kpi"><span class="rot">Quem mais domina o G12</span><div class="kpi-esc" data-draw="k3-esc"></div><b data-draw="k3-v">—</b><span data-draw="k3-t">—</span></div>
+    <div class="kpi"><span class="rot">Onde o mando mais pesa</span><div class="kpi-esc" data-draw="k4-esc"></div><b data-draw="k4-v">—</b><span data-draw="k4-t">—</span></div>
+  </div>
+
+  <section class="bloco" id="ranking" style="margin-top:10px">
+    <h2>Ranking dos 66 confrontos</h2>
+    <p class="h2sub">Todos os confrontos entre os 12 grandes, nos últimos 30 jogos oficiais de cada um. Mesmo índice do ranking dos clássicos: peso por recência e por importância do jogo, mais um jogo extra para quem avançou em cada mata-mata. Clique num confronto para ver o detalhe.</p>
+    <div class="controles">
+      <div class="ctl"><span class="rot">Confrontos</span>
+        <div class="chips" role="group" aria-label="Tipo de confronto">
+          <button type="button" class="chip" data-t="Todos" aria-pressed="true">Todos</button>
+          <button type="button" class="chip" data-t="Interestadual" aria-pressed="false">Interestaduais</button>
+          <button type="button" class="chip" data-t="Local" aria-pressed="false">Locais</button>
+        </div>
+      </div>
+      <div class="ctl"><span class="rot">Competição</span>
+        <div class="chips" role="group" aria-label="Competição">
+          <button type="button" class="chip" data-f="Todas" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" data-f="Brasileirão" aria-pressed="false">Brasileirão</button>
+          <button type="button" class="chip" data-f="Copas" aria-pressed="false">Copas</button>
+          <button type="button" class="chip" data-f="Mata-mata" aria-pressed="false">Só mata-mata</button>
+        </div>
+      </div>
+      <div class="ctl"><span class="rot">Últimos jogos</span>
+        <div class="chips" role="group" aria-label="Últimos jogos">
+          <button type="button" class="chip" data-j="30" aria-pressed="true">30</button>
+          <button type="button" class="chip" data-j="20" aria-pressed="false">20</button>
+          <button type="button" class="chip" data-j="10" aria-pressed="false">10</button>
+        </div>
+      </div>
+      <div class="ctl"><label class="rot" for="clube-sel">Clube</label><select id="clube-sel" data-draw="clube-sel" aria-label="Clube"></select></div>
+    </div>
+    <div class="tabela-wrap">
+      <table class="ranking">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Confronto</th>
+            <th>Dominante</th>
+            <th>Índice</th>
+            <th>Nível</th>
+            <th>Jogos</th>
+            <th>V</th>
+            <th>E</th>
+            <th>D</th>
+            <th>Mata-matas</th>
+            <th class="lg">Na casa do dominante</th>
+            <th class="lg">Na casa do outro</th>
+            <th class="lg">Forma (5 jogos)</th>
+            <th>Jogos desde</th>
+          </tr>
+        </thead>
+        <tbody data-draw="rk"></tbody>
+      </table>
+    </div>
+    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65 e vantagem clara a partir de 55 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando, nos 30 jogos, sem os jogos em campo neutro e sem o bônus dos mata-matas · Forma: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
+  </section>
+
+  <section class="bloco" id="clubes">
+    <h2>Ranking por clube</h2>
+    <p class="h2sub">Aproveitamento ponderado de cada clube contra os outros 11 grandes, somando os 11 confrontos (30 jogos de cada, mesmos pesos). Ao lado, de quem cada um é freguês e sobre quem tem domínio.</p>
+    <div class="tabela-wrap">
+      <table class="ranking">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Clube</th>
+            <th>Índice contra o G12</th>
+            <th>V</th>
+            <th>E</th>
+            <th>D</th>
+            <th>Mata-matas</th>
+            <th>Domina (65+)</th>
+            <th class="lg">Vantagem clara sobre</th>
+            <th class="lg">Em desvantagem contra</th>
+            <th>Freguês de (65+)</th>
+          </tr>
+        </thead>
+        <tbody data-draw="cl"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="bloco" id="detalhe">
+    <div class="h2linha">
+      <h2>O confronto em detalhe</h2>
+      <div class="sec-filtro"><label for="fg-sel">Confronto</label><select id="fg-sel" data-draw="sel" aria-label="Confronto"></select></div>
+    </div>
+    <div class="vs" data-draw="d-vs">—</div>
+    <div class="kpis fatos">
+      <div class="kpi destaque"><span class="rot">Índice (30 jogos)</span><b data-draw="d-idx">—</b><span data-draw="d-idx-t">—</span></div>
+      <div class="kpi"><span class="rot">Mata-matas</span><b data-draw="d-mm">—</b><span data-draw="d-mm-t">—</span></div>
+      <div class="kpi"><span class="rot" data-draw="d-ca-r">Na casa</span><b data-draw="d-ca">—</b><span data-draw="d-ca-t">—</span></div>
+      <div class="kpi"><span class="rot" data-draw="d-cb-r">Na casa</span><b data-draw="d-cb">—</b><span data-draw="d-cb-t">—</span></div>
+      <div class="kpi"><span class="rot">Forma (5 jogos)</span><b class="txt" data-draw="d-forma">—</b><span data-draw="d-forma-t">—</span></div>
+    </div>
+    <div class="duas">
+      <div>
+        <h3>Índice por recorte</h3>
+        <p class="h2sub">Com os pesos, do ponto de vista de quem domina cada recorte.</p>
+        <div class="tabela-wrap">
+          <table class="ranking">
+            <thead><tr><th>Últimos</th><th>Dominante</th><th>Índice</th><th>V</th><th>E</th><th>D</th><th>Desde</th></tr></thead>
+            <tbody data-draw="rec"></tbody>
+          </table>
+        </div>
+        <p class="nota" data-draw="d-jej">—</p>
+      </div>
+      <div>
+        <h3>Os últimos 30 jogos</h3>
+        <p class="h2sub">Do mais recente (canto superior esquerdo) ao mais antigo. Passe o mouse para ver o placar.</p>
+        <div class="faixa f30" data-draw="strip"></div>
+        <div class="leg"><span><i class="w"></i>vitória do dominante</span><span><i></i>empate</span><span><i class="d"></i>vitória do outro</span><span><i class="mm"></i>mata-mata</span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px">Mata-matas na janela</h3>
+    <p class="h2sub">Cada confronto (ida e volta ou jogo único) conta uma vez, como um jogo extra para quem avançou. Peso = recência do último jogo × peso da fase.</p>
+    <div class="tabela-wrap">
+      <table class="ranking">
+        <thead><tr><th>Data</th><th>Competição</th><th>Fase</th><th class="lg">Jogos</th><th>Avançou</th><th>Como</th><th>Peso</th></tr></thead>
+        <tbody data-draw="mm"></tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:26px">Lista de jogos</h3>
+    <p class="h2sub">Peso = recência × importância do jogo. N = campo neutro.</p>
+    <div class="lista">
+      <table class="ranking">
+        <thead><tr><th>#</th><th>Data</th><th>Mandante</th><th>Gols</th><th>Gols</th><th>Visitante</th><th class="lg">Pênaltis</th><th class="lg">Competição</th><th class="lg">Avançou</th><th>Peso</th></tr></thead>
+        <tbody data-draw="jg"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="bloco" id="metodo">
+    <h2>Como o ranking do G12 foi feito</h2>
+    <p class="h2sub">O mesmo Índice de Freguesia do ranking dos clássicos, aplicado a todos os confrontos entre os 12 grandes.</p>
+    <div class="met-grid">
+      <div class="met"><span class="met-n">1</span><h3>Os jogos</h3><p>Os <b>30 jogos oficiais</b> mais recentes de cada confronto, conferidos no oGol e numa segunda fonte (base do Brasileirão 2003–2025 jogo a jogo; copas e 2026 na imprensa). Amistosos ficam de fora. Vitória vale 3, empate 1, e pênaltis contam como empate.</p></div>
+      <div class="met"><span class="met-n">2</span><h3>Os pesos</h3><p>Cada jogo vale <b>recência × importância</b>, com a mesma tabela do ranking dos clássicos: os 10 jogos mais recentes valem ×3, os 10 seguintes ×2,5 e os 10 mais antigos ×2. Cada mata-mata vira <b>um jogo extra</b> para quem avançou.</p></div>
+      <div class="met"><span class="met-n">3</span><h3>Mando e clubes</h3><p>O índice por mando usa só os jogos com aquele mandante, <b>sem campo neutro</b> (finais únicas e Supercopas) e sem o bônus dos mata-matas. O índice do clube soma os 11 confrontos de cada um.</p></div>
+    </div>
+    <h3 class="met-h3">O peso de cada tipo de jogo</h3>
+    <div class="pesos" data-draw="pesos"></div>
+    <div class="fora">
+      <h3>O que fica de fora</h3>
+      <p>Amistosos e a força de cada elenco na época. Nos interestaduais, 30 jogos cobrem 9 a 21 anos; nos clássicos locais, com os estaduais, de 5 a 10 anos (veja "Jogos desde"). Os clássicos locais aqui usam 30 jogos; a aba dos clássicos mantém 50. Por isso o mesmo clássico pode ter índices diferentes nas duas abas. A forma dos últimos 5 jogos e o índice por mando têm amostra pequena: servem de contexto, não entram no ranking.</p>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p>Fonte: oGol · jogos oficiais, pênaltis contam como empate · segunda fonte: base do Brasileirão 2003–2025 e imprensa · Índice de Freguesia 2.0 (modelo do canal) · método e base em <a href="https://github.com/vcanedo88/ranking-classicos">github.com/vcanedo88/ranking-classicos</a></p>
+    <div class="credito"><nav class="redes" aria-label="Redes sociais"><a href="https://youtube.com/@vcanedo" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://www.instagram.com/vcanedo/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a><a href="https://www.tiktok.com/@vcanedo88" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://x.com/vcanedo" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></nav><img src="assets/marca-c.png" alt="Canedo"></div>
+  </footer>
+</div>
+
+<script src="assets/escudos.js"></script>
+<script>
+(() => {
+  const st = { sel: null, tipo: 'Todos', filtro: 'Todas', janela: '30', clube: '' };
+  const num = (v) => (v === '' || v == null ? NaN : Number(v));
+  const f1 = (v) => (isNaN(num(v)) ? '—' : num(v).toFixed(1).replace('.', ','));
+  const br = (d) => (d ? d.slice(8, 10) + '/' + d.slice(5, 7) + '/' + d.slice(0, 4) : '—');
+  const brc = (d) => (d ? d.slice(8, 10) + '/' + d.slice(5, 7) + '/' + d.slice(2, 4) : '—');
+  const ok = (id) => { const d = dash.data(id); return d.status === 'ok' ? d.data : null; };
+  const mk = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const crest = (team) => {
+    const src = (window.fgEscudos || {})[team];
+    if (!src) return mk('span', 'sr', team);
+    const im = document.createElement('img'); im.src = src; im.alt = team; im.title = team; return im;
+  };
+  const so = (team) => { const s = mk('span', 'clube'); s.title = team; s.append(crest(team), mk('span', 'sr', team)); return s; };
+  const par = (a, b, label) => { const s = mk('span', 'clube'); s.title = label; s.append(crest(a), mk('span', 'x', '×'), crest(b), mk('span', 'sr', label)); return s; };
+  const nome = (team) => { const s = mk('span', 'nome'); s.append(crest(team), document.createTextNode(team)); return s; };
+  const lvl = (i) => (num(i) >= 65 ? 'Freguesia' : num(i) >= 55 ? 'Vantagem clara' : 'Equilíbrio');
+  const nivelTag = (n) => mk('span', 'tag ' + (n === 'Freguesia' ? 'f' : n === 'Vantagem clara' ? 'v' : ''), n);
+  const idxCell = (v, nivel) => {
+    const box = mk('span', 'ix ' + (nivel === 'Freguesia' ? 'f' : nivel === 'Vantagem clara' ? 'v' : ''));
+    const tr = mk('span', 'trilho'); const i = mk('i'); const x = num(v);
+    i.style.width = (isNaN(x) ? 0 : Math.max(0, Math.min(100, ((x - 33.3) / (100 - 33.3)) * 100))) + '%';
+    tr.appendChild(i); box.append(mk('b', '', f1(v)), tr); return box;
+  };
+  const heatCls = (v) => { const x = num(v); return isNaN(x) ? '' : x >= 75 ? 'h4c' : x >= 65 ? 'h3c' : x >= 55 ? 'h2c' : x >= 45 ? 'h1c' : ''; };
+  const td = (tr, child, cls) => { const c = document.createElement('td'); if (child == null || typeof child !== 'object') c.textContent = child == null ? '' : String(child); else c.appendChild(child); if (cls) c.className = cls; tr.appendChild(c); return c; };
+  const teams = (s) => String(s || '').split(', ').filter(Boolean);
+  const escList = (s) => { const box = mk('span', 'clube'); for (const t of teams(s)) box.append(crest(t)); if (!teams(s).length) box.append(mk('span', 'x', '—')); box.title = s || ''; return box; };
+  const rkRow = (lab) => (ok('g12c_ranking') || []).find((r) => r.classico === lab);
+  const sel = () => {
+    const rk = ok('g12c_ranking'); if (!rk || !rk.length) return null;
+    if (!st.sel) st.sel = rk[0].classico;
+    return rk.find((r) => r.classico === st.sel) || rk[0];
+  };
+  const ALL = ['rk', 'cl', 'sel', 'd-vs', 'd-idx', 'd-idx-t', 'd-mm', 'd-mm-t', 'd-ca-r', 'd-ca', 'd-ca-t', 'd-cb-r', 'd-cb', 'd-cb-t', 'd-forma', 'd-forma-t', 'd-jej', 'rec', 'strip', 'mm', 'jg'];
+  const redraw = () => ALL.forEach((n) => dash.draw(n));
+  const pick = (name, scroll) => { st.sel = name; redraw(); if (scroll) { const d = document.getElementById('detalhe'); if (d) d.scrollIntoView({ behavior: 'smooth', block: 'start' }); } };
+  const clickable = (tr, lab) => { tr.tabIndex = 0; tr.addEventListener('click', () => pick(lab, true)); tr.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') pick(lab, true); }); };
+
+  const syncBtns = () => document.querySelectorAll('.chips .chip').forEach((x) => {
+    if (x.dataset.f) x.setAttribute('aria-pressed', String(x.dataset.f === st.filtro));
+    if (x.dataset.j) x.setAttribute('aria-pressed', String(x.dataset.j === st.janela));
+    if (x.dataset.t) x.setAttribute('aria-pressed', String(x.dataset.t === st.tipo));
+  });
+  syncBtns();
+  document.querySelectorAll('.chips .chip').forEach((b) => b.addEventListener('click', () => {
+    if (b.dataset.f) st.filtro = b.dataset.f;
+    if (b.dataset.j) st.janela = b.dataset.j;
+    if (b.dataset.t) st.tipo = b.dataset.t;
+    syncBtns(); dash.draw('rk');
+  }));
+  dash.draw('clube-sel', (s) => {
+    const cl = ok('g12c_clubes') || [];
+    s.replaceChildren(new Option('Todos', ''), ...cl.map((r) => r.clube).sort((a, b) => a.localeCompare(b, 'pt')).map((c) => new Option(c, c)));
+    s.value = st.clube; s.onchange = () => { st.clube = s.value; dash.draw('rk'); };
+  });
+  dash.draw('ate', (el) => { const m = ok('g12c_meta'); el.textContent = m ? br(m.ultimo_jogo) : '—'; });
+
+  // KPIs
+  const rk0 = () => (ok('g12c_ranking') || [])[0] || null;
+  const clubes = () => ok('g12c_clubes') || [];
+  const esc = (el, list, label) => { el.replaceChildren(); list.forEach((t) => el.append(crest(t))); el.append(mk('strong', '', label)); };
+  dash.draw('k1-esc', (el) => { const r = rk0(); if (r) esc(el, [r.dominante, r.fregues], r.classico); });
+  dash.draw('k1-v', (el) => { const r = rk0(); el.textContent = r ? f1(r.indice) : '—'; });
+  dash.draw('k1-t', (el) => { const r = rk0(); el.textContent = r ? `índice do ${r.dominante} contra o ${r.fregues} · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
+  dash.draw('k2-esc', (el) => { const c = clubes(); const r = c[c.length - 1]; if (r) esc(el, [r.clube], r.clube); });
+  dash.draw('k2-v', (el) => { const c = clubes(); const r = c[c.length - 1]; el.textContent = r ? f1(r.indice) : '—'; });
+  dash.draw('k2-t', (el) => { const c = clubes(); const r = c[c.length - 1]; el.textContent = r ? `índice contra os outros 11 · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
+  dash.draw('k3-esc', (el) => { const r = clubes()[0]; if (r) esc(el, [r.clube], r.clube); });
+  dash.draw('k3-v', (el) => { const r = clubes()[0]; el.textContent = r ? f1(r.indice) : '—'; });
+  dash.draw('k3-t', (el) => { const r = clubes()[0]; el.textContent = r ? `índice contra os outros 11 · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
+  const k4 = () => (ok('g12c_ranking') || []).filter((r) => r.casa_dom_jogos >= 10 && r.casa_fre_jogos >= 10)
+    .sort((a, b) => (num(b.casa_dom_indice) - num(b.casa_fre_indice)) - (num(a.casa_dom_indice) - num(a.casa_fre_indice)))[0] || null;
+  dash.draw('k4-esc', (el) => { const r = k4(); if (r) esc(el, [r.dominante, r.fregues], r.classico); });
+  dash.draw('k4-v', (el) => { const r = k4(); el.textContent = r ? `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}` : '—'; });
+  dash.draw('k4-t', (el) => { const r = k4(); el.textContent = r ? `índice do ${r.dominante} em casa x na casa do ${r.fregues}` : '—'; });
+
+  // Ranking dos confrontos
+  dash.draw('rk', (tb) => {
+    const ix = ok('g12c_indices'); tb.replaceChildren(); if (!ix) return;
+    const cur = sel(); let p = 0;
+    for (const r of ix.filter((x) => x.filtro === st.filtro && String(x.janela) === st.janela)) {
+      if (st.tipo !== 'Todos' && r.tipo !== st.tipo) continue;
+      if (st.clube && r.dominante !== st.clube && r.fregues !== st.clube) continue;
+      const base = rkRow(r.classico) || {};
+      const tr = document.createElement('tr');
+      tr.className = (cur && r.classico === cur.classico ? 'ativo' : '') + (r.poucos === 'S' ? ' poucos' : '');
+      const left = (r.nivel === 'Equilíbrio' && num(r.d) > num(r.v)) ? r.fregues : r.dominante;
+      td(tr, ++p, 'cinza');
+      td(tr, par(left, left === r.dominante ? r.fregues : r.dominante, r.classico));
+      td(tr, so(r.dominante));
+      td(tr, idxCell(r.indice, r.nivel));
+      td(tr, nivelTag(r.nivel));
+      td(tr, r.jogos); td(tr, r.v); td(tr, r.e); td(tr, r.d);
+      td(tr, `${r.mm_dom} x ${r.mm_fre}`);
+      // mando e forma vêm do recorte de 30, do ponto de vista do dominante de 30
+      const same = base.dominante === r.dominante;
+      td(tr, same ? `${f1(base.casa_dom_indice)} (${base.casa_dom_jogos})` : '—', 'lg ' + (same ? heatCls(base.casa_dom_indice) : ''));
+      td(tr, same ? `${f1(base.casa_fre_indice)} (${base.casa_fre_jogos})` : '—', 'lg ' + (same ? heatCls(base.casa_fre_indice) : ''));
+      const fz = mk('span', 'clube'); if (base.forma_time) { fz.append(crest(base.forma_time), document.createTextNode(' ' + base.forma)); }
+      td(tr, fz, 'lg');
+      td(tr, brc(r.inicio));
+      clickable(tr, r.classico);
+      tb.appendChild(tr);
+    }
+    if (!p) { const tr = document.createElement('tr'); td(tr, 'Nenhum confronto com esse filtro.', 'cinza').colSpan = 14; tb.appendChild(tr); }
+  });
+
+  // Ranking por clube
+  dash.draw('cl', (tb) => {
+    const cl = ok('g12c_clubes'); tb.replaceChildren(); if (!cl) return;
+    for (const r of cl) {
+      const tr = document.createElement('tr');
+      td(tr, r.pos, 'cinza'); td(tr, nome(r.clube), 'l');
+      td(tr, idxCell(r.indice, lvl(r.indice)));
+      td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, r.mm);
+      td(tr, escList(r.domina)); td(tr, escList(r.vantagem_sobre), 'lg'); td(tr, escList(r.desvantagem_contra), 'lg'); td(tr, escList(r.fregues_de));
+      tr.tabIndex = 0;
+      tr.addEventListener('click', () => { st.clube = r.clube; const s = document.getElementById('clube-sel'); if (s) s.value = r.clube; dash.draw('rk'); document.getElementById('ranking').scrollIntoView({ behavior: 'smooth' }); });
+      tb.appendChild(tr);
+    }
+  });
+
+  // Detalhe
+  dash.draw('sel', (s) => {
+    const rk = ok('g12c_ranking') || [];
+    s.replaceChildren(...[...rk].sort((a, b) => a.classico.localeCompare(b.classico, 'pt')).map((r) => new Option(r.classico, r.classico)));
+    const cur = sel(); if (cur) s.value = cur.classico;
+    s.onchange = () => pick(s.value, false);
+  });
+  const T = (name, fn) => dash.draw(name, (el) => { const r = sel(); el.textContent = r ? fn(r) : '—'; });
+  dash.draw('d-vs', (el) => {
+    const r = sel(); el.replaceChildren(); if (!r) { el.textContent = '—'; return; }
+    const a = mk('span', 't'); a.append(crest(r.dominante), document.createTextNode(r.dominante));
+    const b = mk('span', 't'); b.append(crest(r.fregues), document.createTextNode(r.fregues));
+    el.append(a, mk('span', 'contra', r.nivel === 'Equilíbrio' ? 'leva vantagem mínima sobre' : 'domina'), b, mk('span', 'contra', '· ' + r.tipo.toLowerCase()));
+  });
+  T('d-idx', (r) => f1(r.indice));
+  T('d-idx-t', (r) => `${r.nivel} · ${r.v}V ${r.e}E ${r.d}D desde ${brc(r.inicio)}`);
+  T('d-mm', (r) => r.mata_matas);
+  T('d-mm-t', (r) => `vencidos pelo ${r.dominante} x ${r.fregues}`);
+  T('d-ca-r', (r) => `Na casa do ${r.dominante}`);
+  T('d-ca', (r) => f1(r.casa_dom_indice));
+  T('d-ca-t', (r) => `${r.casa_dom} · ${r.casa_dom_jogos} jogos`);
+  T('d-cb-r', (r) => `Na casa do ${r.fregues}`);
+  T('d-cb', (r) => f1(r.casa_fre_indice));
+  T('d-cb-t', (r) => `${r.casa_fre} do ${r.dominante} · ${r.casa_fre_jogos} jogos`);
+  T('d-forma', (r) => `${r.forma_time}: ${r.forma}`);
+  T('d-forma-t', (r) => `índice ${f1(r.forma_indice)} nos últimos 5`);
+  T('d-jej', (r) => `Jejum: ${r.jejum_time} está há ${r.jejum_jogos} jogos sem vencer o rival${r.jejum_desde ? ' (última vitória em ' + br(r.jejum_desde) + ')' : ''}. Último jogo: ${r.ultimo_jogo}.${r.neutros ? ' Jogos em campo neutro na janela: ' + r.neutros + '.' : ''}`);
+  dash.draw('rec', (tb) => {
+    const ix = ok('g12c_indices'); const cur = sel(); tb.replaceChildren(); if (!ix || !cur) return;
+    for (const r of ix.filter((x) => x.classico === cur.classico && x.filtro === 'Todas').sort((a, b) => b.janela - a.janela)) {
+      const tr = document.createElement('tr');
+      td(tr, r.janela + ' jogos'); td(tr, so(r.dominante)); td(tr, f1(r.indice), 'forte ' + heatCls(r.indice)); td(tr, r.v); td(tr, r.e); td(tr, r.d); td(tr, brc(r.inicio));
+      tb.appendChild(tr);
+    }
+    const tr = document.createElement('tr');
+    td(tr, '5 jogos', 'cinza'); td(tr, so(cur.forma_time)); td(tr, f1(cur.forma_indice), 'cinza');
+    const m = String(cur.forma).match(/(\d+)V (\d+)E (\d+)D/) || [];
+    td(tr, m[1], 'cinza'); td(tr, m[2], 'cinza'); td(tr, m[3], 'cinza'); td(tr, 'forma', 'cinza');
+    tb.appendChild(tr);
+  });
+  const outcome = (g, dom) => { const gm = num(g.gm), gv = num(g.gv); if (gm === gv) return 'e'; return (gm > gv ? g.mandante : g.visitante) === dom ? 'w' : 'd'; };
+  dash.draw('strip', (el) => {
+    const jg = ok('g12c_jogos'); const cur = sel(); el.replaceChildren(); if (!jg || !cur) return;
+    const tip = mk('div', 'tip'); tip.hidden = true;
+    for (const g of jg.filter((x) => x.classico === cur.classico)) {
+      const i = mk('i', outcome(g, cur.dominante) + (g.mata_mata === 'S' ? ' mm' : ''));
+      const pen = g.penaltis ? ` (pên. ${g.penaltis})` : '';
+      i.setAttribute('aria-label', `${br(g.data)}: ${g.mandante} ${g.gm} x ${g.gv} ${g.visitante}${pen}`);
+      const show = () => {
+        tip.replaceChildren(mk('b', '', `${g.mandante} ${g.gm} x ${g.gv} ${g.visitante}${pen}`), mk('em', '', br(g.data) + ' · ' + g.competicao + (g.neutro ? ' · campo neutro' : '')));
+        if (g.classificado) tip.appendChild(mk('em', '', 'Avançou: ' + g.classificado));
+        tip.hidden = false;
+        const W = el.clientWidth, x = i.offsetLeft + i.offsetWidth / 2;
+        tip.style.top = (i.offsetTop + i.offsetHeight + 6) + 'px'; tip.style.left = '0px';
+        tip.style.left = Math.max(0, Math.min(W - tip.offsetWidth, x - tip.offsetWidth / 2)) + 'px';
+      };
+      i.addEventListener('pointerenter', show); i.addEventListener('pointerdown', show);
+      i.addEventListener('pointerleave', () => { tip.hidden = true; });
+      el.appendChild(i);
+    }
+    el.appendChild(tip);
+  });
+  const COMO = { agregado: 'Agregado', 'pênaltis': 'Pênaltis', vantagem: 'Vantagem', jogo: 'Jogo único', 'gol fora': 'Gol fora', 'decisão do STJD': 'Decisão do STJD' };
+  dash.draw('mm', (tb) => {
+    const mm = ok('g12c_matamatas'); const cur = sel(); tb.replaceChildren(); if (!mm || !cur) return;
+    const rows = mm.filter((x) => x.classico === cur.classico);
+    for (const r of rows) {
+      const tr = document.createElement('tr');
+      td(tr, brc(r.data)); td(tr, r.competicao, 'l'); td(tr, r.fase); td(tr, r.jogos, 'lg l'); td(tr, so(r.avancou)); td(tr, COMO[r.como] || r.como); td(tr, f1(r.peso));
+      tb.appendChild(tr);
+    }
+    if (!rows.length) { const tr = document.createElement('tr'); td(tr, 'Nenhum mata-mata na janela.', 'cinza').colSpan = 7; tb.appendChild(tr); }
+  });
+  dash.draw('jg', (tb) => {
+    const jg = ok('g12c_jogos'); const cur = sel(); tb.replaceChildren(); if (!jg || !cur) return;
+    for (const g of jg.filter((x) => x.classico === cur.classico)) {
+      const tr = document.createElement('tr');
+      const o = outcome(g, cur.dominante);
+      td(tr, g.n, 'cinza'); td(tr, brc(g.data) + (g.neutro ? ' N' : '')); td(tr, so(g.mandante)); td(tr, g.gm, 'forte'); td(tr, g.gv, 'forte'); td(tr, so(g.visitante));
+      td(tr, g.penaltis, 'lg'); td(tr, g.competicao, 'lg l'); td(tr, g.classificado ? so(g.classificado) : '', 'lg'); td(tr, f1(g.peso));
+      tr.firstChild.style.boxShadow = `inset 4px 0 0 ${o === 'w' ? 'var(--roxo)' : o === 'd' ? 'var(--verde)' : 'var(--cinza)'}`;
+      tb.appendChild(tr);
+    }
+  });
+  dash.draw('pesos', (box) => {
+    const p = ok('pesos'); box.replaceChildren(); if (!p) return;
+    const rows = p.filter((r) => !isNaN(num(r.peso)) && !(r.grupo === 'Recência' && /4[1-9]|3[1-9]|50/.test(r.criterio)));
+    const max = Math.max(...rows.map((r) => num(r.peso)));
+    for (const r of rows) {
+      const l = mk('div', 'peso-l');
+      const a = mk('span', '', r.criterio); a.appendChild(mk('small', '', r.grupo));
+      const b = mk('div', 'peso-b'); const i = mk('i'); i.style.width = (num(r.peso) / max * 100) + '%'; b.appendChild(i);
+      l.append(a, b, mk('b', '', '×' + String(num(r.peso)).replace('.', ',')));
+      box.appendChild(l);
+    }
+  });
+})();
+</script>
+</body>
+</html>
