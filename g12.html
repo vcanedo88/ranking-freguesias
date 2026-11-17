@@ -502,7 +502,7 @@ footer.rodape a{color:var(--texto-2)}
     return { esc: [r.jejum_time], label: r.jejum_time, v: `${r.jejum_jogos} jogos`, t: `sem vencer o ${o} desde ${brc(r.jejum_desde)}` }; });
   kpi(6, () => { const r = K.rows().slice().sort((a, b) => { const x = mmPar(K.mm(a)), y = mmPar(K.mm(b)); return Math.abs(y[0] - y[1]) - Math.abs(x[0] - x[1]) || (y[0] + y[1]) - (x[0] + x[1]); })[0];
     if (!r) return null; const [x, y] = mmPar(K.mm(r)); const [w, l] = x >= y ? [r.dominante, r.fregues] : [r.fregues, r.dominante];
-    return { ...par2(w, l), v: `${Math.max(x, y)} x ${Math.min(x, y)}`, t: `mata-matas vencidos pelo ${w} em ${K.N} jogos` }; });
+    return { ...par2(w, l), v: `${Math.max(x, y)} x ${Math.min(x, y)}`, t: `vencidos pelo ${w} em ${K.N}J` }; });
   kpi(7, () => { const r = K.rows().filter((x) => x.casa_dom_jogos >= 10 && x.casa_fre_jogos >= 10)
     .sort((a, b) => (num(b.casa_dom_indice) - num(b.casa_fre_indice)) - (num(a.casa_dom_indice) - num(a.casa_fre_indice)))[0];
     return r && { ...par2(r.dominante, r.fregues), v: `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}`, t: `${r.dominante} em casa x na casa do ${r.fregues}` }; });
