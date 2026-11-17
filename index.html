@@ -276,6 +276,10 @@ footer.rodape a{color:var(--texto-2)}
             <th data-field="v">V</th>
             <th data-field="e">E</th>
             <th data-field="d">D</th>
+            <th data-field="vagas_dom">Mata-matas</th>
+            <th data-field="casa_dom_indice" class="lg">Na casa do dominante</th>
+            <th data-field="casa_fre_indice" class="lg">Na casa do outro</th>
+            <th data-field="forma" class="lg">5 jogos</th>
             <th data-field="jejum_time">Jejum</th>
             <th data-field="jejum_jogos">Sem vencer</th>
             <th data-field="jejum_desde">Última vitória</th>
@@ -285,7 +289,7 @@ footer.rodape a{color:var(--texto-2)}
         <tbody data-draw="rk"></tbody>
       </table>
     </div>
-    <p class="nota">Clássico: à esquerda o escudo do dominante (no equilíbrio, de quem tem mais vitórias na janela) · Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D: do ponto de vista do dominante · Jejum: quem está há mais jogos sem vencer o rival hoje · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro (menos de 12% da janela), o clássico fica no fim da lista, em cinza.</p>
+    <p class="nota">Clássico: à esquerda o escudo do dominante (no equilíbrio, de quem tem mais vitórias na janela) · Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mandante, dentro do recorte e do filtro escolhidos, sem o bônus dos mata-matas (mando oficial; a base local não marca campo neutro) · 5 jogos: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jejum: quem está há mais jogos sem vencer o rival hoje; última vitória: a data da última vitória desse time no clássico · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro (menos de 12% da janela), o clássico fica no fim da lista, em cinza.</p>
   </section>
 
   <section class="bloco">
@@ -523,6 +527,14 @@ footer.rodape a{color:var(--texto-2)}
       td(tr, idxCell(r.indice, r.nivel));
       td(tr, nivelTag(r.nivel));
       td(tr, r.jogos); td(tr, r.v); td(tr, r.e); td(tr, r.d);
+      td(tr, `${r.vagas_dom} x ${r.vagas_fre}`);
+      // mando no próprio recorte e filtro, do ponto de vista do dominante do recorte; forma vem dos últimos 5
+      const casa = (v) => (v === null || v === undefined || v === '' ? '—' : f1(v));
+      td(tr, casa(r.casa_dom_indice), 'lg ' + (r.casa_dom_indice == null ? '' : heatCls(r.casa_dom_indice)));
+      td(tr, casa(r.casa_fre_indice), 'lg ' + (r.casa_fre_indice == null ? '' : heatCls(r.casa_fre_indice)));
+      const base = (ok('ranking') || []).find((x) => x.classico === r.classico) || {};
+      const fz = mk('span', 'clube'); if (base.forma_time) { fz.append(crest(base.forma_time), document.createTextNode(' ' + base.forma)); }
+      td(tr, fz, 'lg');
       td(tr, so(r.jejum_time)); td(tr, r.jejum_jogos, 'forte'); td(tr, brc(r.jejum_desde)); td(tr, brc(r.inicio));
       tr.addEventListener('click', () => pick(r.classico, true));
       tr.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') pick(r.classico, true); });

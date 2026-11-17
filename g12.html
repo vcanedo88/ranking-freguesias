@@ -285,13 +285,16 @@ footer.rodape a{color:var(--texto-2)}
             <th class="lg">Na casa do dominante</th>
             <th class="lg">Na casa do outro</th>
             <th class="lg">5 jogos</th>
+            <th>Jejum</th>
+            <th>Sem vencer</th>
+            <th>Última vitória</th>
             <th>Jogos desde</th>
           </tr>
         </thead>
         <tbody data-draw="rk"></tbody>
       </table>
     </div>
-    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando, dentro do recorte e do filtro escolhidos (cerca de 15 jogos de cada lado em 30, uns 5 em 10: amostra pequena), sem os jogos em campo neutro e sem o bônus dos mata-matas · 5 jogos: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
+    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando, dentro do recorte e do filtro escolhidos (cerca de 15 jogos de cada lado em 30, uns 5 em 10: amostra pequena), sem os jogos em campo neutro e sem o bônus dos mata-matas · 5 jogos: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jejum: quem está há mais jogos sem vencer o rival hoje; última vitória: a data da última vitória desse time no confronto · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
   </section>
 
   <section class="bloco" id="clubes">
@@ -512,11 +515,12 @@ footer.rodape a{color:var(--texto-2)}
       td(tr, casa(r.casa_fre_indice), 'lg ' + (r.casa_fre_indice == null ? '' : heatCls(r.casa_fre_indice)));
       const fz = mk('span', 'clube'); if (base.forma_time) { fz.append(crest(base.forma_time), document.createTextNode(' ' + base.forma)); }
       td(tr, fz, 'lg');
+      td(tr, base.jejum_time ? so(base.jejum_time) : '—'); td(tr, base.jejum_jogos, 'forte'); td(tr, brc(base.jejum_desde));
       td(tr, brc(r.inicio));
       clickable(tr, r.classico);
       tb.appendChild(tr);
     }
-    if (!p) { const tr = document.createElement('tr'); td(tr, 'Nenhum confronto com esse filtro.', 'cinza').colSpan = 14; tb.appendChild(tr); }
+    if (!p) { const tr = document.createElement('tr'); td(tr, 'Nenhum confronto com esse filtro.', 'cinza').colSpan = 17; tb.appendChild(tr); }
   });
 
   // Ranking por clube

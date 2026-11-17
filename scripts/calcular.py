@@ -127,6 +127,22 @@ def indice(team, gN, tN, filtro):
     return (round(100 * num / den, 1) if den else None), n, v, e, d, cv, cl
 
 
+def mando_ix(team, casa, gN, filtro):
+    """Índice de `team` só nos jogos com `casa` como mandante, dentro do recorte gN e do filtro, sem o bônus dos mata-matas."""
+    num = den = 0.0
+    n = 0
+    for i, g in enumerate(gN):
+        if g["m"] != casa:
+            continue
+        if filtro == "Mata-mata" and g["fase"] not in KO:
+            continue
+        if filtro in ("Estaduais", "Brasileirão", "Copas") and grupo(g) != filtro:
+            continue
+        w = REC[i // 10] * imp(g)
+        num += w * pts(g, team); den += w * 3; n += 1
+    return (round(100 * num / den, 1) if den else None), n
+
+
 def nivel(i):
     if i >= PESOS["limiar_freguesia"]:
         return "Freguesia"
@@ -188,7 +204,9 @@ def main():
                 indices.append(dict(classico=lab, filtro=f, janela=N, dominante=top, fregues=ot, indice=r[0], jogos=r[1],
                                     v=r[2], e=r[3], d=r[4], vagas_dom=r[5], vagas_fre=r[6], inicio=limN,
                                     poucos="S" if r[1] < max(3, round(N * 0.12)) else "N",
-                                    jejum_time=jt, jejum_jogos=jn, jejum_desde=jd, inicio50=lim, nivel=nivel(r[0])))
+                                    jejum_time=jt, jejum_jogos=jn, jejum_desde=jd, inicio50=lim, nivel=nivel(r[0]),
+                                    casa_dom_indice=mando_ix(top, top, gN, f)[0], casa_dom_jogos=mando_ix(top, top, gN, f)[1],
+                                    casa_fre_indice=mando_ix(top, ot, gN, f)[0], casa_fre_jogos=mando_ix(top, ot, gN, f)[1]))
         for n in (10, 20, 30, 40, 50):
             s = g50[:n]
             wd = sum(pts(g, dom) == 3 for g in s); e = sum(g["gm"] == g["gv"] for g in s)
@@ -197,6 +215,10 @@ def main():
             recortes.append(dict(classico=lab, recorte=n, dominante=dom, fregues=fre, v_dom=wd, empates=e, v_fregues=n - wd - e,
                                  gols_dom=gd, gols_fregues=gf, aproveitamento=round(100 * (3 * wd + e) / (3 * n), 1), desde=s[-1]["data"]))
         rc = recortes[-5:]
+        # forma: últimos 5 jogos (fora do ranking)
+        g5 = g50[:5]; t5 = [t for t in ties if t["pos"] < 5]
+        f5a, f5b = indice(a, g5, t5, "Todas"), indice(b, g5, t5, "Todas")
+        f5t, f5 = (a, f5a) if (f5a[0] or 0) >= (f5b[0] or 0) else (b, f5b)
         i0 = indice(dom, g50, ties, "Todas")
         last = next((g for g in games if pts(g, fre) == 3), None)
         vd = sum(t["vencedor"] == dom for t in ties)
@@ -208,7 +230,8 @@ def main():
                             campanha50=f"{i0[2]}V {i0[3]}E {i0[4]}D", mata_matas=f"{vd} x {len(ties) - vd}",
                             jejum=next((n for n, g in enumerate(games) if pts(g, fre) == 3), len(games)),
                             ult_vit_fregues=(f"{br(last['data'])} {last['m']} {last['gm']}x{last['gv']} {last['v']}" if last else ""),
-                            ultimo_jogo=f"{br(u['data'])} {u['m']} {u['gm']}x{u['gv']} {u['v']}"))
+                            ultimo_jogo=f"{br(u['data'])} {u['m']} {u['gm']}x{u['gv']} {u['v']}",
+                            forma_time=f5t, forma_indice=f5[0], forma=f"{f5[2]}V {f5[3]}E {f5[4]}D"))
         for i, g in enumerate(g50, 1):
             t = next((t for t in ties if t["fim"] == g["data"]), None)
             jogos.append(dict(classico=lab, n=i, data=g["data"], mandante=g["m"], gm=g["gm"], gv=g["gv"], visitante=g["v"],
