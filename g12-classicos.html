@@ -199,6 +199,8 @@ footer.rodape a{color:var(--texto-2)}
 .placar{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
 .placar img{width:20px;height:20px;object-fit:contain}
 .placar small{color:var(--texto-2)}
+.agg{display:inline-flex;flex-direction:column;align-items:center;gap:2px}
+.agg-nota{font-size:11px;color:var(--texto-2);white-space:nowrap}
 .partidas{display:inline-flex;flex-direction:column;gap:3px;align-items:flex-start}
 .picker{position:relative}
 .picker>button{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:14px;padding:5px 10px;border:1px solid var(--cinza);background:#fff;color:var(--texto);cursor:pointer;min-width:250px;justify-content:space-between}
@@ -373,7 +375,7 @@ footer.rodape a{color:var(--texto-2)}
     <p class="h2sub">Cada confronto (ida e volta ou jogo único) conta uma vez, como um jogo extra para quem avançou. Peso = recência do último jogo × peso da fase.</p>
     <div class="tabela-wrap">
       <table class="ranking">
-        <thead><tr><th>Data</th><th>Competição</th><th>Fase</th><th class="lg">Jogos</th><th>Agregado</th><th>Avançou</th><th>Como</th><th>Peso</th></tr></thead>
+        <thead><tr><th>Data</th><th>Competição</th><th>Fase</th><th class="lg">Jogos</th><th>Agregado</th><th>Avançou</th><th>Peso</th></tr></thead>
         <tbody data-draw="mm"></tbody>
       </table>
     </div>
@@ -634,17 +636,25 @@ footer.rodape a{color:var(--texto-2)}
   });
   const placar = (p) => { const s = mk('span', 'placar'); s.append(crest(p.m), mk('b', '', `${p.gm} x ${p.gv}`), crest(p.v)); if (p.pen) s.append(mk('small', '', `pên. ${p.pen}`)); return s; };
   const partidasCell = (r) => { const box = mk('span', 'partidas'); (r.partidas || []).forEach((p) => box.append(placar(p))); return box; };
-  const aggCell = (r) => { if (!r.partidas || r.partidas.length < 2) return mk('span', 'cinza', '—'); const s = mk('span', 'placar'); s.append(crest(r.avancou), mk('b', '', r.agregado), crest(r.perdeu)); return s; };
-  const COMO = { agregado: 'Agregado', 'pênaltis': 'Pênaltis', vantagem: 'Vantagem', jogo: 'Jogo único', 'gol fora': 'Gol fora', 'decisão do STJD': 'Decisão do STJD' };
+  const penAv = (r) => { const p = [...(r.partidas || [])].reverse().find((x) => x.pen); if (!p) return ''; const [a, b] = String(p.pen).split('-'); return p.m === r.avancou ? `${a} x ${b}` : `${b} x ${a}`; };
+  const NOTA = { 'gol fora': 'gol fora de casa', vantagem: 'vantagem do empate', 'decisão do STJD': 'decisão do STJD' };
+  const aggCell = (r) => {
+    const n = (r.partidas || []).length;
+    const nota = r.como === 'pênaltis' ? ((penAv(r) ? penAv(r) + ' ' : '') + 'nos pênaltis') : (NOTA[r.como] || '');
+    if (n < 2 && !nota) return mk('span', 'cinza', '—');
+    const box = mk('span', 'agg'); const s = mk('span', 'placar'); s.append(crest(r.avancou), mk('b', '', r.agregado), crest(r.perdeu)); box.append(s);
+    if (nota) box.append(mk('small', 'agg-nota', nota));
+    return box;
+  };
   dash.draw('mm', (tb) => {
     const mm = ok('g12c_matamatas'); const cur = sel(); tb.replaceChildren(); if (!mm || !cur) return;
     const rows = mm.filter((x) => x.classico === cur.classico);
     for (const r of rows) {
       const tr = document.createElement('tr');
-      td(tr, brc(r.data)); td(tr, r.competicao, 'l'); td(tr, r.fase); td(tr, partidasCell(r), 'lg'); td(tr, aggCell(r)); td(tr, so(r.avancou)); td(tr, COMO[r.como] || r.como); td(tr, f1(r.peso));
+      td(tr, brc(r.data)); td(tr, r.competicao, 'l'); td(tr, r.fase); td(tr, partidasCell(r), 'lg'); td(tr, aggCell(r)); td(tr, so(r.avancou)); td(tr, f1(r.peso));
       tb.appendChild(tr);
     }
-    if (!rows.length) { const tr = document.createElement('tr'); td(tr, 'Nenhum mata-mata na janela.', 'cinza').colSpan = 8; tb.appendChild(tr); }
+    if (!rows.length) { const tr = document.createElement('tr'); td(tr, 'Nenhum mata-mata na janela.', 'cinza').colSpan = 7; tb.appendChild(tr); }
   });
   dash.draw('jg', (tb) => {
     const jg = ok('g12c_jogos'); const cur = sel(); tb.replaceChildren(); if (!jg || !cur) return;
