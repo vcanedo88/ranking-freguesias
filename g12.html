@@ -291,7 +291,7 @@ footer.rodape a{color:var(--texto-2)}
         <tbody data-draw="rk"></tbody>
       </table>
     </div>
-    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando (cerca de 15 de cada lado), nos 30 jogos, sem os jogos em campo neutro e sem o bônus dos mata-matas · 5 jogos: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
+    <p class="nota">Índice: de 0 a 100, freguesia a partir de 65, vantagem clara de 60 a 64,9 e vantagem de 55 a 59,9 · V, E, D e mata-matas: do ponto de vista do dominante · Na casa do dominante / do outro: índice do dominante só nos jogos com aquele mando, dentro do recorte e do filtro escolhidos (cerca de 15 jogos de cada lado em 30, uns 5 em 10: amostra pequena), sem os jogos em campo neutro e sem o bônus dos mata-matas · 5 jogos: quem foi melhor nos últimos 5 jogos (amostra pequena, fora do ranking) · Jogos desde: data do jogo mais antigo da janela. Com poucos jogos no filtro, o confronto fica no fim da lista, em cinza.</p>
   </section>
 
   <section class="bloco" id="clubes">
@@ -506,10 +506,10 @@ footer.rodape a{color:var(--texto-2)}
       td(tr, nivelTag(r.nivel));
       td(tr, r.jogos); td(tr, r.v); td(tr, r.e); td(tr, r.d);
       td(tr, `${r.mm_dom} x ${r.mm_fre}`);
-      // mando e forma vêm do recorte de 30, do ponto de vista do dominante de 30
-      const same = base.dominante === r.dominante;
-      td(tr, same ? f1(base.casa_dom_indice) : '—', 'lg ' + (same ? heatCls(base.casa_dom_indice) : ''));
-      td(tr, same ? f1(base.casa_fre_indice) : '—', 'lg ' + (same ? heatCls(base.casa_fre_indice) : ''));
+      // mando no próprio recorte e filtro, do ponto de vista do dominante do recorte; forma vem dos últimos 5
+      const casa = (v) => (v === null || v === undefined || v === '' ? '—' : f1(v));
+      td(tr, casa(r.casa_dom_indice), 'lg ' + (r.casa_dom_indice == null ? '' : heatCls(r.casa_dom_indice)));
+      td(tr, casa(r.casa_fre_indice), 'lg ' + (r.casa_fre_indice == null ? '' : heatCls(r.casa_fre_indice)));
       const fz = mk('span', 'clube'); if (base.forma_time) { fz.append(crest(base.forma_time), document.createTextNode(' ' + base.forma)); }
       td(tr, fz, 'lg');
       td(tr, brc(r.inicio));

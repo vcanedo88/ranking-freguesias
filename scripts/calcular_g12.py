@@ -217,9 +217,16 @@ def main(escopo, prefixo):
                     continue
                 xa, xb = ix(sa[0], sa[1]), ix(sb[0], sb[1])
                 top, ot, s = (a, b, sa) if (xa or 0) >= (xb or 0) else (b, a, sb)
+                # mando no próprio recorte e filtro, do ponto de vista do dominante do recorte (sem neutros e sem o bônus)
+                mr = {}
+                for casa in (top, ot):
+                    gs = [(i, g) for i, g in gJ if g["m"] == casa and not g["neutro"]]
+                    sm = soma(top, gs, [], f)
+                    mr[casa] = (sm[2], ix(sm[0], sm[1]) if sm[2] else None)
                 indices.append(dict(classico=lab, tipo=c["tipo"], filtro=f, janela=J, dominante=top, fregues=ot, indice=ix(s[0], s[1]),
                                     jogos=s[2], v=s[3], e=s[4], d=s[5], mm_dom=s[6], mm_fre=s[7], inicio=limJ,
-                                    poucos="S" if s[2] < max(3, round(J * 0.12)) else "N", nivel=nivel(ix(s[0], s[1]))))
+                                    poucos="S" if s[2] < max(3, round(J * 0.12)) else "N", nivel=nivel(ix(s[0], s[1])),
+                                    casa_dom_jogos=mr[top][0], casa_dom_indice=mr[top][1], casa_fre_jogos=mr[ot][0], casa_fre_indice=mr[ot][1]))
         # forma: últimos 5 (sem ranking)
         g5 = G[:5]; t5 = [t for t in ties if t["fim"] >= gN[4]["data"]]
         s5a, s5b = soma(a, g5, t5), soma(b, g5, t5)
