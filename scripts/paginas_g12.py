@@ -39,7 +39,7 @@ def main():
             "Aproveitamento ponderado de cada clube contra os grandes de outros estados, somando os seus confrontos (mesmos pesos). "
             "Os clubes do Rio e de São Paulo têm 8 adversários (240 jogos no recorte de 30); os de Minas e do Rio Grande do Sul, 10 (300 jogos).")
     g = g.replace("índice contra os outros 11 · ", "índice contra os grandes de outros estados · ")
-    g = rep(g, "clubeTxt: 'índice contra os outros 11'", "clubeTxt: 'índice contra os grandes de outros estados'")
+    g = rep(g, "clubeTxt: 'contra os outros 11'", "clubeTxt: 'contra os grandes de fora'")
     g = rep(g, "O índice do clube soma os 11 confrontos de cada um.", "O índice do clube soma os seus confrontos contra os grandes de outros estados.")
     g = rep(g, "Os clássicos locais aqui usam 30 jogos; a aba dos clássicos mantém 50. Por isso o mesmo clássico pode ter índices diferentes nas duas abas. ",
             'Os clássicos locais ficam fora desta aba; na aba "G12 com clássicos" eles entram com 30 jogos (a aba dos clássicos locais mantém 50). ')

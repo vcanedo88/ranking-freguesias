@@ -63,6 +63,7 @@ header.topo{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-left
 .kpi-esc strong{font-size:15px;font-weight:700}
 .kpi b{display:block;font-size:clamp(26px,3vw,38px);line-height:1.05;font-variant-numeric:tabular-nums;margin-top:4px}
 .kpi.destaque b{color:var(--roxo)}
+.kpis .kpi > span[data-draw]{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .kpi > span:last-child{color:var(--texto-2);font-size:13px;display:block;margin-top:4px}
 @media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
@@ -250,9 +251,9 @@ footer.rodape a{color:var(--texto-2)}
     <div class="kpi"><span class="rot">Maior freguês</span><div class="kpi-esc" data-draw="k3-esc"></div><b data-draw="k3-v">—</b><span data-draw="k3-t">—</span></div>
     <div class="kpi"><span class="rot">Mais equilibrado</span><div class="kpi-esc" data-draw="k4-esc"></div><b data-draw="k4-v">—</b><span data-draw="k4-t">—</span></div>
     <div class="kpi"><span class="rot">Maior jejum</span><div class="kpi-esc" data-draw="k5-esc"></div><b data-draw="k5-v">—</b><span data-draw="k5-t">—</span></div>
-    <div class="kpi"><span class="rot">Mata-matas mais desiguais</span><div class="kpi-esc" data-draw="k6-esc"></div><b data-draw="k6-v">—</b><span data-draw="k6-t">—</span></div>
+    <div class="kpi"><span class="rot">Mata-mata mais desigual</span><div class="kpi-esc" data-draw="k6-esc"></div><b data-draw="k6-v">—</b><span data-draw="k6-t">—</span></div>
     <div class="kpi"><span class="rot">Onde o mando mais pesa</span><div class="kpi-esc" data-draw="k7-esc"></div><b data-draw="k7-v">—</b><span data-draw="k7-t">—</span></div>
-    <div class="kpi"><span class="rot">Virada recente</span><div class="kpi-esc" data-draw="k8-esc"></div><b data-draw="k8-v">—</b><span data-draw="k8-t">—</span></div>
+    <div class="kpi"><span class="rot">Virada nos últimos 10J</span><div class="kpi-esc" data-draw="k8-esc"></div><b data-draw="k8-v">—</b><span data-draw="k8-t">—</span></div>
   </div>
 
   <section class="bloco" id="ranking" style="margin-top:10px">
@@ -483,8 +484,8 @@ footer.rodape a{color:var(--texto-2)}
   // KPIs
   const clubes = () => (ok('g12_clubes') || []).filter((r) => String(r.janela) === '30');
   const K = { N: 30, rows: () => ok('g12_ranking') || [], r10: () => (ok('g12_indices') || []).filter((r) => r.filtro === 'Todas' && String(r.janela) === '10'),
-    clubes, clubeTxt: 'índice contra os grandes de outros estados', mm: (r) => r.mata_matas };
-  // KPIs: as mesmas 8 curiosidades nas três abas
+    clubes, clubeTxt: 'contra os grandes de fora', mm: (r) => r.mata_matas };
+  // KPIs: as mesmas 8 curiosidades nas três abas (descrição em 1 linha)
   const kpi = (n, fn) => {
     dash.draw(`k${n}-esc`, (el) => { const k = fn(); el.replaceChildren(); if (!k) return; k.esc.forEach((t) => el.append(crest(t))); el.append(mk('strong', '', k.label)); });
     dash.draw(`k${n}-v`, (el) => { const k = fn(); el.textContent = k ? k.v : '—'; });
@@ -498,17 +499,17 @@ footer.rodape a{color:var(--texto-2)}
   kpi(3, () => { const c = K.clubes(); const r = c[c.length - 1]; return r && { esc: [r.clube], label: r.clube, v: f1(r.indice), t: `${K.clubeTxt} · ${ved(r)}` }; });
   kpi(4, () => { const r = K.rows().filter((x) => x.poucos !== 'S').sort((a, b) => num(a.indice) - num(b.indice))[0]; return r && { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `índice mais baixo · ${ved(r)}` }; });
   kpi(5, () => { const r = K.rows().slice().sort((a, b) => num(b.jejum_jogos) - num(a.jejum_jogos))[0]; if (!r) return null; const o = r.jejum_time === r.dominante ? r.fregues : r.dominante;
-    return { esc: [r.jejum_time], label: r.jejum_time, v: `${r.jejum_jogos} jogos`, t: `sem vencer o ${o} · última vitória em ${brc(r.jejum_desde)}` }; });
+    return { esc: [r.jejum_time], label: r.jejum_time, v: `${r.jejum_jogos} jogos`, t: `sem vencer o ${o} desde ${brc(r.jejum_desde)}` }; });
   kpi(6, () => { const r = K.rows().slice().sort((a, b) => { const x = mmPar(K.mm(a)), y = mmPar(K.mm(b)); return Math.abs(y[0] - y[1]) - Math.abs(x[0] - x[1]) || (y[0] + y[1]) - (x[0] + x[1]); })[0];
     if (!r) return null; const [x, y] = mmPar(K.mm(r)); const [w, l] = x >= y ? [r.dominante, r.fregues] : [r.fregues, r.dominante];
-    return { ...par2(w, l), v: `${Math.max(x, y)} x ${Math.min(x, y)}`, t: `mata-matas vencidos pelo ${w} nos últimos ${K.N} jogos` }; });
+    return { ...par2(w, l), v: `${Math.max(x, y)} x ${Math.min(x, y)}`, t: `mata-matas vencidos pelo ${w} em ${K.N} jogos` }; });
   kpi(7, () => { const r = K.rows().filter((x) => x.casa_dom_jogos >= 10 && x.casa_fre_jogos >= 10)
     .sort((a, b) => (num(b.casa_dom_indice) - num(b.casa_fre_indice)) - (num(a.casa_dom_indice) - num(a.casa_fre_indice)))[0];
-    return r && { ...par2(r.dominante, r.fregues), v: `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}`, t: `índice do ${r.dominante} em casa x na casa do ${r.fregues}` }; });
+    return r && { ...par2(r.dominante, r.fregues), v: `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}`, t: `${r.dominante} em casa x na casa do ${r.fregues}` }; });
   kpi(8, () => { const full = Object.fromEntries(K.rows().map((x) => [x.classico, x]));
     const r = K.r10().filter((x) => x.poucos !== 'S' && full[x.classico] && full[x.classico].dominante !== x.dominante).sort((a, b) => num(b.indice) - num(a.indice))[0];
     if (!r) return null; const f = full[r.classico];
-    return { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `nos últimos 10 jogos; nos ${K.N}, quem domina é o ${f.dominante} (${f1(f.indice)})` }; });
+    return { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `índice em 10J · em ${K.N}J: ${f.dominante}, ${f1(f.indice)}` }; });
 
   // Ranking dos confrontos
   dash.draw('rk', (tb) => {
