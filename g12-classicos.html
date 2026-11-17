@@ -90,6 +90,10 @@ table.ranking{width:100%;border-collapse:collapse;font-size:13.5px}
 .ranking th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--texto-2);font-weight:700;text-align:center;padding:8px 4px;border-bottom:2px solid var(--texto);white-space:normal;line-height:1.15;vertical-align:bottom}
 .ranking td{padding:6px 4px;border-bottom:1px solid var(--linha);font-variant-numeric:tabular-nums;text-align:center;vertical-align:middle;white-space:nowrap}
 .ranking td.l{white-space:normal;min-width:7rem}
+th.ord{cursor:pointer;user-select:none}
+th.ord:hover{color:var(--texto)}
+th[data-ord="desc"]::after{content:" ▼";font-size:9px}
+th[data-ord="asc"]::after{content:" ▲";font-size:9px}
 .ranking td.forte{font-weight:700}
 .ranking td.roxo{color:var(--roxo);font-weight:700}
 .ranking td.cinza{color:var(--texto-2)}
@@ -241,10 +245,14 @@ footer.rodape a{color:var(--texto-2)}
   <nav class="abas" aria-label="Rankings"><a href="index.html">Clássicos locais</a><a href="g12.html">G12</a><a href="g12-classicos.html" aria-current="page">G12 com clássicos</a></nav>
 
   <div class="kpis">
-    <div class="kpi destaque"><span class="rot">Maior freguesia do G12</span><div class="kpi-esc" data-draw="k1-esc"></div><b data-draw="k1-v">—</b><span data-draw="k1-t">—</span></div>
-    <div class="kpi"><span class="rot">Maior freguês do G12</span><div class="kpi-esc" data-draw="k2-esc"></div><b data-draw="k2-v">—</b><span data-draw="k2-t">—</span></div>
-    <div class="kpi"><span class="rot">Quem mais domina o G12</span><div class="kpi-esc" data-draw="k3-esc"></div><b data-draw="k3-v">—</b><span data-draw="k3-t">—</span></div>
-    <div class="kpi"><span class="rot">Onde o mando mais pesa</span><div class="kpi-esc" data-draw="k4-esc"></div><b data-draw="k4-v">—</b><span data-draw="k4-t">—</span></div>
+    <div class="kpi destaque"><span class="rot">Maior freguesia</span><div class="kpi-esc" data-draw="k1-esc"></div><b data-draw="k1-v">—</b><span data-draw="k1-t">—</span></div>
+    <div class="kpi"><span class="rot">Quem mais domina</span><div class="kpi-esc" data-draw="k2-esc"></div><b data-draw="k2-v">—</b><span data-draw="k2-t">—</span></div>
+    <div class="kpi"><span class="rot">Maior freguês</span><div class="kpi-esc" data-draw="k3-esc"></div><b data-draw="k3-v">—</b><span data-draw="k3-t">—</span></div>
+    <div class="kpi"><span class="rot">Mais equilibrado</span><div class="kpi-esc" data-draw="k4-esc"></div><b data-draw="k4-v">—</b><span data-draw="k4-t">—</span></div>
+    <div class="kpi"><span class="rot">Maior jejum</span><div class="kpi-esc" data-draw="k5-esc"></div><b data-draw="k5-v">—</b><span data-draw="k5-t">—</span></div>
+    <div class="kpi"><span class="rot">Mata-matas mais desiguais</span><div class="kpi-esc" data-draw="k6-esc"></div><b data-draw="k6-v">—</b><span data-draw="k6-t">—</span></div>
+    <div class="kpi"><span class="rot">Onde o mando mais pesa</span><div class="kpi-esc" data-draw="k7-esc"></div><b data-draw="k7-v">—</b><span data-draw="k7-t">—</span></div>
+    <div class="kpi"><span class="rot">Virada recente</span><div class="kpi-esc" data-draw="k8-esc"></div><b data-draw="k8-v">—</b><span data-draw="k8-t">—</span></div>
   </div>
 
   <section class="bloco" id="ranking" style="margin-top:10px">
@@ -446,7 +454,7 @@ footer.rodape a{color:var(--texto-2)}
   const heatCls = (v) => { const x = num(v); return isNaN(x) ? '' : x >= 75 ? 'h4c' : x >= 65 ? 'h3c' : x >= 55 ? 'h2c' : x >= 45 ? 'h1c' : ''; };
   const td = (tr, child, cls) => { const c = document.createElement('td'); if (child == null || typeof child !== 'object') c.textContent = child == null ? '' : String(child); else c.appendChild(child); if (cls) c.className = cls; tr.appendChild(c); return c; };
   const teams = (s) => String(s || '').split(', ').filter(Boolean);
-  const escList = (s) => { const box = mk('span', 'clube'); for (const t of teams(s)) box.append(crest(t)); if (!teams(s).length) box.append(mk('span', 'x', '—')); box.title = s || ''; return box; };
+  const escList = (s) => { const box = mk('span', 'clube'); for (const t of teams(s)) box.append(crest(t)); if (!teams(s).length) box.append(mk('span', 'x', '—')); box.title = s || ''; box.dataset.n = teams(s).length; return box; };
   const rkRow = (lab) => (ok('g12c_ranking') || []).find((r) => r.classico === lab);
   const sel = () => {
     const rk = ok('g12c_ranking'); if (!rk || !rk.length) return null;
@@ -480,23 +488,34 @@ footer.rodape a{color:var(--texto-2)}
   dash.draw('ate', (el) => { const m = ok('g12c_meta'); el.textContent = m ? br(m.ultimo_jogo) : '—'; });
 
   // KPIs
-  const rk0 = () => (ok('g12c_ranking') || [])[0] || null;
   const clubes = () => (ok('g12c_clubes') || []).filter((r) => String(r.janela) === '30');
-  const esc = (el, list, label) => { el.replaceChildren(); list.forEach((t) => el.append(crest(t))); el.append(mk('strong', '', label)); };
-  dash.draw('k1-esc', (el) => { const r = rk0(); if (r) esc(el, [r.dominante, r.fregues], `${r.dominante} x ${r.fregues}`); });
-  dash.draw('k1-v', (el) => { const r = rk0(); el.textContent = r ? f1(r.indice) : '—'; });
-  dash.draw('k1-t', (el) => { const r = rk0(); el.textContent = r ? `${r.dominante} x ${r.fregues} · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
-  dash.draw('k2-esc', (el) => { const c = clubes(); const r = c[c.length - 1]; if (r) esc(el, [r.clube], r.clube); });
-  dash.draw('k2-v', (el) => { const c = clubes(); const r = c[c.length - 1]; el.textContent = r ? f1(r.indice) : '—'; });
-  dash.draw('k2-t', (el) => { const c = clubes(); const r = c[c.length - 1]; el.textContent = r ? `índice contra os outros 11 · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
-  dash.draw('k3-esc', (el) => { const r = clubes()[0]; if (r) esc(el, [r.clube], r.clube); });
-  dash.draw('k3-v', (el) => { const r = clubes()[0]; el.textContent = r ? f1(r.indice) : '—'; });
-  dash.draw('k3-t', (el) => { const r = clubes()[0]; el.textContent = r ? `índice contra os outros 11 · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
-  const k4 = () => (ok('g12c_ranking') || []).filter((r) => r.casa_dom_jogos >= 10 && r.casa_fre_jogos >= 10)
-    .sort((a, b) => (num(b.casa_dom_indice) - num(b.casa_fre_indice)) - (num(a.casa_dom_indice) - num(a.casa_fre_indice)))[0] || null;
-  dash.draw('k4-esc', (el) => { const r = k4(); if (r) esc(el, [r.dominante, r.fregues], `${r.dominante} x ${r.fregues}`); });
-  dash.draw('k4-v', (el) => { const r = k4(); el.textContent = r ? `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}` : '—'; });
-  dash.draw('k4-t', (el) => { const r = k4(); el.textContent = r ? `índice do ${r.dominante} em casa x na casa do ${r.fregues}` : '—'; });
+  const K = { N: 30, rows: () => ok('g12c_ranking') || [], r10: () => (ok('g12c_indices') || []).filter((r) => r.filtro === 'Todas' && String(r.janela) === '10'),
+    clubes, clubeTxt: 'índice contra os outros 11', mm: (r) => r.mata_matas };
+  // KPIs: as mesmas 8 curiosidades nas três abas
+  const kpi = (n, fn) => {
+    dash.draw(`k${n}-esc`, (el) => { const k = fn(); el.replaceChildren(); if (!k) return; k.esc.forEach((t) => el.append(crest(t))); el.append(mk('strong', '', k.label)); });
+    dash.draw(`k${n}-v`, (el) => { const k = fn(); el.textContent = k ? k.v : '—'; });
+    dash.draw(`k${n}-t`, (el) => { const k = fn(); el.textContent = k ? k.t : '—'; });
+  };
+  const ved = (r) => `${r.v}V ${r.e}E ${r.d}D`;
+  const par2 = (a, b) => ({ esc: [a, b], label: `${a} x ${b}` });
+  const mmPar = (s) => { const m = String(s || '').match(/(\d+)\s*x\s*(\d+)/); return m ? [Number(m[1]), Number(m[2])] : [0, 0]; };
+  kpi(1, () => { const r = K.rows().slice().sort((a, b) => num(b.indice) - num(a.indice))[0]; return r && { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `${ved(r)} nos últimos ${K.N} jogos` }; });
+  kpi(2, () => { const r = K.clubes()[0]; return r && { esc: [r.clube], label: r.clube, v: f1(r.indice), t: `${K.clubeTxt} · ${ved(r)}` }; });
+  kpi(3, () => { const c = K.clubes(); const r = c[c.length - 1]; return r && { esc: [r.clube], label: r.clube, v: f1(r.indice), t: `${K.clubeTxt} · ${ved(r)}` }; });
+  kpi(4, () => { const r = K.rows().filter((x) => x.poucos !== 'S').sort((a, b) => num(a.indice) - num(b.indice))[0]; return r && { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `índice mais baixo · ${ved(r)}` }; });
+  kpi(5, () => { const r = K.rows().slice().sort((a, b) => num(b.jejum_jogos) - num(a.jejum_jogos))[0]; if (!r) return null; const o = r.jejum_time === r.dominante ? r.fregues : r.dominante;
+    return { esc: [r.jejum_time], label: r.jejum_time, v: `${r.jejum_jogos} jogos`, t: `sem vencer o ${o} · última vitória em ${brc(r.jejum_desde)}` }; });
+  kpi(6, () => { const r = K.rows().slice().sort((a, b) => { const x = mmPar(K.mm(a)), y = mmPar(K.mm(b)); return Math.abs(y[0] - y[1]) - Math.abs(x[0] - x[1]) || (y[0] + y[1]) - (x[0] + x[1]); })[0];
+    if (!r) return null; const [x, y] = mmPar(K.mm(r)); const [w, l] = x >= y ? [r.dominante, r.fregues] : [r.fregues, r.dominante];
+    return { ...par2(w, l), v: `${Math.max(x, y)} x ${Math.min(x, y)}`, t: `mata-matas vencidos pelo ${w} nos últimos ${K.N} jogos` }; });
+  kpi(7, () => { const r = K.rows().filter((x) => x.casa_dom_jogos >= 10 && x.casa_fre_jogos >= 10)
+    .sort((a, b) => (num(b.casa_dom_indice) - num(b.casa_fre_indice)) - (num(a.casa_dom_indice) - num(a.casa_fre_indice)))[0];
+    return r && { ...par2(r.dominante, r.fregues), v: `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}`, t: `índice do ${r.dominante} em casa x na casa do ${r.fregues}` }; });
+  kpi(8, () => { const full = Object.fromEntries(K.rows().map((x) => [x.classico, x]));
+    const r = K.r10().filter((x) => x.poucos !== 'S' && full[x.classico] && full[x.classico].dominante !== x.dominante).sort((a, b) => num(b.indice) - num(a.indice))[0];
+    if (!r) return null; const f = full[r.classico];
+    return { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `nos últimos 10 jogos; nos ${K.N}, quem domina é o ${f.dominante} (${f1(f.indice)})` }; });
 
   // Ranking dos confrontos
   dash.draw('rk', (tb) => {
@@ -683,6 +702,60 @@ footer.rodape a{color:var(--texto-2)}
       l.append(a, b, mk('b', '', '×' + String(num(r.peso)).replace('.', ',')));
       box.appendChild(l);
     }
+  });
+})();
+
+/* Ordenação: clique no título de qualquer coluna (1º clique: maior para menor; 2º: menor para maior) */
+(() => {
+  const NIV = { 'freguesia': 4, 'vantagem clara': 3, 'vantagem': 2, 'equilíbrio': 1 };
+  const val = (td) => {
+    if (!td) return null;
+    if (td.dataset.sort != null) { const n = Number(td.dataset.sort); return isNaN(n) ? td.dataset.sort : n; }
+    const lista = td.querySelector('[data-n]'); if (lista) return Number(lista.dataset.n);
+    const t = td.textContent.replace(/\s+/g, ' ').trim();
+    if (!t || t === '—') return null;
+    const k = t.toLowerCase(); if (k in NIV) return NIV[k];
+    let m;
+    if ((m = t.match(/^(\d{2})\/(\d{2})\/(\d{2})$/))) return Number((Number(m[3]) > 60 ? '19' : '20') + m[3] + m[2] + m[1]);
+    if ((m = t.match(/(\d+)V (\d+)E (\d+)D/))) return 3 * m[1] + 1 * m[2] + m[1] / 100;
+    if ((m = t.match(/(\d+) x (\d+)/))) return (m[1] - m[2]) + m[1] / 1000;
+    if (/^-?[\d.]+(,\d+)?( jogos)?$/.test(t)) return Number(t.replace(' jogos', '').replace(/\./g, '').replace(',', '.'));
+    return k;
+  };
+  const cmp = (a, b) => (typeof a === 'number' && typeof b === 'number' ? a - b : String(a).localeCompare(String(b), 'pt'));
+  const apply = (tb) => {
+    const table = tb.closest('table'); const col = table.dataset.ordCol; if (col == null || col === '') return;
+    const dir = table.dataset.ordDir === 'asc' ? 1 : -1, c = Number(col);
+    const rows = [...tb.rows].filter((r) => r.cells.length > 1);
+    rows.forEach((r, i) => { if (r.dataset.i == null) r.dataset.i = i; });
+    const sorted = rows.slice().sort((x, y) => {
+      const a = val(x.cells[c]), b = val(y.cells[c]);
+      if (a == null && b == null) return x.dataset.i - y.dataset.i;
+      if (a == null) return 1; if (b == null) return -1;
+      return dir * cmp(a, b) || x.dataset.i - y.dataset.i;
+    });
+    if (sorted.every((r, i) => r === rows[i])) return;
+    sorted.forEach((r) => tb.appendChild(r));
+  };
+  const mark = (table) => table.querySelectorAll('thead th').forEach((th) => {
+    if (String(th.cellIndex) === table.dataset.ordCol) th.dataset.ord = table.dataset.ordDir; else delete th.dataset.ord;
+  });
+  document.querySelectorAll('table.ranking').forEach((table) => {
+    const tb = table.querySelector('tbody[data-draw]'); if (!tb) return;
+    table.querySelectorAll('thead th').forEach((th) => {
+      th.classList.add('ord'); th.title = 'Ordenar';
+      th.addEventListener('click', () => {
+        const c = String(th.cellIndex);
+        if (table.dataset.ordCol === c) table.dataset.ordDir = table.dataset.ordDir === 'desc' ? 'asc' : 'desc';
+        else {
+          const first = [...tb.rows].map((r) => val(r.cells[th.cellIndex])).find((v) => v != null);
+          table.dataset.ordCol = c; table.dataset.ordDir = typeof first === 'string' ? 'asc' : 'desc';
+        }
+        [...tb.rows].forEach((r) => { if (r.dataset.i == null) r.dataset.i = r.sectionRowIndex; });
+        mark(table); apply(tb);
+      });
+    });
+    new MutationObserver(() => apply(tb)).observe(tb, { childList: true });
   });
 })();
 </script>

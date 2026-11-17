@@ -166,6 +166,7 @@ def comp_nome(g, uf):
 def main():
     por = ler_jogos()
     ranking, recortes, jogos, indices, matamatas = [], [], [], [], []
+    clubes = defaultdict(lambda: dict(soma=0.0, n=0, v=0, e=0, d=0, classicos=[]))
     for c in CLASSICOS:
         k, a, b, uf = c["id"], c["time_a"], c["time_b"], c["uf"]
         games = por[k]
@@ -182,6 +183,10 @@ def main():
             t["pos"] = pos[t["fim"]]
         ia, ib = indice(a, g50, ties, "Todas")[0], indice(b, g50, ties, "Todas")[0]
         dom, fre = (a, b) if ia >= ib else (b, a)
+        # clubes: média do índice do clube nos seus clássicos (50 jogos, todas as competições)
+        for team, opp in ((a, b), (b, a)):
+            rr = indice(team, g50, ties, "Todas"); cl = clubes[team]
+            cl["soma"] += rr[0]; cl["n"] += 1; cl["v"] += rr[2]; cl["e"] += rr[3]; cl["d"] += rr[4]; cl["classicos"].append(opp)
 
         # jejum vigente: quem está há mais jogos sem vencer
         def sem_vencer(team):
@@ -268,9 +273,14 @@ def main():
     pesos += [dict(grupo="Bônus", criterio="Classificação ou título em mata-mata: jogo extra com o peso da fase", peso="")]
     meta = dict(atualizado=dt.date.today().isoformat(), ultimo_jogo=max(g["data"] for v in por.values() for g in v))
 
+    cl_rows = [dict(clube=t, indice=round(c["soma"] / c["n"], 1), classicos=c["n"], adversarios=", ".join(c["classicos"]),
+                    jogos=c["v"] + c["e"] + c["d"], v=c["v"], e=c["e"], d=c["d"]) for t, c in clubes.items()]
+    cl_rows.sort(key=lambda r: -r["indice"])
+    for p, r in enumerate(cl_rows, 1):
+        r["pos"] = p
     os.makedirs(P("data"), exist_ok=True); os.makedirs(P("csv"), exist_ok=True)
     for nome, rows in (("ranking", ranking), ("recortes", recortes), ("jogos", jogos), ("indices", indices),
-                       ("matamatas", matamatas), ("pesos", pesos)):
+                       ("matamatas", matamatas), ("pesos", pesos), ("clubes", cl_rows)):
         json.dump(rows, open(P("data", f"{nome}.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
         cols = (["pos"] + [c for c in rows[0] if c != "pos"]) if nome == "ranking" else list(rows[0].keys())
         with open(P("csv", f"{nome}.csv"), "w", newline="", encoding="utf-8") as f:

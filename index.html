@@ -11,7 +11,7 @@
 <script>
 /* Mini-runtime: carrega data/*.json e executa os desenhos marcados com data-draw */
 window.dash = (() => {
-  const store = {}, draws = {}, ids = ['ranking', 'recortes', 'jogos', 'indices', 'matamatas', 'pesos', 'meta'];
+  const store = {}, draws = {}, ids = ['ranking', 'recortes', 'jogos', 'indices', 'matamatas', 'pesos', 'meta', 'clubes'];
   const api = {
     data(id) { return store[id] ? { status: 'ok', data: store[id] } : { status: 'loading', data: [] }; },
     draw(name, fn) { if (fn) draws[name] = fn; run(name); },
@@ -91,6 +91,10 @@ table.ranking{width:100%;border-collapse:collapse;font-size:13.5px}
 .ranking th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--texto-2);font-weight:700;text-align:center;padding:8px 4px;border-bottom:2px solid var(--texto);white-space:normal;line-height:1.15;vertical-align:bottom}
 .ranking td{padding:6px 4px;border-bottom:1px solid var(--linha);font-variant-numeric:tabular-nums;text-align:center;vertical-align:middle;white-space:nowrap}
 .ranking td.l{white-space:normal;min-width:7rem}
+th.ord{cursor:pointer;user-select:none}
+th.ord:hover{color:var(--texto)}
+th[data-ord="desc"]::after{content:" ▼";font-size:9px}
+th[data-ord="asc"]::after{content:" ▲";font-size:9px}
 .ranking td.forte{font-weight:700}
 .ranking td.roxo{color:var(--roxo);font-weight:700}
 .ranking td.cinza{color:var(--texto-2)}
@@ -234,10 +238,14 @@ footer.rodape a{color:var(--texto-2)}
   <nav class="abas" aria-label="Rankings"><a href="index.html" aria-current="page">Clássicos locais</a><a href="g12.html">G12</a><a href="g12-classicos.html">G12 com clássicos</a></nav>
 
   <div class="kpis">
-    <div class="kpi destaque"><span class="rot">Maior freguesia</span><div class="kpi-esc" data-draw="k1-esc" data-source="indices"></div><b data-draw="k1-v" data-source="indices" data-field="indice">—</b><span data-draw="k1-t" data-source="indices">—</span></div>
-    <div class="kpi"><span class="rot">Maior jejum</span><div class="kpi-esc" data-draw="k2-esc" data-source="indices"></div><b data-draw="k2-v" data-source="indices" data-field="jejum_jogos">—</b><span data-draw="k2-t" data-source="indices">—</span></div>
-    <div class="kpi"><span class="rot">Mata-matas mais desiguais</span><div class="kpi-esc" data-draw="k3-esc" data-source="ranking"></div><b data-draw="k3-v" data-source="ranking" data-field="mata_matas">—</b><span data-draw="k3-t" data-source="ranking">—</span></div>
-    <div class="kpi"><span class="rot">Mais equilibrado</span><div class="kpi-esc" data-draw="k4-esc" data-source="indices"></div><b data-draw="k4-v" data-source="indices" data-field="indice">—</b><span data-draw="k4-t" data-source="indices">—</span></div>
+    <div class="kpi destaque"><span class="rot">Maior freguesia</span><div class="kpi-esc" data-draw="k1-esc"></div><b data-draw="k1-v">—</b><span data-draw="k1-t">—</span></div>
+    <div class="kpi"><span class="rot">Quem mais domina</span><div class="kpi-esc" data-draw="k2-esc"></div><b data-draw="k2-v">—</b><span data-draw="k2-t">—</span></div>
+    <div class="kpi"><span class="rot">Maior freguês</span><div class="kpi-esc" data-draw="k3-esc"></div><b data-draw="k3-v">—</b><span data-draw="k3-t">—</span></div>
+    <div class="kpi"><span class="rot">Mais equilibrado</span><div class="kpi-esc" data-draw="k4-esc"></div><b data-draw="k4-v">—</b><span data-draw="k4-t">—</span></div>
+    <div class="kpi"><span class="rot">Maior jejum</span><div class="kpi-esc" data-draw="k5-esc"></div><b data-draw="k5-v">—</b><span data-draw="k5-t">—</span></div>
+    <div class="kpi"><span class="rot">Mata-matas mais desiguais</span><div class="kpi-esc" data-draw="k6-esc"></div><b data-draw="k6-v">—</b><span data-draw="k6-t">—</span></div>
+    <div class="kpi"><span class="rot">Onde o mando mais pesa</span><div class="kpi-esc" data-draw="k7-esc"></div><b data-draw="k7-v">—</b><span data-draw="k7-t">—</span></div>
+    <div class="kpi"><span class="rot">Virada recente</span><div class="kpi-esc" data-draw="k8-esc"></div><b data-draw="k8-v">—</b><span data-draw="k8-t">—</span></div>
   </div>
 
   <section class="bloco" id="ranking" style="margin-top:10px">
@@ -488,28 +496,33 @@ footer.rodape a{color:var(--texto-2)}
   // KPIs (todas as competições, 50 jogos)
   const where = (el, r, extra) => { if (r) el.setAttribute('data-where', 'classico=' + encodeURIComponent(r.classico) + (extra || '')); };
   const outro = (r, t) => (t === r.dominante ? r.fregues : r.dominante);
-  const k1 = () => topRow();
-  const k2 = () => todas50().slice().sort((a, b) => num(b.jejum_jogos) - num(a.jejum_jogos))[0] || null;
-  const k4 = () => todas50().filter((r) => r.poucos !== 'S').sort((a, b) => num(a.indice) - num(b.indice))[0] || null;
-  const mmDiff = (r) => { const m = String(r.mata_matas || '').match(/(\d+)\s*x\s*(\d+)/); return m ? [Number(m[1]), Number(m[2])] : [0, 0]; };
-  const k3 = () => (ok('ranking') || []).slice().sort((a, b) => { const x = mmDiff(a), y = mmDiff(b); return (y[0] - y[1]) - (x[0] - x[1]) || y[0] - x[0]; })[0] || null;
-  const escDraw = (name, getRow, teams) => dash.draw(name, (el) => {
-    const r = getRow(); el.replaceChildren(); if (!r) return;
-    const [a, b] = teams(r); el.append(crest(a)); if (b) el.append(mk('span', 'sr', ' x '), crest(b));
-    el.append(mk('strong', '', b ? r.classico.replace(' x ', ' x ') : a));
-  });
-  escDraw('k1-esc', k1, (r) => [r.dominante, r.fregues]);
-  dash.draw('k1-v', (el) => { const r = k1(); el.textContent = r ? f1(r.indice) : '—'; where(el, r, '&filtro=Todas&janela=50'); });
-  dash.draw('k1-t', (el) => { const r = k1(); el.textContent = r ? `índice do ${r.dominante} contra o ${r.fregues}` : '—'; });
-  escDraw('k2-esc', k2, (r) => [r.jejum_time]);
-  dash.draw('k2-v', (el) => { const r = k2(); el.textContent = r ? `${r.jejum_jogos} jogos` : '—'; where(el, r, '&filtro=Todas&janela=50'); });
-  dash.draw('k2-t', (el) => { const r = k2(); el.textContent = r ? `sem vencer o ${outro(r, r.jejum_time)} · desde ${brc(r.jejum_desde)}` : '—'; });
-  escDraw('k3-esc', k3, (r) => [r.dominante, r.fregues]);
-  dash.draw('k3-v', (el) => { const r = k3(); el.textContent = r ? r.mata_matas : '—'; where(el, r); });
-  dash.draw('k3-t', (el) => { const r = k3(); el.textContent = r ? `mata-matas vencidos pelo ${r.dominante} x ${r.fregues} nos últimos 50 jogos` : '—'; });
-  escDraw('k4-esc', k4, (r) => [r.dominante, r.fregues]);
-  dash.draw('k4-v', (el) => { const r = k4(); el.textContent = r ? f1(r.indice) : '—'; where(el, r, '&filtro=Todas&janela=50'); });
-  dash.draw('k4-t', (el) => { const r = k4(); el.textContent = r ? `índice mais baixo do ranking · ${r.v}V ${r.e}E ${r.d}D` : '—'; });
+  const K = { N: 50, rows: todas50, r10: () => (ok('indices') || []).filter((r) => r.filtro === 'Todas' && String(r.janela) === '10'),
+    clubes: () => (ok('clubes') || []).filter((r) => r.classicos >= 2), clubeTxt: 'média nos seus 3 clássicos', mm: (r) => `${r.vagas_dom} x ${r.vagas_fre}` };
+  // KPIs: as mesmas 8 curiosidades nas três abas
+  const kpi = (n, fn) => {
+    dash.draw(`k${n}-esc`, (el) => { const k = fn(); el.replaceChildren(); if (!k) return; k.esc.forEach((t) => el.append(crest(t))); el.append(mk('strong', '', k.label)); });
+    dash.draw(`k${n}-v`, (el) => { const k = fn(); el.textContent = k ? k.v : '—'; });
+    dash.draw(`k${n}-t`, (el) => { const k = fn(); el.textContent = k ? k.t : '—'; });
+  };
+  const ved = (r) => `${r.v}V ${r.e}E ${r.d}D`;
+  const par2 = (a, b) => ({ esc: [a, b], label: `${a} x ${b}` });
+  const mmPar = (s) => { const m = String(s || '').match(/(\d+)\s*x\s*(\d+)/); return m ? [Number(m[1]), Number(m[2])] : [0, 0]; };
+  kpi(1, () => { const r = K.rows().slice().sort((a, b) => num(b.indice) - num(a.indice))[0]; return r && { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `${ved(r)} nos últimos ${K.N} jogos` }; });
+  kpi(2, () => { const r = K.clubes()[0]; return r && { esc: [r.clube], label: r.clube, v: f1(r.indice), t: `${K.clubeTxt} · ${ved(r)}` }; });
+  kpi(3, () => { const c = K.clubes(); const r = c[c.length - 1]; return r && { esc: [r.clube], label: r.clube, v: f1(r.indice), t: `${K.clubeTxt} · ${ved(r)}` }; });
+  kpi(4, () => { const r = K.rows().filter((x) => x.poucos !== 'S').sort((a, b) => num(a.indice) - num(b.indice))[0]; return r && { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `índice mais baixo · ${ved(r)}` }; });
+  kpi(5, () => { const r = K.rows().slice().sort((a, b) => num(b.jejum_jogos) - num(a.jejum_jogos))[0]; if (!r) return null; const o = r.jejum_time === r.dominante ? r.fregues : r.dominante;
+    return { esc: [r.jejum_time], label: r.jejum_time, v: `${r.jejum_jogos} jogos`, t: `sem vencer o ${o} · última vitória em ${brc(r.jejum_desde)}` }; });
+  kpi(6, () => { const r = K.rows().slice().sort((a, b) => { const x = mmPar(K.mm(a)), y = mmPar(K.mm(b)); return Math.abs(y[0] - y[1]) - Math.abs(x[0] - x[1]) || (y[0] + y[1]) - (x[0] + x[1]); })[0];
+    if (!r) return null; const [x, y] = mmPar(K.mm(r)); const [w, l] = x >= y ? [r.dominante, r.fregues] : [r.fregues, r.dominante];
+    return { ...par2(w, l), v: `${Math.max(x, y)} x ${Math.min(x, y)}`, t: `mata-matas vencidos pelo ${w} nos últimos ${K.N} jogos` }; });
+  kpi(7, () => { const r = K.rows().filter((x) => x.casa_dom_jogos >= 10 && x.casa_fre_jogos >= 10)
+    .sort((a, b) => (num(b.casa_dom_indice) - num(b.casa_fre_indice)) - (num(a.casa_dom_indice) - num(a.casa_fre_indice)))[0];
+    return r && { ...par2(r.dominante, r.fregues), v: `${f1(r.casa_dom_indice)} x ${f1(r.casa_fre_indice)}`, t: `índice do ${r.dominante} em casa x na casa do ${r.fregues}` }; });
+  kpi(8, () => { const full = Object.fromEntries(K.rows().map((x) => [x.classico, x]));
+    const r = K.r10().filter((x) => x.poucos !== 'S' && full[x.classico] && full[x.classico].dominante !== x.dominante).sort((a, b) => num(b.indice) - num(a.indice))[0];
+    if (!r) return null; const f = full[r.classico];
+    return { ...par2(r.dominante, r.fregues), v: f1(r.indice), t: `nos últimos 10 jogos; nos ${K.N}, quem domina é o ${f.dominante} (${f1(f.indice)})` }; });
 
   // Ranking (com filtros)
   dash.draw('rk', (tb) => {
@@ -696,6 +709,60 @@ footer.rodape a{color:var(--texto-2)}
 
   dash.draw('t-f', (el) => { el.textContent = LIMIAR_F; });
   dash.draw('t-v', (el) => { el.textContent = LIMIAR_V; });
+})();
+
+/* Ordenação: clique no título de qualquer coluna (1º clique: maior para menor; 2º: menor para maior) */
+(() => {
+  const NIV = { 'freguesia': 4, 'vantagem clara': 3, 'vantagem': 2, 'equilíbrio': 1 };
+  const val = (td) => {
+    if (!td) return null;
+    if (td.dataset.sort != null) { const n = Number(td.dataset.sort); return isNaN(n) ? td.dataset.sort : n; }
+    const lista = td.querySelector('[data-n]'); if (lista) return Number(lista.dataset.n);
+    const t = td.textContent.replace(/\s+/g, ' ').trim();
+    if (!t || t === '—') return null;
+    const k = t.toLowerCase(); if (k in NIV) return NIV[k];
+    let m;
+    if ((m = t.match(/^(\d{2})\/(\d{2})\/(\d{2})$/))) return Number((Number(m[3]) > 60 ? '19' : '20') + m[3] + m[2] + m[1]);
+    if ((m = t.match(/(\d+)V (\d+)E (\d+)D/))) return 3 * m[1] + 1 * m[2] + m[1] / 100;
+    if ((m = t.match(/(\d+) x (\d+)/))) return (m[1] - m[2]) + m[1] / 1000;
+    if (/^-?[\d.]+(,\d+)?( jogos)?$/.test(t)) return Number(t.replace(' jogos', '').replace(/\./g, '').replace(',', '.'));
+    return k;
+  };
+  const cmp = (a, b) => (typeof a === 'number' && typeof b === 'number' ? a - b : String(a).localeCompare(String(b), 'pt'));
+  const apply = (tb) => {
+    const table = tb.closest('table'); const col = table.dataset.ordCol; if (col == null || col === '') return;
+    const dir = table.dataset.ordDir === 'asc' ? 1 : -1, c = Number(col);
+    const rows = [...tb.rows].filter((r) => r.cells.length > 1);
+    rows.forEach((r, i) => { if (r.dataset.i == null) r.dataset.i = i; });
+    const sorted = rows.slice().sort((x, y) => {
+      const a = val(x.cells[c]), b = val(y.cells[c]);
+      if (a == null && b == null) return x.dataset.i - y.dataset.i;
+      if (a == null) return 1; if (b == null) return -1;
+      return dir * cmp(a, b) || x.dataset.i - y.dataset.i;
+    });
+    if (sorted.every((r, i) => r === rows[i])) return;
+    sorted.forEach((r) => tb.appendChild(r));
+  };
+  const mark = (table) => table.querySelectorAll('thead th').forEach((th) => {
+    if (String(th.cellIndex) === table.dataset.ordCol) th.dataset.ord = table.dataset.ordDir; else delete th.dataset.ord;
+  });
+  document.querySelectorAll('table.ranking').forEach((table) => {
+    const tb = table.querySelector('tbody[data-draw]'); if (!tb) return;
+    table.querySelectorAll('thead th').forEach((th) => {
+      th.classList.add('ord'); th.title = 'Ordenar';
+      th.addEventListener('click', () => {
+        const c = String(th.cellIndex);
+        if (table.dataset.ordCol === c) table.dataset.ordDir = table.dataset.ordDir === 'desc' ? 'asc' : 'desc';
+        else {
+          const first = [...tb.rows].map((r) => val(r.cells[th.cellIndex])).find((v) => v != null);
+          table.dataset.ordCol = c; table.dataset.ordDir = typeof first === 'string' ? 'asc' : 'desc';
+        }
+        [...tb.rows].forEach((r) => { if (r.dataset.i == null) r.dataset.i = r.sectionRowIndex; });
+        mark(table); apply(tb);
+      });
+    });
+    new MutationObserver(() => apply(tb)).observe(tb, { childList: true });
+  });
 })();
 </script>
 </body>
