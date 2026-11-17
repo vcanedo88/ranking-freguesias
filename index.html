@@ -635,7 +635,7 @@ footer.rodape a{color:var(--texto-2)}
   });
 
   const penTxt = (pen) => String(pen).replace('-', ' x ') + ' nos pênaltis';
-  const placar = (p) => { const w = mk('span', 'pj'); const s = mk('span', 'placar'); s.append(crest(p.m), mk('b', '', `${p.gm} x ${p.gv}`), crest(p.v)); w.append(s); if (p.pen) w.append(mk('small', 'agg-nota', penTxt(p.pen))); return w; };
+  const placar = (p) => { const w = mk('span', 'pj'); const s = mk('span', 'placar'); s.append(crest(p.m), mk('b', '', `${p.gm} x ${p.gv}`), crest(p.v)); w.append(s); return w; };
   const partidasCell = (r) => { const box = mk('span', 'partidas'); (r.partidas || []).forEach((p) => box.append(placar(p))); return box; };
   const penAv = (r) => { const p = [...(r.partidas || [])].reverse().find((x) => x.pen); if (!p) return ''; const [a, b] = String(p.pen).split('-'); return p.m === r.avancou ? `${a} x ${b}` : `${b} x ${a}`; };
   const NOTA = { 'gol fora': 'gol fora de casa', vantagem: 'vantagem do empate', 'decisão do STJD': 'decisão do STJD' };
