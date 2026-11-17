@@ -201,7 +201,9 @@ footer.rodape a{color:var(--texto-2)}
 .placar small{color:var(--texto-2)}
 .agg{display:inline-flex;flex-direction:column;align-items:center;gap:2px}
 .agg-nota{font-size:11px;color:var(--texto-2);white-space:nowrap}
-.partidas{display:inline-flex;flex-direction:column;gap:3px;align-items:flex-start}
+.partidas{display:inline-flex;flex-direction:column;gap:3px;align-items:center}
+.pj{display:flex;flex-direction:column;align-items:center;gap:1px}
+.partidas .placar b,.agg .placar b{min-width:38px;text-align:center}
 .picker{position:relative}
 .picker>button{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:14px;padding:5px 10px;border:1px solid var(--cinza);background:#fff;color:var(--texto);cursor:pointer;min-width:250px;justify-content:space-between}
 .picker img{width:22px;height:22px;object-fit:contain}
@@ -611,7 +613,7 @@ footer.rodape a{color:var(--texto-2)}
       const i = mk('i', (o === 'e' ? 'e' : 'v') + (g.mata_mata === 'S' ? ' mm' : ''));
       if (o !== 'e') i.appendChild(crest(o === 'w' ? cur.dominante : cur.fregues));
       if ([10, 20].includes(num(g.n) - 1)) { i.dataset.corte = String(num(g.n) - 1); i.appendChild(mk('span', 'corte', String(num(g.n) - 1))); }
-      const pen = g.penaltis ? ` (pên. ${g.penaltis})` : '';
+      const pen = g.penaltis ? ` (${String(g.penaltis).replace('-', ' x ')} nos pênaltis)` : '';
       i.setAttribute('aria-label', `${br(g.data)}: ${g.mandante} ${g.gm} x ${g.gv} ${g.visitante}${pen}`);
       const show = () => {
         tip.replaceChildren(mk('b', '', `${g.mandante} ${g.gm} x ${g.gv} ${g.visitante}${pen}`), mk('em', '', br(g.data) + ' · ' + g.competicao + (g.neutro ? ' · campo neutro' : '')));
@@ -627,7 +629,8 @@ footer.rodape a{color:var(--texto-2)}
     }
     el.appendChild(tip);
   });
-  const placar = (p) => { const s = mk('span', 'placar'); s.append(crest(p.m), mk('b', '', `${p.gm} x ${p.gv}`), crest(p.v)); if (p.pen) s.append(mk('small', '', `pên. ${p.pen}`)); return s; };
+  const penTxt = (pen) => String(pen).replace('-', ' x ') + ' nos pênaltis';
+  const placar = (p) => { const w = mk('span', 'pj'); const s = mk('span', 'placar'); s.append(crest(p.m), mk('b', '', `${p.gm} x ${p.gv}`), crest(p.v)); w.append(s); if (p.pen) w.append(mk('small', 'agg-nota', penTxt(p.pen))); return w; };
   const partidasCell = (r) => { const box = mk('span', 'partidas'); (r.partidas || []).forEach((p) => box.append(placar(p))); return box; };
   const penAv = (r) => { const p = [...(r.partidas || [])].reverse().find((x) => x.pen); if (!p) return ''; const [a, b] = String(p.pen).split('-'); return p.m === r.avancou ? `${a} x ${b}` : `${b} x ${a}`; };
   const NOTA = { 'gol fora': 'gol fora de casa', vantagem: 'vantagem do empate', 'decisão do STJD': 'decisão do STJD' };
@@ -654,7 +657,7 @@ footer.rodape a{color:var(--texto-2)}
     for (const g of jg.filter((x) => x.classico === cur.classico)) {
       const tr = document.createElement('tr');
       td(tr, g.n, 'cinza'); td(tr, brc(g.data) + (g.neutro ? ' N' : '')); td(tr, so(g.mandante)); td(tr, g.gm, 'forte'); td(tr, g.gv, 'forte'); td(tr, so(g.visitante));
-      td(tr, g.penaltis, 'lg'); td(tr, g.competicao, 'lg l'); td(tr, g.classificado ? so(g.classificado) : '', 'lg'); td(tr, f1(g.peso));
+      td(tr, g.penaltis ? String(g.penaltis).replace('-', ' x ') : '', 'lg'); td(tr, g.competicao, 'lg l'); td(tr, g.classificado ? so(g.classificado) : '', 'lg'); td(tr, f1(g.peso));
       tb.appendChild(tr);
     }
   });
