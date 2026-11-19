@@ -65,6 +65,7 @@ header.topo{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-left
 .kpi b{display:block;font-size:clamp(26px,3vw,38px);line-height:1.05;font-variant-numeric:tabular-nums;margin-top:4px}
 .kpi.destaque b{color:var(--roxo)}
 .kpis .kpi > span[data-draw]{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:900px){.kpis .kpi > span[data-draw]{white-space:normal;overflow:visible;text-overflow:clip;font-size:12px;line-height:1.35}}
 .kpi > span:last-child{color:var(--texto-2);font-size:13px;display:block;margin-top:4px}
 @media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
