@@ -1,28 +1,28 @@
 pos,janela,clube,indice,jogos,v,e,d,mm,adversarios,domina,vantagem_clara_sobre,vantagem_sobre,equilibrio,desvantagem_contra,desvantagem_clara_contra,fregues_de
 1,30,Flamengo,57.8,240,114,60,66,19 x 10,8,"Grêmio, Corinthians",Atlético-MG,"Cruzeiro, Internacional, Santos","Palmeiras, São Paulo",,,
 2,30,Palmeiras,53.6,240,102,73,65,15 x 10,8,,"Vasco, Grêmio","Internacional, Botafogo, Fluminense","Atlético-MG, Cruzeiro, Flamengo",,,
-3,30,São Paulo,46.3,240,90,64,86,5 x 6,8,,,"Vasco, Cruzeiro","Flamengo, Internacional, Botafogo, Grêmio, Fluminense",Atlético-MG,,
-4,30,Atlético-MG,46.3,300,116,71,113,12 x 13,10,,,"Internacional, São Paulo, Fluminense","Santos, Vasco, Corinthians, Botafogo, Palmeiras",,"Flamengo, Grêmio",
+3,30,Atlético-MG,46.3,300,116,71,113,12 x 13,10,,,"Internacional, São Paulo, Fluminense","Santos, Vasco, Corinthians, Botafogo, Palmeiras",,"Flamengo, Grêmio",
+4,30,São Paulo,46.2,240,90,64,86,5 x 6,8,,,"Vasco, Cruzeiro","Flamengo, Internacional, Botafogo, Grêmio, Fluminense",Atlético-MG,,
 5,30,Corinthians,45.4,240,83,76,81,10 x 10,8,Vasco,,,"Grêmio, Fluminense, Atlético-MG, Botafogo, Internacional, Cruzeiro",,,Flamengo
 6,30,Cruzeiro,45.4,300,105,82,113,14 x 8,10,,,,"Botafogo, Grêmio, Corinthians, Vasco, Santos, Palmeiras, Internacional, Fluminense","São Paulo, Flamengo",,
-7,30,Fluminense,45.2,240,88,58,94,6 x 9,8,,,,"São Paulo, Cruzeiro, Internacional, Santos, Corinthians, Grêmio","Palmeiras, Atlético-MG",,
+7,30,Fluminense,45.3,240,88,58,94,6 x 9,8,,,,"São Paulo, Cruzeiro, Internacional, Santos, Corinthians, Grêmio","Palmeiras, Atlético-MG",,
 8,30,Grêmio,45.1,300,111,78,111,11 x 12,10,,Atlético-MG,Botafogo,"Fluminense, Vasco, São Paulo, Santos, Cruzeiro, Corinthians",,Palmeiras,Flamengo
-9,30,Internacional,44.7,300,107,84,109,6 x 9,10,,,"Santos, Vasco","Botafogo, Cruzeiro, Corinthians, São Paulo, Fluminense","Palmeiras, Flamengo, Atlético-MG",,
+9,30,Internacional,44.4,300,106,84,110,6 x 9,10,,,Santos,"Vasco, Botafogo, Cruzeiro, Corinthians, São Paulo, Fluminense","Palmeiras, Flamengo, Atlético-MG",,
 10,30,Santos,44.3,240,85,65,90,5 x 7,8,,,Vasco,"Botafogo, Grêmio, Fluminense, Cruzeiro, Atlético-MG","Flamengo, Internacional",,
 11,30,Botafogo,41.8,240,79,60,101,5 x 6,8,,,,"Atlético-MG, Corinthians, São Paulo, Internacional, Santos, Cruzeiro","Grêmio, Palmeiras",,
-12,30,Vasco,33.6,240,65,59,116,1 x 9,8,,,,"Cruzeiro, Atlético-MG, Grêmio","Internacional, Santos, São Paulo",Palmeiras,Corinthians
+12,30,Vasco,34.0,240,66,59,115,1 x 9,8,,,,"Cruzeiro, Atlético-MG, Internacional, Grêmio","Santos, São Paulo",Palmeiras,Corinthians
 1,20,Flamengo,60.4,160,82,39,39,16 x 9,8,"Grêmio, Corinthians","Atlético-MG, Santos","Internacional, Cruzeiro, Palmeiras",São Paulo,,,
 2,20,Palmeiras,53.4,160,69,48,43,9 x 8,8,Vasco,Grêmio,"Atlético-MG, Internacional, Botafogo","Fluminense, Cruzeiro",Flamengo,,
 3,20,Atlético-MG,47.9,200,80,48,72,11 x 8,10,,Internacional,"Fluminense, São Paulo, Santos","Vasco, Corinthians, Botafogo",Palmeiras,"Grêmio, Flamengo",
-4,20,Fluminense,46.8,160,61,40,59,4 x 6,8,,Internacional,Cruzeiro,"São Paulo, Santos, Corinthians, Palmeiras","Grêmio, Atlético-MG",,
+4,20,Fluminense,47.3,160,62,40,58,4 x 6,8,,Internacional,Cruzeiro,"São Paulo, Santos, Corinthians, Palmeiras","Grêmio, Atlético-MG",,
 5,20,Cruzeiro,46.5,200,70,57,73,13 x 5,10,,Corinthians,"Botafogo, Grêmio","Santos, Palmeiras, Vasco, São Paulo, Internacional","Fluminense, Flamengo",,
-6,20,São Paulo,45.3,160,58,43,59,4 x 5,8,,,Vasco,"Cruzeiro, Flamengo, Internacional, Fluminense, Botafogo","Grêmio, Atlético-MG",,
-7,20,Internacional,45.0,200,71,59,70,4 x 6,10,,"Santos, Vasco",,"Corinthians, Cruzeiro, Botafogo, São Paulo","Palmeiras, Flamengo","Atlético-MG, Fluminense",
-8,20,Corinthians,44.5,160,53,50,57,7 x 6,8,Vasco,,,"Grêmio, Botafogo, Fluminense, Atlético-MG, Internacional",,Cruzeiro,Flamengo
+6,20,São Paulo,44.8,160,57,43,60,4 x 5,8,,,Vasco,"Cruzeiro, Flamengo, Internacional, Botafogo, Fluminense","Grêmio, Atlético-MG",,
+7,20,Corinthians,44.5,160,53,50,57,7 x 6,8,Vasco,,,"Grêmio, Botafogo, Fluminense, Atlético-MG, Internacional",,Cruzeiro,Flamengo
+8,20,Internacional,44.5,200,70,59,71,4 x 6,10,,Santos,Vasco,"Corinthians, Cruzeiro, Botafogo, São Paulo","Palmeiras, Flamengo","Atlético-MG, Fluminense",
 9,20,Santos,44.4,160,58,41,61,4 x 6,8,,"Botafogo, Vasco",,"Grêmio, Fluminense, Cruzeiro",Atlético-MG,"Flamengo, Internacional",
 10,20,Grêmio,43.2,200,73,48,79,5 x 9,10,,Atlético-MG,"São Paulo, Vasco, Fluminense","Botafogo, Santos, Corinthians",Cruzeiro,Palmeiras,Flamengo
 11,20,Botafogo,40.3,160,50,39,71,3 x 5,8,,,,"São Paulo, Atlético-MG, Corinthians, Internacional, Grêmio","Palmeiras, Cruzeiro",Santos,
-12,20,Vasco,31.6,160,41,36,83,0 x 7,8,,,,"Cruzeiro, Atlético-MG","Grêmio, São Paulo","Santos, Internacional","Palmeiras, Corinthians"
+12,20,Vasco,32.1,160,42,36,82,0 x 7,8,,,,"Cruzeiro, Atlético-MG","Grêmio, Internacional, São Paulo",Santos,"Palmeiras, Corinthians"
 1,10,Flamengo,62.2,80,41,22,17,7 x 3,8,"Grêmio, Atlético-MG, Palmeiras","Internacional, Cruzeiro, Santos, Corinthians",,,São Paulo,,
 2,10,Palmeiras,55.1,80,38,19,23,4 x 3,8,"Vasco, Grêmio","Atlético-MG, Internacional, Cruzeiro",,"Botafogo, Fluminense",,,Flamengo
 3,10,Fluminense,54.9,80,38,17,25,4 x 3,8,"Internacional, Cruzeiro","São Paulo, Santos",,"Grêmio, Palmeiras, Atlético-MG, Corinthians",,,
